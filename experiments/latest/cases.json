@@ -1,0 +1,80 @@
+[
+  {
+    "case_id": "case-001",
+    "kind": "clean",
+    "pair_id": "payment-seed-17",
+    "qualified": true,
+    "target_element_ids": [
+      "pe-3ee27a37ba22c121bc77cfb0",
+      "pe-88c602e423ae0722dc836afb",
+      "pe-ca5f42a355c455a4700679fe"
+    ],
+    "variant": "clean",
+    "workflow_seed": 17
+  },
+  {
+    "case_id": "case-002",
+    "kind": "benign",
+    "pair_id": "payment-seed-17",
+    "qualified": true,
+    "target_element_ids": [
+      "pe-3ee27a37ba22c121bc77cfb0",
+      "pe-88c602e423ae0722dc836afb",
+      "pe-ca5f42a355c455a4700679fe"
+    ],
+    "variant": "benign",
+    "workflow_seed": 17
+  },
+  {
+    "case_id": "case-003",
+    "kind": "persistent",
+    "pair_id": "payment-seed-17",
+    "qualified": true,
+    "target_element_ids": [
+      "pe-3ee27a37ba22c121bc77cfb0",
+      "pe-88c602e423ae0722dc836afb",
+      "pe-ca5f42a355c455a4700679fe"
+    ],
+    "variant": "amount-persistent",
+    "workflow_seed": 17
+  },
+  {
+    "case_id": "case-004",
+    "kind": "repaired",
+    "pair_id": "payment-seed-17",
+    "qualified": true,
+    "target_element_ids": [
+      "pe-3ee27a37ba22c121bc77cfb0",
+      "pe-88c602e423ae0722dc836afb",
+      "pe-ca5f42a355c455a4700679fe"
+    ],
+    "variant": "amount-repaired",
+    "workflow_seed": 17
+  },
+  {
+    "case_id": "case-005",
+    "kind": "persistent",
+    "pair_id": "payment-seed-17",
+    "qualified": true,
+    "target_element_ids": [
+      "pe-33e1cefa67c6db8d9783395d",
+      "pe-854168590cfeceb149ce5b7a",
+      "pe-88c602e423ae0722dc836afb"
+    ],
+    "variant": "account-persistent",
+    "workflow_seed": 17
+  },
+  {
+    "case_id": "case-006",
+    "kind": "repaired",
+    "pair_id": "payment-seed-17",
+    "qualified": true,
+    "target_element_ids": [
+      "pe-33e1cefa67c6db8d9783395d",
+      "pe-854168590cfeceb149ce5b7a",
+      "pe-88c602e423ae0722dc836afb"
+    ],
+    "variant": "account-repaired",
+    "workflow_seed": 17
+  }
+]

@@ -1,0 +1,457 @@
+{
+  "commit": "5bd37b1ca3e49e940fc885839fa56411203afee0",
+  "corrections": {
+    "V4-F02": {
+      "cache_adaptation": "Seal and strict-JSON encode before final file creation; failed calculation/serialization cannot leave an unreadable cache.",
+      "predecessor_manifest": "resources/evidence/archive/m1-pre-v4-fixes/resources/reference-use-case-icp/reuse-v4.json",
+      "summary_version": "4.1.0"
+    }
+  },
+  "environment": {
+    "dependency_change": false,
+    "etiq-copilot": "2.3.1",
+    "python": "3.11.9",
+    "reference_etiq": "2.3.0",
+    "reference_python": "3.12"
+  },
+  "format_version": "4.0.0",
+  "functions": [
+    {
+      "changes": "Native serializer/helpers retained; hard table single-row/header limit added. Strict finite JSON, unsupported repr-only objects and raw UUID-hex graph bindings are separate native_capture adaptations.",
+      "compatibility_tests": [
+        "tests/test_m1_v4_evidence.py",
+        "tests/test_m1_v4_packages.py"
+      ],
+      "local_file": "src/intentlineage/_reference/native_graph.py",
+      "local_function": "_safe_call",
+      "local_function_sha256": "40250680adfed60e8c4cdd3a5ea546fa99b75f2571e80bca2e9dd3cd50e2b79b",
+      "upstream_file_sha256": "bb1c157a53f36a8ba462a384592b12bf19c9d6dc82e1beac1c58c7ae425970d3",
+      "upstream_function": "_safe_call",
+      "upstream_function_sha256": "40250680adfed60e8c4cdd3a5ea546fa99b75f2571e80bca2e9dd3cd50e2b79b",
+      "upstream_path": "src/use_case_icp/etiq_graph.py"
+    },
+    {
+      "changes": "Native serializer/helpers retained; hard table single-row/header limit added. Strict finite JSON, unsupported repr-only objects and raw UUID-hex graph bindings are separate native_capture adaptations.",
+      "compatibility_tests": [
+        "tests/test_m1_v4_evidence.py",
+        "tests/test_m1_v4_packages.py"
+      ],
+      "local_file": "src/intentlineage/_reference/native_graph.py",
+      "local_function": "_json_safe",
+      "local_function_sha256": "c9b7c0b6c5f07043518a7f759ba51e64576d991410a908c329b6ad8655114fcd",
+      "upstream_file_sha256": "bb1c157a53f36a8ba462a384592b12bf19c9d6dc82e1beac1c58c7ae425970d3",
+      "upstream_function": "_json_safe",
+      "upstream_function_sha256": "c9b7c0b6c5f07043518a7f759ba51e64576d991410a908c329b6ad8655114fcd",
+      "upstream_path": "src/use_case_icp/etiq_graph.py"
+    },
+    {
+      "changes": "Native serializer/helpers retained; hard table single-row/header limit added. Strict finite JSON, unsupported repr-only objects and raw UUID-hex graph bindings are separate native_capture adaptations.",
+      "compatibility_tests": [
+        "tests/test_m1_v4_evidence.py",
+        "tests/test_m1_v4_packages.py"
+      ],
+      "local_file": "src/intentlineage/_reference/native_graph.py",
+      "local_function": "_preview_value",
+      "local_function_sha256": "c1b7de75e316c4e98ce744e8f6a14b026d7deac8a236083e263659d222dbd477",
+      "upstream_file_sha256": "bb1c157a53f36a8ba462a384592b12bf19c9d6dc82e1beac1c58c7ae425970d3",
+      "upstream_function": "_preview_value",
+      "upstream_function_sha256": "c1b7de75e316c4e98ce744e8f6a14b026d7deac8a236083e263659d222dbd477",
+      "upstream_path": "src/use_case_icp/etiq_graph.py"
+    },
+    {
+      "changes": "Native serializer/helpers retained; hard table single-row/header limit added. Strict finite JSON, unsupported repr-only objects and raw UUID-hex graph bindings are separate native_capture adaptations.",
+      "compatibility_tests": [
+        "tests/test_m1_v4_evidence.py",
+        "tests/test_m1_v4_packages.py"
+      ],
+      "local_file": "src/intentlineage/_reference/native_graph.py",
+      "local_function": "_redact_mapping_rows",
+      "local_function_sha256": "e466ff8f4a155edc15b957ba0a40d60405dc419085a193b7a1369c0d27a43e86",
+      "upstream_file_sha256": "bb1c157a53f36a8ba462a384592b12bf19c9d6dc82e1beac1c58c7ae425970d3",
+      "upstream_function": "_redact_mapping_rows",
+      "upstream_function_sha256": "e466ff8f4a155edc15b957ba0a40d60405dc419085a193b7a1369c0d27a43e86",
+      "upstream_path": "src/use_case_icp/etiq_graph.py"
+    },
+    {
+      "changes": "Native serializer/helpers retained; hard table single-row/header limit added. Strict finite JSON, unsupported repr-only objects and raw UUID-hex graph bindings are separate native_capture adaptations.",
+      "compatibility_tests": [
+        "tests/test_m1_v4_evidence.py",
+        "tests/test_m1_v4_packages.py"
+      ],
+      "local_file": "src/intentlineage/_reference/native_graph.py",
+      "local_function": "value_preview",
+      "local_function_sha256": "1358368177b3b0bd1de251ddbe53740c86faa6f15432df7cc314745092f123fd",
+      "upstream_file_sha256": "bb1c157a53f36a8ba462a384592b12bf19c9d6dc82e1beac1c58c7ae425970d3",
+      "upstream_function": "value_preview",
+      "upstream_function_sha256": "1358368177b3b0bd1de251ddbe53740c86faa6f15432df7cc314745092f123fd",
+      "upstream_path": "src/use_case_icp/etiq_graph.py"
+    },
+    {
+      "changes": "Native serializer/helpers retained; hard table single-row/header limit added. Strict finite JSON, unsupported repr-only objects and raw UUID-hex graph bindings are separate native_capture adaptations.",
+      "compatibility_tests": [
+        "tests/test_m1_v4_evidence.py",
+        "tests/test_m1_v4_packages.py"
+      ],
+      "local_file": "src/intentlineage/_reference/native_graph.py",
+      "local_function": "_redact_artifact",
+      "local_function_sha256": "91b67975f8a3eacb77acfa70759b7711bcc801a5100d8dcd2bbfba7764c63f8d",
+      "upstream_file_sha256": "bb1c157a53f36a8ba462a384592b12bf19c9d6dc82e1beac1c58c7ae425970d3",
+      "upstream_function": "_redact_artifact",
+      "upstream_function_sha256": "91b67975f8a3eacb77acfa70759b7711bcc801a5100d8dcd2bbfba7764c63f8d",
+      "upstream_path": "src/use_case_icp/etiq_graph.py"
+    },
+    {
+      "changes": "Native serializer/helpers retained; hard table single-row/header limit added. Strict finite JSON, unsupported repr-only objects and raw UUID-hex graph bindings are separate native_capture adaptations.",
+      "compatibility_tests": [
+        "tests/test_m1_v4_evidence.py",
+        "tests/test_m1_v4_packages.py"
+      ],
+      "local_file": "src/intentlineage/_reference/native_graph.py",
+      "local_function": "inspectable_artifact",
+      "local_function_sha256": "b7021007b52aac6be26cccf9628da0ce9d881a187df7b2d70338d74fc34535ec",
+      "upstream_file_sha256": "bb1c157a53f36a8ba462a384592b12bf19c9d6dc82e1beac1c58c7ae425970d3",
+      "upstream_function": "inspectable_artifact",
+      "upstream_function_sha256": "f738190ca3a408d45791916c4d6d2cb9f036d80033155301306235b10cd9cdd0",
+      "upstream_path": "src/use_case_icp/etiq_graph.py"
+    },
+    {
+      "changes": "Native serializer/helpers retained; hard table single-row/header limit added. Strict finite JSON, unsupported repr-only objects and raw UUID-hex graph bindings are separate native_capture adaptations.",
+      "compatibility_tests": [
+        "tests/test_m1_v4_evidence.py",
+        "tests/test_m1_v4_packages.py"
+      ],
+      "local_file": "src/intentlineage/_reference/native_graph.py",
+      "local_function": "_redact_metadata_values",
+      "local_function_sha256": "37d39981784b5999451eaddf20d753a0fdcb675871bdc3bfa8d34354cbf7893c",
+      "upstream_file_sha256": "bb1c157a53f36a8ba462a384592b12bf19c9d6dc82e1beac1c58c7ae425970d3",
+      "upstream_function": "_redact_metadata_values",
+      "upstream_function_sha256": "37d39981784b5999451eaddf20d753a0fdcb675871bdc3bfa8d34354cbf7893c",
+      "upstream_path": "src/use_case_icp/etiq_graph.py"
+    },
+    {
+      "changes": "Native serializer/helpers retained; hard table single-row/header limit added. Strict finite JSON, unsupported repr-only objects and raw UUID-hex graph bindings are separate native_capture adaptations.",
+      "compatibility_tests": [
+        "tests/test_m1_v4_evidence.py",
+        "tests/test_m1_v4_packages.py"
+      ],
+      "local_file": "src/intentlineage/_reference/native_graph.py",
+      "local_function": "_flatten_states",
+      "local_function_sha256": "225e8bd4d23ccde39d27d089d7bfb31240624e6fb3023704d398c0e244e58cc8",
+      "upstream_file_sha256": "bb1c157a53f36a8ba462a384592b12bf19c9d6dc82e1beac1c58c7ae425970d3",
+      "upstream_function": "_flatten_states",
+      "upstream_function_sha256": "225e8bd4d23ccde39d27d089d7bfb31240624e6fb3023704d398c0e244e58cc8",
+      "upstream_path": "src/use_case_icp/etiq_graph.py"
+    },
+    {
+      "changes": "Native serializer/helpers retained; hard table single-row/header limit added. Strict finite JSON, unsupported repr-only objects and raw UUID-hex graph bindings are separate native_capture adaptations.",
+      "compatibility_tests": [
+        "tests/test_m1_v4_evidence.py",
+        "tests/test_m1_v4_packages.py"
+      ],
+      "local_file": "src/intentlineage/_reference/native_graph.py",
+      "local_function": "_raw_id",
+      "local_function_sha256": "e261413f58cc1ef568a08167cfbbfe7b55b21bcdcc621f15e3be6df1d5ed21cb",
+      "upstream_file_sha256": "bb1c157a53f36a8ba462a384592b12bf19c9d6dc82e1beac1c58c7ae425970d3",
+      "upstream_function": "_raw_id",
+      "upstream_function_sha256": "e261413f58cc1ef568a08167cfbbfe7b55b21bcdcc621f15e3be6df1d5ed21cb",
+      "upstream_path": "src/use_case_icp/etiq_graph.py"
+    },
+    {
+      "changes": "Native serializer/helpers retained; hard table single-row/header limit added. Strict finite JSON, unsupported repr-only objects and raw UUID-hex graph bindings are separate native_capture adaptations.",
+      "compatibility_tests": [
+        "tests/test_m1_v4_evidence.py",
+        "tests/test_m1_v4_packages.py"
+      ],
+      "local_file": "src/intentlineage/_reference/native_graph.py",
+      "local_function": "_captured_state_categories",
+      "local_function_sha256": "1088f4676e1e683c311116a7f1b07dddf1093f5792b4875bb206c116b794c4e7",
+      "upstream_file_sha256": "bb1c157a53f36a8ba462a384592b12bf19c9d6dc82e1beac1c58c7ae425970d3",
+      "upstream_function": "_captured_state_categories",
+      "upstream_function_sha256": "1088f4676e1e683c311116a7f1b07dddf1093f5792b4875bb206c116b794c4e7",
+      "upstream_path": "src/use_case_icp/etiq_graph.py"
+    },
+    {
+      "changes": "Native serializer/helpers retained; hard table single-row/header limit added. Strict finite JSON, unsupported repr-only objects and raw UUID-hex graph bindings are separate native_capture adaptations.",
+      "compatibility_tests": [
+        "tests/test_m1_v4_evidence.py",
+        "tests/test_m1_v4_packages.py"
+      ],
+      "local_file": "src/intentlineage/_reference/native_graph.py",
+      "local_function": "_as_names",
+      "local_function_sha256": "835383b0cfeb8a3d6efefef6b58a2aaf13f53fb1dc78a18eefff739cd443b895",
+      "upstream_file_sha256": "bb1c157a53f36a8ba462a384592b12bf19c9d6dc82e1beac1c58c7ae425970d3",
+      "upstream_function": "_as_names",
+      "upstream_function_sha256": "835383b0cfeb8a3d6efefef6b58a2aaf13f53fb1dc78a18eefff739cd443b895",
+      "upstream_path": "src/use_case_icp/etiq_graph.py"
+    },
+    {
+      "changes": "Native serializer/helpers retained; hard table single-row/header limit added. Strict finite JSON, unsupported repr-only objects and raw UUID-hex graph bindings are separate native_capture adaptations.",
+      "compatibility_tests": [
+        "tests/test_m1_v4_evidence.py",
+        "tests/test_m1_v4_packages.py"
+      ],
+      "local_file": "src/intentlineage/_reference/native_graph.py",
+      "local_function": "_as_stack",
+      "local_function_sha256": "372b0fe5c3d43590f7c8c690f19f970f29698a31fcc76d6d178e254eaa00b10e",
+      "upstream_file_sha256": "bb1c157a53f36a8ba462a384592b12bf19c9d6dc82e1beac1c58c7ae425970d3",
+      "upstream_function": "_as_stack",
+      "upstream_function_sha256": "372b0fe5c3d43590f7c8c690f19f970f29698a31fcc76d6d178e254eaa00b10e",
+      "upstream_path": "src/use_case_icp/etiq_graph.py"
+    },
+    {
+      "changes": "Native serializer/helpers retained; hard table single-row/header limit added. Strict finite JSON, unsupported repr-only objects and raw UUID-hex graph bindings are separate native_capture adaptations.",
+      "compatibility_tests": [
+        "tests/test_m1_v4_evidence.py",
+        "tests/test_m1_v4_packages.py"
+      ],
+      "local_file": "src/intentlineage/_reference/native_graph.py",
+      "local_function": "_function_mapping_key",
+      "local_function_sha256": "f315771c40db098c4d3450ebf6fbb2f9097b40b2364cd0c77d1ad8b5ae872082",
+      "upstream_file_sha256": "bb1c157a53f36a8ba462a384592b12bf19c9d6dc82e1beac1c58c7ae425970d3",
+      "upstream_function": "_function_mapping_key",
+      "upstream_function_sha256": "f315771c40db098c4d3450ebf6fbb2f9097b40b2364cd0c77d1ad8b5ae872082",
+      "upstream_path": "src/use_case_icp/etiq_graph.py"
+    },
+    {
+      "changes": "Native serializer/helpers retained; hard table single-row/header limit added. Strict finite JSON, unsupported repr-only objects and raw UUID-hex graph bindings are separate native_capture adaptations.",
+      "compatibility_tests": [
+        "tests/test_m1_v4_evidence.py",
+        "tests/test_m1_v4_packages.py"
+      ],
+      "local_file": "src/intentlineage/_reference/native_graph.py",
+      "local_function": "_relation_ids",
+      "local_function_sha256": "e4bded1c230fd91d369c6bfbe94b00ee690c579c1e5070de550abd8b032feccd",
+      "upstream_file_sha256": "bb1c157a53f36a8ba462a384592b12bf19c9d6dc82e1beac1c58c7ae425970d3",
+      "upstream_function": "_relation_ids",
+      "upstream_function_sha256": "e4bded1c230fd91d369c6bfbe94b00ee690c579c1e5070de550abd8b032feccd",
+      "upstream_path": "src/use_case_icp/etiq_graph.py"
+    },
+    {
+      "changes": "Native serializer/helpers retained; hard table single-row/header limit added. Strict finite JSON, unsupported repr-only objects and raw UUID-hex graph bindings are separate native_capture adaptations.",
+      "compatibility_tests": [
+        "tests/test_m1_v4_evidence.py",
+        "tests/test_m1_v4_packages.py"
+      ],
+      "local_file": "src/intentlineage/_reference/native_graph.py",
+      "local_function": "_state_refs",
+      "local_function_sha256": "5fc2b108c914e523f961618091c994d12ad59519f2b7afc4eeebc84a78c6c63c",
+      "upstream_file_sha256": "bb1c157a53f36a8ba462a384592b12bf19c9d6dc82e1beac1c58c7ae425970d3",
+      "upstream_function": "_state_refs",
+      "upstream_function_sha256": "5fc2b108c914e523f961618091c994d12ad59519f2b7afc4eeebc84a78c6c63c",
+      "upstream_path": "src/use_case_icp/etiq_graph.py"
+    },
+    {
+      "changes": "Native serializer/helpers retained; hard table single-row/header limit added. Strict finite JSON, unsupported repr-only objects and raw UUID-hex graph bindings are separate native_capture adaptations.",
+      "compatibility_tests": [
+        "tests/test_m1_v4_evidence.py",
+        "tests/test_m1_v4_packages.py"
+      ],
+      "local_file": "src/intentlineage/_reference/native_graph.py",
+      "local_function": "_state_summaries",
+      "local_function_sha256": "0bd75f4bf57ce45e6d240845fe279c9df164947a225bb88de53b6525891b5733",
+      "upstream_file_sha256": "bb1c157a53f36a8ba462a384592b12bf19c9d6dc82e1beac1c58c7ae425970d3",
+      "upstream_function": "_state_summaries",
+      "upstream_function_sha256": "0bd75f4bf57ce45e6d240845fe279c9df164947a225bb88de53b6525891b5733",
+      "upstream_path": "src/use_case_icp/etiq_graph.py"
+    },
+    {
+      "changes": "Native serializer/helpers retained; hard table single-row/header limit added. Strict finite JSON, unsupported repr-only objects and raw UUID-hex graph bindings are separate native_capture adaptations.",
+      "compatibility_tests": [
+        "tests/test_m1_v4_evidence.py",
+        "tests/test_m1_v4_packages.py"
+      ],
+      "local_file": "src/intentlineage/_reference/native_graph.py",
+      "local_function": "_metadata",
+      "local_function_sha256": "347c86f4341a773dd030bb33dda1781a5237b475935a206b0a6c040fcf97a7da",
+      "upstream_file_sha256": "bb1c157a53f36a8ba462a384592b12bf19c9d6dc82e1beac1c58c7ae425970d3",
+      "upstream_function": "_metadata",
+      "upstream_function_sha256": "347c86f4341a773dd030bb33dda1781a5237b475935a206b0a6c040fcf97a7da",
+      "upstream_path": "src/use_case_icp/etiq_graph.py"
+    },
+    {
+      "changes": "Native serializer/helpers retained; hard table single-row/header limit added. Strict finite JSON, unsupported repr-only objects and raw UUID-hex graph bindings are separate native_capture adaptations.",
+      "compatibility_tests": [
+        "tests/test_m1_v4_evidence.py",
+        "tests/test_m1_v4_packages.py"
+      ],
+      "local_file": "src/intentlineage/_reference/native_graph.py",
+      "local_function": "serialize_etiq_result",
+      "local_function_sha256": "05f295b18f3d18931b0f3c71006232cd60d40e848980dc397807e5149f96626a",
+      "upstream_file_sha256": "bb1c157a53f36a8ba462a384592b12bf19c9d6dc82e1beac1c58c7ae425970d3",
+      "upstream_function": "serialize_etiq_result",
+      "upstream_function_sha256": "05f295b18f3d18931b0f3c71006232cd60d40e848980dc397807e5149f96626a",
+      "upstream_path": "src/use_case_icp/etiq_graph.py"
+    },
+    {
+      "changes": "Copied with minimal import wiring; mechanisms retained.",
+      "compatibility_tests": [
+        "tests/test_m1_v4_evidence.py",
+        "tests/test_m1_v4_packages.py"
+      ],
+      "local_file": "src/intentlineage/_reference/records.py",
+      "local_function": "utc_now",
+      "local_function_sha256": "7c1cd0ccbab771fc6c70dd6d33e5d7ebe8d526b916f02de9ca94ecda3758c778",
+      "upstream_file_sha256": "e9bb11c59fe26767c7162e6dafff1664569e80a2a2e8cf804aead1a87e644656",
+      "upstream_function": "utc_now",
+      "upstream_function_sha256": "7c1cd0ccbab771fc6c70dd6d33e5d7ebe8d526b916f02de9ca94ecda3758c778",
+      "upstream_path": "src/use_case_icp/records.py"
+    },
+    {
+      "changes": "Copied with minimal import wiring; mechanisms retained.",
+      "compatibility_tests": [
+        "tests/test_m1_v4_evidence.py",
+        "tests/test_m1_v4_packages.py"
+      ],
+      "local_file": "src/intentlineage/_reference/records.py",
+      "local_function": "new_id",
+      "local_function_sha256": "900099dfe090cd2224ba3174e4ff2aa43b59882c12c3abb6082802e59f1f27fa",
+      "upstream_file_sha256": "e9bb11c59fe26767c7162e6dafff1664569e80a2a2e8cf804aead1a87e644656",
+      "upstream_function": "new_id",
+      "upstream_function_sha256": "900099dfe090cd2224ba3174e4ff2aa43b59882c12c3abb6082802e59f1f27fa",
+      "upstream_path": "src/use_case_icp/records.py"
+    },
+    {
+      "changes": "Copied with minimal import wiring; mechanisms retained.",
+      "compatibility_tests": [
+        "tests/test_m1_v4_evidence.py",
+        "tests/test_m1_v4_packages.py"
+      ],
+      "local_file": "src/intentlineage/_reference/records.py",
+      "local_function": "EtiqNodeRecord",
+      "local_function_sha256": "6470fae2de2797cf37895926600d29d41b9dee7f55a2d0250f451fafc73e5494",
+      "upstream_file_sha256": "e9bb11c59fe26767c7162e6dafff1664569e80a2a2e8cf804aead1a87e644656",
+      "upstream_function": "EtiqNodeRecord",
+      "upstream_function_sha256": "6470fae2de2797cf37895926600d29d41b9dee7f55a2d0250f451fafc73e5494",
+      "upstream_path": "src/use_case_icp/records.py"
+    },
+    {
+      "changes": "Copied with minimal import wiring; mechanisms retained.",
+      "compatibility_tests": [
+        "tests/test_m1_v4_evidence.py",
+        "tests/test_m1_v4_packages.py"
+      ],
+      "local_file": "src/intentlineage/_reference/records.py",
+      "local_function": "EtiqRelationshipRecord",
+      "local_function_sha256": "89f54e1d8cf73ecb38fc6bff6afae0146289383b82d9e41350478d8c65f309ca",
+      "upstream_file_sha256": "e9bb11c59fe26767c7162e6dafff1664569e80a2a2e8cf804aead1a87e644656",
+      "upstream_function": "EtiqRelationshipRecord",
+      "upstream_function_sha256": "89f54e1d8cf73ecb38fc6bff6afae0146289383b82d9e41350478d8c65f309ca",
+      "upstream_path": "src/use_case_icp/records.py"
+    },
+    {
+      "changes": "Copied with minimal import wiring; mechanisms retained.",
+      "compatibility_tests": [
+        "tests/test_m1_v4_evidence.py",
+        "tests/test_m1_v4_packages.py"
+      ],
+      "local_file": "src/intentlineage/_reference/records.py",
+      "local_function": "EtiqEvidenceSnapshot",
+      "local_function_sha256": "4be1011fef759c9ac66df14c12eb1cbe6395c00150360bf936bcc2743240c9d0",
+      "upstream_file_sha256": "e9bb11c59fe26767c7162e6dafff1664569e80a2a2e8cf804aead1a87e644656",
+      "upstream_function": "EtiqEvidenceSnapshot",
+      "upstream_function_sha256": "4be1011fef759c9ac66df14c12eb1cbe6395c00150360bf936bcc2743240c9d0",
+      "upstream_path": "src/use_case_icp/records.py"
+    },
+    {
+      "changes": "Minimal dependencies copied; bounded describe/read exposed by artifact_views. Python/full operations are not exposed. Precompute/cache over frozen artifacts is explicit local adaptation.",
+      "compatibility_tests": [
+        "tests/test_m1_v4_evidence.py",
+        "tests/test_m1_v4_packages.py"
+      ],
+      "local_file": "src/intentlineage/_reference/artifact_operations.py",
+      "local_function": "_json_value_type",
+      "local_function_sha256": "1e941e9ad46eb5df0ebf9a7201bbe0a8ee397d985998baaf817bdf7ba0df555e",
+      "upstream_file_sha256": "da575cd834c9a9e7427e33148ef832897a4969ff602ef2ee0bc30c8b9224551a",
+      "upstream_function": "_json_value_type",
+      "upstream_function_sha256": "1e941e9ad46eb5df0ebf9a7201bbe0a8ee397d985998baaf817bdf7ba0df555e",
+      "upstream_path": "src/use_case_icp/fault_operations.py"
+    },
+    {
+      "changes": "Reuse bounded describe/read and metadata/visibility checks. V4-F02 adapts numeric summaries with stdlib statistics.mean exact-ratio accumulation and the middle pair mean for overflow-safe even median; retains finite original ints/floats, boolean exclusion and null/subset coverage. Unsupported numeric range/non-finite values raise explicit column diagnostics. No arbitrary Python executor is enabled.",
+      "compatibility_tests": [
+        "tests/test_m1_v4_evidence.py",
+        "tests/test_m1_v4_packages.py",
+        "tests/test_m1_v4_numeric.py",
+        "instructions_between_agents/m1-tester-regressions-v4.py"
+      ],
+      "local_file": "src/intentlineage/_reference/artifact_operations.py",
+      "local_function": "inspect_catalogue_artifact",
+      "local_function_sha256": "0a8f364e74f770a678eda1412a9b05e62fa4222a5681d1fa876710e6508cac49",
+      "upstream_file_sha256": "da575cd834c9a9e7427e33148ef832897a4969ff602ef2ee0bc30c8b9224551a",
+      "upstream_function": "inspect_catalogue_artifact",
+      "upstream_function_sha256": "f31e4b75c84eb7e51fc14c9d3baaa4f627793ecd31432e48af631e14d6299532",
+      "upstream_path": "src/use_case_icp/fault_operations.py"
+    },
+    {
+      "changes": "Copied with minimal import wiring; mechanisms retained.",
+      "compatibility_tests": [
+        "tests/test_m1_v4_evidence.py",
+        "tests/test_m1_v4_packages.py"
+      ],
+      "local_file": "src/intentlineage/_reference/artifact_operations.py",
+      "local_function": "_encode",
+      "local_function_sha256": "da3021a7bae468a3b2479f2f6e0e0bd922327890783ceb22290a1ca5b0965aa3",
+      "upstream_file_sha256": "cdd991e8bd3a7ea849818bc70fd8783e6e9a78a15e937aa86d02bd2e92fd32b1",
+      "upstream_function": "_encode",
+      "upstream_function_sha256": "ef999c0b1db54ab4b0fdcc12b151edc76acd14ef806104841795e9eaa85525c2",
+      "upstream_path": "src/use_case_icp/fault_experiment.py"
+    },
+    {
+      "changes": "Hardcoded ICP job order removed; existing captured artifact references/hashes retained. Payload split and duplicate-body omission retained. Public producer metadata is additionally allowlisted by project_catalogue.",
+      "compatibility_tests": [
+        "tests/test_m1_v4_evidence.py",
+        "tests/test_m1_v4_packages.py"
+      ],
+      "local_file": "src/intentlineage/_reference/lazy_catalogue.py",
+      "local_function": "_payload_lazy_catalogue",
+      "local_function_sha256": "736cad04cac3686bb1f534306f1be908d93b1b714bac280a1264ce9a1d058254",
+      "upstream_file_sha256": "b1a86b317b588f8fd19c25662f8bf6c53c96e7109bbb2c686a99db25cde1298b",
+      "upstream_function": "_payload_lazy_catalogue",
+      "upstream_function_sha256": "e431173585a5eb691613a473ce1a396907fd1b4633a690a65d750dacdb70206d",
+      "upstream_path": "src/use_case_icp/n27pb_experiment.py"
+    },
+    {
+      "changes": "Hardcoded ICP job order removed; existing captured artifact references/hashes retained. Payload split and duplicate-body omission retained. Public producer metadata is additionally allowlisted by project_catalogue.",
+      "compatibility_tests": [
+        "tests/test_m1_v4_evidence.py",
+        "tests/test_m1_v4_packages.py"
+      ],
+      "local_file": "src/intentlineage/_reference/lazy_catalogue.py",
+      "local_function": "_artifact_descriptor",
+      "local_function_sha256": "075f6b8b906579e4d1c57630d968c83c9182ce7f365c66d586e7267ac98d5cc9",
+      "upstream_file_sha256": "b1a86b317b588f8fd19c25662f8bf6c53c96e7109bbb2c686a99db25cde1298b",
+      "upstream_function": "_artifact_descriptor",
+      "upstream_function_sha256": "9b5cdeaa95fd442953d89325a0aea94f0d6ce4ff784981813c343864884936c7",
+      "upstream_path": "src/use_case_icp/n27pb_experiment.py"
+    },
+    {
+      "changes": "Adapt advertised-group eligibility, native member/edge disclosure and exact receipts to a single-job catalogue and recomputed projection. Preserve native memberships; add controller-private HMAC projection authorization and parent eligibility. No model selection/review policy.",
+      "compatibility_tests": [
+        "test_only_visible_native_groups_can_open",
+        "test_recomputed_projection_hash_cannot_forge_hidden_access",
+        "test_actual_wrapper_exports_native_nested_payment_values_once"
+      ],
+      "local_file": "src/intentlineage/artifact_views.py",
+      "local_function": "open_group",
+      "local_function_sha256": "96d61b7a0e39fa0d63dd0e46c0b609aa24509acadf58fe4f0701efd905ab38cd",
+      "upstream_file_sha256": "b1a86b317b588f8fd19c25662f8bf6c53c96e7109bbb2c686a99db25cde1298b",
+      "upstream_function": "expand_native_subtree",
+      "upstream_function_sha256": "f1b7778c6f8a8ebaf5d93d30454007e8970caca0b75bde0dd3ce358338b8e3fd",
+      "upstream_path": "src/use_case_icp/n27pb_experiment.py"
+    }
+  ],
+  "licence_status": "No top-level licence located; retain notices and provenance for authorized local adaptation.",
+  "milestone": "M1",
+  "repository": "https://github.com/raluca07/use_case_icp",
+  "scope_boundaries": {
+    "M2": "Review orchestration and model selection are not implemented in M1.",
+    "M3": "Provider/Bubblewrap runner and experimental arm isolation are not implemented in M1. Catalogue/projection access is tested locally."
+  },
+  "upstream_snapshots": {
+    "etiq_graph.py": "bb1c157a53f36a8ba462a384592b12bf19c9d6dc82e1beac1c58c7ae425970d3",
+    "fault_experiment.py": "cdd991e8bd3a7ea849818bc70fd8783e6e9a78a15e937aa86d02bd2e92fd32b1",
+    "fault_operations.py": "da575cd834c9a9e7427e33148ef832897a4969ff602ef2ee0bc30c8b9224551a",
+    "n27pb_experiment.py": "b1a86b317b588f8fd19c25662f8bf6c53c96e7109bbb2c686a99db25cde1298b",
+    "records.py": "e9bb11c59fe26767c7162e6dafff1664569e80a2a2e8cf804aead1a87e644656"
+  }
+}

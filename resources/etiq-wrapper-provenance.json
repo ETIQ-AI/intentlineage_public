@@ -1,0 +1,17 @@
+{
+  "source_checkout": "USER_HOME\\etiq_improvements2",
+  "source_commit": "1a544516c44ae21547e1814338ff3f31ab604f7a",
+  "recovery": "verbatim shared wrapper; no scanner changes",
+  "licence": "No licence file found in the recovered checkout. Public upstream confirmed; redistribution terms remain unestablished by this record.",
+  "files_sha256": {
+    "etiq_agent_wrapper.py": "3c6e3f2fad136bcf26a0c5cdb7af4d2d5e97abb2eb7f3399609b2f9466039688",
+    "scripts/scan_entry.py": "b1354dc533b49342009f6e081716be7e6bcd39cf0596b5a2d96bb755af9e9000",
+    "etiq_runner/__init__.py": "772daa9a531eb616d04008f46a0c6f64e6d8b28c7e66e1254f781ba952e72559",
+    "etiq_runner/wrapper.py": "43b7ba7b742b5216cebd05f7829f2c0bff4047631d20220992a91ac83a2414e0",
+    "etiq_runner/validation.py": "269868f0844ca38aeb4b56b33ec7e517fad84fa22f736fd45b9eddb0b88f0b0e"
+  },
+  "upstream_repository": "https://github.com/ETIQ-AI/etiq-demo-scripts",
+  "upstream_visibility": "public",
+  "upstream_visibility_evidence": "Public GitHub repository page lists etiq_agent_wrapper.py and etiq_runner/.",
+  "source_remote_tracking_branch": "etiq_demo1/etiq_demo_library2"
+}

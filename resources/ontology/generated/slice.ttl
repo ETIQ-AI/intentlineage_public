@@ -1,0 +1,271 @@
+<http://data.europa.eu/a4g/ontology#CreditTransferInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#CreditTransferInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#CreditTransferInformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#InformationHub> .
+<http://data.europa.eu/a4g/ontology#CreditTransferInformation> <http://www.w3.org/2004/02/skos/core#definition> "Information about a direct payment of money from one bank account into another."@en .
+<http://data.europa.eu/a4g/ontology#CreditTransferInformation> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 11/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#CreditTransferInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Credit Transfer Information"@en .
+<http://data.europa.eu/a4g/ontology#Invoice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Invoice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#Invoice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PostAwardDocument> .
+<http://data.europa.eu/a4g/ontology#Invoice> <http://www.w3.org/2004/02/skos/core#definition> "A commercial Document issued by the Seller to the Buyer to collect payments for the goods or services provided and to state the VAT amount due by the Buyer."@en .
+<http://data.europa.eu/a4g/ontology#Invoice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 04/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#Invoice> <http://www.w3.org/2004/02/skos/core#prefLabel> "Invoice"@en .
+<http://data.europa.eu/a4g/ontology#MaskableObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#MaskableObject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#core> .
+<http://data.europa.eu/a4g/ontology#MaskableObject> <http://www.w3.org/2004/02/skos/core#definition> "Entity within the procurement data model whose visibility, accessibility, or disclosure may be conditionally restricted due to legal, confidentiality, or security requirements."@en .
+<http://data.europa.eu/a4g/ontology#MaskableObject> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 11/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#MaskableObject> <http://www.w3.org/2004/02/skos/core#prefLabel> "Maskable Object"@en .
+<http://data.europa.eu/a4g/ontology#MonetaryValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#MonetaryValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#core> .
+<http://data.europa.eu/a4g/ontology#MonetaryValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#MaskableObject> .
+<http://data.europa.eu/a4g/ontology#MonetaryValue> <http://www.w3.org/2004/02/skos/core#definition> "A number of monetary units specified using a given unit of currency. Additional information: In the pre-award phase of the procurement, all monetary values are considered to exclude VAT based on the Directive 2014/24/EU."@en .
+<http://data.europa.eu/a4g/ontology#MonetaryValue> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 13/04/2021"@en .
+<http://data.europa.eu/a4g/ontology#MonetaryValue> <http://www.w3.org/2004/02/skos/core#prefLabel> "Monetary Value"@en .
+<http://data.europa.eu/a4g/ontology#Order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Order> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#Order> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#PostAwardDocument> .
+<http://data.europa.eu/a4g/ontology#Order> <http://www.w3.org/2004/02/skos/core#definition> "A formal request of the Buyer to the Seller specifying the goods, services or works to be delivered. Additional Information: A Buyer submits an Order for delivery of goods, services or works to a Seller."@en .
+<http://data.europa.eu/a4g/ontology#Order> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 23/04/2023"@en .
+<http://data.europa.eu/a4g/ontology#Order> <http://www.w3.org/2004/02/skos/core#prefLabel> "Order"@en .
+<http://data.europa.eu/a4g/ontology#Payee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#Payee> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#Payee> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#OfferingParty> .
+<http://data.europa.eu/a4g/ontology#Payee> <http://www.w3.org/2004/02/skos/core#definition> "A Role of an Agent that receives the payment. Additional Information: The role of Payee may be fulfilled by another party than the Seller, e.g. a factoring service."@en .
+<http://data.europa.eu/a4g/ontology#Payee> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 11/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#Payee> <http://www.w3.org/2004/02/skos/core#prefLabel> "Payee"@en .
+<http://data.europa.eu/a4g/ontology#PaymentInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://data.europa.eu/a4g/ontology#PaymentInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#pay> .
+<http://data.europa.eu/a4g/ontology#PaymentInformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/a4g/ontology#InformationHub> .
+<http://data.europa.eu/a4g/ontology#PaymentInformation> <http://www.w3.org/2004/02/skos/core#definition> "Information about a remittance."@en .
+<http://data.europa.eu/a4g/ontology#PaymentInformation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Payment Information"@en .
+<http://data.europa.eu/a4g/ontology#core> <http://purl.org/dc/terms/created> "2021-06-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#core> <http://purl.org/dc/terms/description> "The eProcurement Ontology core describes the concepts and properties representing the European Public Procurement domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en .
+<http://data.europa.eu/a4g/ontology#core> <http://purl.org/dc/terms/issued> "2025-10-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#core> <http://purl.org/dc/terms/license> "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." .
+<http://data.europa.eu/a4g/ontology#core> <http://purl.org/dc/terms/publisher> "http://publications.europa.eu/resource/authority/corporate-body/PUBL" .
+<http://data.europa.eu/a4g/ontology#core> <http://purl.org/dc/terms/title> "eProcurement Ontology - core"@en .
+<http://data.europa.eu/a4g/ontology#core> <http://purl.org/vocab/vann/preferredNamespacePrefix> "epo" .
+<http://data.europa.eu/a4g/ontology#core> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.europa.eu/a4g/ontology#" .
+<http://data.europa.eu/a4g/ontology#core> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://data.europa.eu/a4g/ontology#core> <http://www.w3.org/2000/01/rdf-schema#comment> "This version is automatically generated from ePO_core.xml on 2025-10-10" .
+<http://data.europa.eu/a4g/ontology#core> <http://www.w3.org/2000/01/rdf-schema#label> "eProcurement Ontology - core"@en .
+<http://data.europa.eu/a4g/ontology#core> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://docs.ted.europa.eu/home/index.html> .
+<http://data.europa.eu/a4g/ontology#core> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/OP-TED/ePO/releases> .
+<http://data.europa.eu/a4g/ontology#core> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about> .
+<http://data.europa.eu/a4g/ontology#core> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> .
+<http://data.europa.eu/a4g/ontology#core> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/eli/ontology#> .
+<http://data.europa.eu/a4g/ontology#core> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/m8g/> .
+<http://data.europa.eu/a4g/ontology#core> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/dc/terms/> .
+<http://data.europa.eu/a4g/ontology#core> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core#> .
+<http://data.europa.eu/a4g/ontology#core> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2006/time> .
+<http://data.europa.eu/a4g/ontology#core> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/adms> .
+<http://data.europa.eu/a4g/ontology#core> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/locn> .
+<http://data.europa.eu/a4g/ontology#core> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/org#> .
+<http://data.europa.eu/a4g/ontology#core> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/person> .
+<http://data.europa.eu/a4g/ontology#core> <http://www.w3.org/2002/07/owl#incompatibleWith> "4.2.0" .
+<http://data.europa.eu/a4g/ontology#core> <http://www.w3.org/2002/07/owl#priorVersion> "http://data.europa.eu/a4g/ontology#core-5.1.0" .
+<http://data.europa.eu/a4g/ontology#core> <http://www.w3.org/2002/07/owl#versionIRI> <http://data.europa.eu/a4g/ontology#core-5.2.0> .
+<http://data.europa.eu/a4g/ontology#core> <http://www.w3.org/2002/07/owl#versionInfo> "5.2.0" .
+<http://data.europa.eu/a4g/ontology#hasAmountDueForPayment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasAmountDueForPayment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasAmountDueForPayment> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the Monetary Value that has to be paid."@en .
+<http://data.europa.eu/a4g/ontology#hasAmountDueForPayment> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasAmountDueForPayment> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Amount Due For Payment"@en .
+<http://data.europa.eu/a4g/ontology#hasAmountValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://data.europa.eu/a4g/ontology#hasAmountValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#core> .
+<http://data.europa.eu/a4g/ontology#hasAmountValue> <http://www.w3.org/2004/02/skos/core#definition> "The numeric value of the amount, including decimals. (epo:MonetaryValue)"@en .
+<http://data.europa.eu/a4g/ontology#hasAmountValue> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Amount Value"@en .
+<http://data.europa.eu/a4g/ontology#hasCurrency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasCurrency> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#core> .
+<http://data.europa.eu/a4g/ontology#hasCurrency> <http://www.w3.org/2004/02/skos/core#definition> "The identifier of the currency as in the standard code list used."@en .
+<http://data.europa.eu/a4g/ontology#hasCurrency> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Currency"@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentAccountIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasPaymentAccountIdentifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#hasPaymentAccountIdentifier> <http://www.w3.org/2004/02/skos/core#definition> "A unique identifier of the financial payment account, at a payment service provider, to which payment should be made."@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentAccountIdentifier> <http://www.w3.org/2004/02/skos/core#historyNote> "WG Approval 11/07/2024"@en .
+<http://data.europa.eu/a4g/ontology#hasPaymentAccountIdentifier> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Payment Account Identifier"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalPaymentAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#hasTotalPaymentAmount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#pay> .
+<http://data.europa.eu/a4g/ontology#hasTotalPaymentAmount> <http://www.w3.org/2004/02/skos/core#definition> "Relation indicating the overall paid Monetary Value."@en .
+<http://data.europa.eu/a4g/ontology#hasTotalPaymentAmount> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#hasTotalPaymentAmount> <http://www.w3.org/2004/02/skos/core#prefLabel> "has Total Payment Amount"@en .
+<http://data.europa.eu/a4g/ontology#inv> <http://purl.org/dc/terms/created> "2021-06-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#inv> <http://purl.org/dc/terms/description> "The eProcurement Ontology Invoicing core describes the concepts and properties representing the European Public Procurement Invoicing domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en .
+<http://data.europa.eu/a4g/ontology#inv> <http://purl.org/dc/terms/issued> "2025-10-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#inv> <http://purl.org/dc/terms/license> "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." .
+<http://data.europa.eu/a4g/ontology#inv> <http://purl.org/dc/terms/publisher> "http://publications.europa.eu/resource/authority/corporate-body/PUBL" .
+<http://data.europa.eu/a4g/ontology#inv> <http://purl.org/dc/terms/title> "eProcurement Ontology Invoicing - core"@en .
+<http://data.europa.eu/a4g/ontology#inv> <http://purl.org/vocab/vann/preferredNamespacePrefix> "epo" .
+<http://data.europa.eu/a4g/ontology#inv> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.europa.eu/a4g/ontology#" .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2000/01/rdf-schema#comment> "This version is automatically generated from eInvoicing.xml on 2025-10-10" .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2000/01/rdf-schema#label> "eProcurement Ontology Invoicing - core"@en .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://docs.ted.europa.eu/home/index.html> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/OP-TED/ePO/releases> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#core> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/eli/ontology#> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/m8g/> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/dc/terms/> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core#> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2006/time> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/adms> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/locn> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/org#> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/person> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#incompatibleWith> "4.2.0" .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#priorVersion> "http://data.europa.eu/a4g/ontology#inv-5.1.0" .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#versionIRI> <http://data.europa.eu/a4g/ontology#inv-5.2.0> .
+<http://data.europa.eu/a4g/ontology#inv> <http://www.w3.org/2002/07/owl#versionInfo> "5.2.0" .
+<http://data.europa.eu/a4g/ontology#ord> <http://purl.org/dc/terms/created> "2021-06-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#ord> <http://purl.org/dc/terms/description> "The eProcurement Ontology Ordering core describes the concepts and properties representing the European Public Procurement Ordering domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en .
+<http://data.europa.eu/a4g/ontology#ord> <http://purl.org/dc/terms/issued> "2025-10-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#ord> <http://purl.org/dc/terms/license> "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." .
+<http://data.europa.eu/a4g/ontology#ord> <http://purl.org/dc/terms/publisher> "http://publications.europa.eu/resource/authority/corporate-body/PUBL" .
+<http://data.europa.eu/a4g/ontology#ord> <http://purl.org/dc/terms/title> "eProcurement Ontology Ordering - core"@en .
+<http://data.europa.eu/a4g/ontology#ord> <http://purl.org/vocab/vann/preferredNamespacePrefix> "epo" .
+<http://data.europa.eu/a4g/ontology#ord> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.europa.eu/a4g/ontology#" .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2000/01/rdf-schema#comment> "This version is automatically generated from eOrdering.xml on 2025-10-10" .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2000/01/rdf-schema#label> "eProcurement Ontology Ordering - core"@en .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://docs.ted.europa.eu/home/index.html> .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/OP-TED/ePO/releases> .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about> .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#core> .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#ful> .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/eli/ontology#> .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/m8g/> .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/dc/terms/> .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core#> .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2006/time> .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/adms> .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/locn> .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/org#> .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/person> .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#incompatibleWith> "4.2.0" .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#priorVersion> "http://data.europa.eu/a4g/ontology#ord-5.1.0" .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#versionIRI> <http://data.europa.eu/a4g/ontology#ord-5.2.0> .
+<http://data.europa.eu/a4g/ontology#ord> <http://www.w3.org/2002/07/owl#versionInfo> "5.2.0" .
+<http://data.europa.eu/a4g/ontology#pay> <http://purl.org/dc/terms/created> "2021-06-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#pay> <http://purl.org/dc/terms/description> "The eProcurement Ontology Payment core describes the concepts and properties representing the European Public Procurement Payment domain. The provision of these semantics offers the basis for a common understanding of the domain for all stakeholders ensuring the quality of data exchange and transparency. The ontology restrictions are published in a separate artefact."@en .
+<http://data.europa.eu/a4g/ontology#pay> <http://purl.org/dc/terms/issued> "2025-10-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://data.europa.eu/a4g/ontology#pay> <http://purl.org/dc/terms/license> "© European Union, 2014. Unless otherwise noted, the reuse of the Ontology is authorised under the European Union Public Licence v1.2 (https://eupl.eu/)." .
+<http://data.europa.eu/a4g/ontology#pay> <http://purl.org/dc/terms/publisher> "http://publications.europa.eu/resource/authority/corporate-body/PUBL" .
+<http://data.europa.eu/a4g/ontology#pay> <http://purl.org/dc/terms/title> "eProcurement Ontology Payment - core"@en .
+<http://data.europa.eu/a4g/ontology#pay> <http://purl.org/vocab/vann/preferredNamespacePrefix> "epo" .
+<http://data.europa.eu/a4g/ontology#pay> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.europa.eu/a4g/ontology#" .
+<http://data.europa.eu/a4g/ontology#pay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://data.europa.eu/a4g/ontology#pay> <http://www.w3.org/2000/01/rdf-schema#comment> "This version is automatically generated from ePayment.xml on 2025-10-10" .
+<http://data.europa.eu/a4g/ontology#pay> <http://www.w3.org/2000/01/rdf-schema#label> "eProcurement Ontology Payment - core"@en .
+<http://data.europa.eu/a4g/ontology#pay> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://docs.ted.europa.eu/home/index.html> .
+<http://data.europa.eu/a4g/ontology#pay> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/OP-TED/ePO/releases> .
+<http://data.europa.eu/a4g/ontology#pay> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://joinup.ec.europa.eu/collection/eprocurement/solution/eprocurement-ontology/about> .
+<http://data.europa.eu/a4g/ontology#pay> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://op.europa.eu/en/web/eu-vocabularies/e-procurement> .
+<http://data.europa.eu/a4g/ontology#pay> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#cat> .
+<http://data.europa.eu/a4g/ontology#pay> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#core> .
+<http://data.europa.eu/a4g/ontology#pay> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#pay> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/a4g/ontology#ord> .
+<http://data.europa.eu/a4g/ontology#pay> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/eli/ontology#> .
+<http://data.europa.eu/a4g/ontology#pay> <http://www.w3.org/2002/07/owl#imports> <http://data.europa.eu/m8g/> .
+<http://data.europa.eu/a4g/ontology#pay> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/dc/terms/> .
+<http://data.europa.eu/a4g/ontology#pay> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core#> .
+<http://data.europa.eu/a4g/ontology#pay> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2006/time> .
+<http://data.europa.eu/a4g/ontology#pay> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/adms> .
+<http://data.europa.eu/a4g/ontology#pay> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/locn> .
+<http://data.europa.eu/a4g/ontology#pay> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/org#> .
+<http://data.europa.eu/a4g/ontology#pay> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/person> .
+<http://data.europa.eu/a4g/ontology#pay> <http://www.w3.org/2002/07/owl#incompatibleWith> "4.2.0" .
+<http://data.europa.eu/a4g/ontology#pay> <http://www.w3.org/2002/07/owl#priorVersion> "http://data.europa.eu/a4g/ontology#pay-5.1.0" .
+<http://data.europa.eu/a4g/ontology#pay> <http://www.w3.org/2002/07/owl#versionIRI> <http://data.europa.eu/a4g/ontology#pay-5.2.0> .
+<http://data.europa.eu/a4g/ontology#pay> <http://www.w3.org/2002/07/owl#versionInfo> "5.2.0" .
+<http://data.europa.eu/a4g/ontology#refersToInvoice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#refersToInvoice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#pay> .
+<http://data.europa.eu/a4g/ontology#refersToInvoice> <http://www.w3.org/2004/02/skos/core#definition> "Reference to an Invoice."@en .
+<http://data.europa.eu/a4g/ontology#refersToInvoice> <http://www.w3.org/2004/02/skos/core#historyNote> "WG approval 25/09/2025"@en .
+<http://data.europa.eu/a4g/ontology#refersToInvoice> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Invoice"@en .
+<http://data.europa.eu/a4g/ontology#refersToOrder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://data.europa.eu/a4g/ontology#refersToOrder> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/a4g/ontology#inv> .
+<http://data.europa.eu/a4g/ontology#refersToOrder> <http://www.w3.org/2004/02/skos/core#definition> "Reference to an Order."@en .
+<http://data.europa.eu/a4g/ontology#refersToOrder> <http://www.w3.org/2004/02/skos/core#prefLabel> "refers To Order"@en .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://purl.org/dc/terms/abstract> "This ontology defines basic concepts such as payment, payee, payer, and payment schedule, extending the scheduling concepts from the Dates and Times module, among others." .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://purl.org/dc/terms/license> "Copyright (c) 2013-2025 EDM Council, Inc.\nCopyright (c) 2013-2025 Object Management Group, Inc.\n		\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n		\n		See https://opensource.org/licenses/MIT." .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://www.w3.org/2000/01/rdf-schema#label> "Payments and Schedules Ontology" .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://www.w3.org/2002/07/owl#imports> <https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/> .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://www.w3.org/2002/07/owl#imports> <https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Agreements/> .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://www.w3.org/2002/07/owl#imports> <https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/> .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://www.w3.org/2002/07/owl#imports> <https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/> .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://www.w3.org/2002/07/owl#imports> <https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/Occurrences/> .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://www.w3.org/2002/07/owl#imports> <https://spec.edmcouncil.org/fibo/ontology/FND/Law/LegalCapacity/> .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://www.w3.org/2002/07/owl#imports> <https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/> .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://www.w3.org/2002/07/owl#imports> <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/> .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://www.w3.org/2002/07/owl#imports> <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/> .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://www.w3.org/2002/07/owl#imports> <https://www.omg.org/spec/Commons/AnnotationVocabulary/> .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://www.w3.org/2002/07/owl#imports> <https://www.omg.org/spec/Commons/Collections/> .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://www.w3.org/2002/07/owl#imports> <https://www.omg.org/spec/Commons/ContextualDesignators/> .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://www.w3.org/2002/07/owl#imports> <https://www.omg.org/spec/Commons/PartiesAndSituations/> .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://www.w3.org/2002/07/owl#imports> <https://www.omg.org/spec/Commons/RolesAndCompositions/> .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://www.w3.org/2002/07/owl#versionIRI> <https://spec.edmcouncil.org/fibo/ontology/FND/20250701/ProductsAndServices/PaymentsAndSchedules/> .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://www.w3.org/2004/02/skos/core#changeNote> "The https://spec.edmcouncil.org/fibo/ontology/FND/20150801/ProductsAndServices/PaymentsAndSchedules.rdf version of this ontology was modified per the issue resolutions identified in the FIBO FND 1.1 RTF report to replace MoneyAmount with MonetaryAmount." .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://www.w3.org/2004/02/skos/core#changeNote> "The https://spec.edmcouncil.org/fibo/ontology/FND/20160201/ProductsAndServices/PaymentsAndSchedules.rdf version of this ontology was modified per the FIBO 2.0 RFC to make hasPaymentAmount a child of hasMonetaryAmount and move hasObligation and isObligationOf to Agreements." .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://www.w3.org/2004/02/skos/core#changeNote> "The https://spec.edmcouncil.org/fibo/ontology/FND/20181001/ProductsAndServices/PaymentsAndSchedules.rdf version of this ontology was modified to eliminate deprecated elements." .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://www.w3.org/2004/02/skos/core#changeNote> "The https://spec.edmcouncil.org/fibo/ontology/FND/20190901/ProductsAndServices/PaymentsAndSchedules.rdf version of this ontology was modified to revise payments to better support loan requirements and eliminate duplication of concepts in LCC." .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://www.w3.org/2004/02/skos/core#changeNote> "The https://spec.edmcouncil.org/fibo/ontology/FND/20200201/ProductsAndServices/PaymentsAndSchedules.rdf version of this ontology was modified to eliminate remaining circular references." .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://www.w3.org/2004/02/skos/core#changeNote> "The https://spec.edmcouncil.org/fibo/ontology/FND/20210201/ProductsAndServices/PaymentsAndSchedules.rdf version of this ontology was modified to fix spelling errors." .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://www.w3.org/2004/02/skos/core#changeNote> "The https://spec.edmcouncil.org/fibo/ontology/FND/20211201/ProductsAndServices/PaymentsAndSchedules.rdf version of this ontology was modified to clean up the definition and augment the restrictions on payment obligation to include the payee." .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://www.w3.org/2004/02/skos/core#changeNote> "The https://spec.edmcouncil.org/fibo/ontology/FND/20220301/ProductsAndServices/PaymentsAndSchedules.rdf version of the ontology was modified to use the Commons Ontology Library (Commons) Annotation Vocabulary rather than the OMG's Specification Metadata vocabulary." .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://www.w3.org/2004/02/skos/core#changeNote> "The https://spec.edmcouncil.org/fibo/ontology/FND/20230101/ProductsAndServices/PaymentsAndSchedules.rdf version of this ontology was modified to use the Commons Ontology Library (Commons) rather than the OMG's Languages, Countries and Codes (LCC), eliminating redundancies in FIBO as appropriate." .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://www.w3.org/2004/02/skos/core#changeNote> "The https://spec.edmcouncil.org/fibo/ontology/FND/20230301/ProductsAndServices/PaymentsAndSchedules.rdf version of this ontology was modified to replace content that is now available in the OMG Commons Ontology Library (Commons) v1.1 (FND-380)." .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://www.w3.org/2004/02/skos/core#changeNote> "The https://spec.edmcouncil.org/fibo/ontology/FND/20250301/ProductsAndServices/PaymentsAndSchedules.rdf version of this ontology was modified to normalize properties related to payment obligations (DER-55)." .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <http://www.w3.org/2004/02/skos/core#changeNote> "The https://spec.edmcouncil.org/fibo/ontology/FND/20250401/ProductsAndServices/PaymentsAndSchedules.rdf version of the ontology was modified to replace hasConstituent with hasMember for better semantic consistency (FND-396)." .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/hasMaturityLevel> <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Release> .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright> "Copyright (c) 2013-2025 EDM Council, Inc." .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/> <https://www.omg.org/spec/Commons/AnnotationVocabulary/copyright> "Copyright (c) 2013-2025 Object Management Group, Inc." .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/Payee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/Payee> <http://www.w3.org/2000/01/rdf-schema#label> "payee" .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/Payee> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Agreements/Obligee> .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/Payee> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:cb11abc825fc022d8780f6a9a22490d46f7352ac54e01733b9c219b452c1539b2d0 .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/Payee> <http://www.w3.org/2004/02/skos/core#definition> "a party to whom a debt should be paid, or to whose order a bill of exchange, note, or check is made payable, or who receives or will receive a payment from a payer in partial or complete fulfillment of an obligation" .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/Payment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/Payment> <http://www.w3.org/2000/01/rdf-schema#label> "payment" .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/Payment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/Occurrences/Occurrence> .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/Payment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:cb14a6f09ec07f39031180deefad402999b92bd96d2678178e8958b70aa07ab508c .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/Payment> <http://www.w3.org/2004/02/skos/core#definition> "delivery of money in fulfillment of an obligation, such as to satisfy a claim or debt" .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/PaymentObligation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/PaymentObligation> <http://www.w3.org/2000/01/rdf-schema#label> "payment obligation" .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/PaymentObligation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Agreements/Commitment> .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/PaymentObligation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://spec.edmcouncil.org/fibo/ontology/FND/Law/LegalCapacity/Duty> .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/PaymentObligation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:cb1648fc40935cfbb00d7bfd0c52a6e8eb57ac842435a45933f3ef171700b6dd425 .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/PaymentObligation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:cb19f7cc825795c31fdcab81a907d4def9e8d3ecb4d139ffc22166c5ce02abb5377 .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/PaymentObligation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:cb1da7ef6d352f4210a1df337447711467bdc382b5aa7ab6cb0646156061a42104f .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/PaymentObligation> <http://www.w3.org/2004/02/skos/core#definition> "legally enforceable duty to pay a sum of money according to the terms stated in a contract" .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/PaymentObligation> <http://www.w3.org/2004/02/skos/core#example> "the duty of a borrower to repay a loan, related to the legal right of a lender to enforce payment" .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/fulfillsObligation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/fulfillsObligation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/Payment> .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/fulfillsObligation> <http://www.w3.org/2000/01/rdf-schema#label> "fulfills obligation" .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/fulfillsObligation> <http://www.w3.org/2000/01/rdf-schema#range> <https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/PaymentObligation> .
+<https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/fulfillsObligation> <http://www.w3.org/2004/02/skos/core#definition> "satisfies a requirement for payment of some claim, debt, or other obligation" .
+_:cb11abc825fc022d8780f6a9a22490d46f7352ac54e01733b9c219b452c1539b2d0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:cb11abc825fc022d8780f6a9a22490d46f7352ac54e01733b9c219b452c1539b2d0 <http://www.w3.org/2002/07/owl#onProperty> <https://www.omg.org/spec/Commons/RolesAndCompositions/isPlayedBy> .
+_:cb11abc825fc022d8780f6a9a22490d46f7352ac54e01733b9c219b452c1539b2d0 <http://www.w3.org/2002/07/owl#someValuesFrom> _:cbddbaf7fdaf1fb9fcff5a0bde9308249a097a9691a50583a9ba673b1b281badfc .
+_:cb14a6f09ec07f39031180deefad402999b92bd96d2678178e8958b70aa07ab508c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:cb14a6f09ec07f39031180deefad402999b92bd96d2678178e8958b70aa07ab508c <http://www.w3.org/2002/07/owl#onProperty> <https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/hasPaymentAmount> .
+_:cb14a6f09ec07f39031180deefad402999b92bd96d2678178e8958b70aa07ab508c <http://www.w3.org/2002/07/owl#someValuesFrom> <https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/MonetaryAmount> .
+_:cb1648fc40935cfbb00d7bfd0c52a6e8eb57ac842435a45933f3ef171700b6dd425 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:cb1648fc40935cfbb00d7bfd0c52a6e8eb57ac842435a45933f3ef171700b6dd425 <http://www.w3.org/2002/07/owl#onProperty> <https://www.omg.org/spec/Commons/PartiesAndSituations/hasPartyRole> .
+_:cb1648fc40935cfbb00d7bfd0c52a6e8eb57ac842435a45933f3ef171700b6dd425 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/Payee> .
+_:cb19f7cc825795c31fdcab81a907d4def9e8d3ecb4d139ffc22166c5ce02abb5377 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:cb19f7cc825795c31fdcab81a907d4def9e8d3ecb4d139ffc22166c5ce02abb5377 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/Contract> .
+_:cb19f7cc825795c31fdcab81a907d4def9e8d3ecb4d139ffc22166c5ce02abb5377 <http://www.w3.org/2002/07/owl#onProperty> <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/isConferredBy> .
+_:cb1da7ef6d352f4210a1df337447711467bdc382b5aa7ab6cb0646156061a42104f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:cb1da7ef6d352f4210a1df337447711467bdc382b5aa7ab6cb0646156061a42104f <http://www.w3.org/2002/07/owl#onProperty> <https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Agreements/isObligationOf> .
+_:cb1da7ef6d352f4210a1df337447711467bdc382b5aa7ab6cb0646156061a42104f <http://www.w3.org/2002/07/owl#someValuesFrom> <https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/Payer> .
+_:cbddbaf7fdaf1fb9fcff5a0bde9308249a097a9691a50583a9ba673b1b281badfc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:cbddbaf7fdaf1fb9fcff5a0bde9308249a097a9691a50583a9ba673b1b281badfc <http://www.w3.org/2002/07/owl#onProperty> <https://www.omg.org/spec/Commons/PartiesAndSituations/isAPartyTo> .
+_:cbddbaf7fdaf1fb9fcff5a0bde9308249a097a9691a50583a9ba673b1b281badfc <http://www.w3.org/2002/07/owl#someValuesFrom> <https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/PaymentObligation> .

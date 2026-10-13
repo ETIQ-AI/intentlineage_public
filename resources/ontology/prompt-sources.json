@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "sources": [
+    {
+      "id": "fibo:CurrencyAmount",
+      "family": "fibo",
+      "version": "master_2026Q2",
+      "commit": "f59157fe156e3d91b1c045222d0a7dc06b7d78a2",
+      "url": "https://raw.githubusercontent.com/edmcouncil/fibo/f59157fe156e3d91b1c045222d0a7dc06b7d78a2/FND/Accounting/CurrencyAmount.rdf",
+      "file": "upstream/fibo/CurrencyAmount.rdf",
+      "sha256": "fe5b6c81be202255d76f0ad61c7fedbcbed08a6e7bd1fcd9a491fe568db7cfce",
+      "licence": "MIT",
+      "licence_file": "licenses/fibo-LICENSE",
+      "imports_resolved": false
+    }
+  ]
+}

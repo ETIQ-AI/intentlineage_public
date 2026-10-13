@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "intentlineage"
+version = "0.1.0"
+description = "Intent propagation research harness built on Etiq execution evidence"
+readme = "README.md"
+requires-python = ">=3.11"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = ["--import-mode=importlib", "--strict-markers"]
+markers = ["integration: executes the real supported Etiq capture path", "offline_boundary: actual network-denied WSL Bubblewrap preparation checks"]

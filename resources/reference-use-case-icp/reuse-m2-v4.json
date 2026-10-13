@@ -1,0 +1,255 @@
+{
+  "adaptations": [
+    {
+      "additional_local_definitions": {
+        "_run_treatment": "f36b13cc4b59659803ea29a84f6cc35c37eab5f57cbe3e2fb6840de1c207ed79"
+      },
+      "changes": "Adapt advertised opening/inspection and fresh follow-up loop to five payment arms, joint responses, frozen budgets and complete raw failure/call records. F01/F02: shared strict raw-alias validation and transcript-derived arm-policy replay; no claim these stricter guards are upstream behaviour.",
+      "compatibility_tests": [
+        "tests/test_m2_v4_boundaries.py",
+        "tests/test_m2_v4_review.py",
+        "tests/test_m2_v4_tester_corrections.py",
+        "tests/test_m2_v4_usage.py"
+      ],
+      "local": {
+        "definition_sha256": "a2b21639c55aed006a7e5c1ba0b31891ac44e0db5dcbc567aaafffc64e9b8706",
+        "end_line": 266,
+        "file_sha256": "b3b8b378d6e7a239197c6875821563479e45aad05076af5b5816aa976d0be0a8",
+        "start_line": 248
+      },
+      "local_definition": "run_review_session",
+      "local_path": "src/intentlineage/review_runner.py",
+      "snapshot": "resources/reference-use-case-icp/upstream/n27pb_experiment.py",
+      "upstream": {
+        "definition_sha256": "475823320275c89f9101d9167ed5745d5a71b079604ef1e25fc80ed3a06fde98",
+        "end_line": 1535,
+        "file_sha256": "b1a86b317b588f8fd19c25662f8bf6c53c96e7109bbb2c686a99db25cde1298b",
+        "start_line": 1444
+      },
+      "upstream_definition": "run_review_session",
+      "upstream_path": "src/use_case_icp/n27pb_experiment.py"
+    },
+    {
+      "additional_local_definitions": {
+        "_run_control": "44727b5cc0f711b0cbab8e5e8358d416efe4ea2b83f2a9c5f666896cf5fdeea9"
+      },
+      "changes": "Adapt P12 reconsideration branch: neutral fresh requests and before/after unchanged evidence hashes; match actual paired count rather than two fixed passes. F01/F02: shared strict raw-alias validation and transcript-derived arm-policy replay; no claim these stricter guards are upstream behaviour.",
+      "compatibility_tests": [
+        "tests/test_m2_v4_boundaries.py",
+        "tests/test_m2_v4_review.py",
+        "tests/test_m2_v4_tester_corrections.py",
+        "tests/test_m2_v4_usage.py"
+      ],
+      "local": {
+        "definition_sha256": "1f2da0153f0b93d1ae4c65e2cbfd4f105cd89f6414936cc1d8d2db30cf413b25",
+        "end_line": 344,
+        "file_sha256": "b3b8b378d6e7a239197c6875821563479e45aad05076af5b5816aa976d0be0a8",
+        "start_line": 337
+      },
+      "local_definition": "reconsider_same_evidence",
+      "local_path": "src/intentlineage/review_runner.py",
+      "snapshot": "resources/reference-use-case-icp/upstream/n27pb_experiment.py",
+      "upstream": {
+        "definition_sha256": "475823320275c89f9101d9167ed5745d5a71b079604ef1e25fc80ed3a06fde98",
+        "end_line": 1535,
+        "file_sha256": "b1a86b317b588f8fd19c25662f8bf6c53c96e7109bbb2c686a99db25cde1298b",
+        "start_line": 1444
+      },
+      "upstream_definition": "run_review_session",
+      "upstream_path": "src/use_case_icp/n27pb_experiment.py"
+    },
+    {
+      "changes": "Adapt eligible visible artifact gate and result/receipt handling by calling M1 signed bounded describe/read; prohibit Python.",
+      "compatibility_tests": [
+        "tests/test_m2_v4_review.py",
+        "tests/test_m2_v4_boundaries.py"
+      ],
+      "local": {
+        "definition_sha256": "95dfb5f92340f669bfaaee5b9efd0cdada9cdf4194d2ef528c1223141808f419",
+        "end_line": 52,
+        "file_sha256": "1ea00eaee797d2e315285c6ea867aa30379f5cf8b52a5a687882212c47ceb2ca",
+        "start_line": 11
+      },
+      "local_definition": "disclose",
+      "local_path": "src/intentlineage/review_disclosure.py",
+      "snapshot": "resources/reference-use-case-icp/upstream/n27pb_experiment.py",
+      "upstream": {
+        "definition_sha256": "0bce45a7341296f06fe972319f61d97ef86fe2d1c77f547a0e1910d1df1f09e0",
+        "end_line": 1434,
+        "file_sha256": "b1a86b317b588f8fd19c25662f8bf6c53c96e7109bbb2c686a99db25cde1298b",
+        "start_line": 1389
+      },
+      "upstream_definition": "inspect_artifact",
+      "upstream_path": "src/use_case_icp/n27pb_experiment.py"
+    },
+    {
+      "changes": "Reuse M1 open_group adaptation directly; batch exact native additions, recompute visible description and bind operation receipts to specific questions.",
+      "compatibility_tests": [
+        "tests/test_m2_v4_review.py",
+        "tests/test_m2_v4_boundaries.py"
+      ],
+      "local": {
+        "definition_sha256": "95dfb5f92340f669bfaaee5b9efd0cdada9cdf4194d2ef528c1223141808f419",
+        "end_line": 52,
+        "file_sha256": "1ea00eaee797d2e315285c6ea867aa30379f5cf8b52a5a687882212c47ceb2ca",
+        "start_line": 11
+      },
+      "local_definition": "disclose",
+      "local_path": "src/intentlineage/review_disclosure.py",
+      "snapshot": "resources/reference-use-case-icp/upstream/n27pb_experiment.py",
+      "upstream": {
+        "definition_sha256": "ee62a2a2b0d3912e37cdbd1dce96444bd62db46f6486ac15c68d7e1b912d7f47",
+        "end_line": 795,
+        "file_sha256": "b1a86b317b588f8fd19c25662f8bf6c53c96e7109bbb2c686a99db25cde1298b",
+        "start_line": 756
+      },
+      "upstream_definition": "expand_native_subtree",
+      "upstream_path": "src/use_case_icp/n27pb_experiment.py"
+    },
+    {
+      "changes": "Adapt identical-common-evidence and identical-starting-graph checks to E/R-H/H/R-A/A; full source excluded and inventory retained.",
+      "compatibility_tests": [
+        "tests/test_m2_v4_review.py",
+        "tests/test_m2_v4_boundaries.py"
+      ],
+      "local": {
+        "definition_sha256": "00188c39ca3a52855a7384834833cdcd754a8a96a4063ffa40ff66cb14df76a3",
+        "end_line": 99,
+        "file_sha256": "4c8f9189f30f1236503ff3cba2078dc6b3ab238334d73c2f27bc2780d3591d22",
+        "start_line": 49
+      },
+      "local_definition": "build_review_plan",
+      "local_path": "src/intentlineage/review_batches.py",
+      "snapshot": "resources/reference-use-case-icp/upstream/n27phb_experiment.py",
+      "upstream": {
+        "definition_sha256": "868ced7bdb2924672da0efcbc391efd3c98b37b97381b2800eef232b810718be",
+        "end_line": 1067,
+        "file_sha256": "63b0445cc635c15b86ab116b8e8d7aef6125ce2f700fd4c1eecb8d5e1dd4758b",
+        "start_line": 1049
+      },
+      "upstream_definition": "_pairwise_checks",
+      "upstream_path": "src/use_case_icp/n27phb_experiment.py"
+    },
+    {
+      "changes": "Adapt fresh private invocation directories, exact request/schema copies, manifest and explicit no-history policy; no hosted invocation or isolation certification. F01/F02: shared strict raw-alias validation and transcript-derived arm-policy replay; no claim these stricter guards are upstream behaviour.",
+      "compatibility_tests": [
+        "tests/test_m2_v4_boundaries.py",
+        "tests/test_m2_v4_review.py",
+        "tests/test_m2_v4_tester_corrections.py",
+        "tests/test_m2_v4_usage.py"
+      ],
+      "local": {
+        "definition_sha256": "6e2af36f0b9dbea855ec39599a0aaaca3d46695010f616f8629986f69befb0af",
+        "end_line": 58,
+        "file_sha256": "b3b8b378d6e7a239197c6875821563479e45aad05076af5b5816aa976d0be0a8",
+        "start_line": 49
+      },
+      "local_definition": "prepare_invocation",
+      "local_path": "src/intentlineage/review_runner.py",
+      "snapshot": "resources/reference-use-case-icp/upstream/codex_runner.py",
+      "upstream": {
+        "definition_sha256": "3d4062558910d28beb45fc125f2c436ee21ba07e699eff0d6e8d82ff120c50a7",
+        "end_line": 429,
+        "file_sha256": "d2a690828093ca0e119e73402128b1058e2f6787a75f8fbb6e87506353b97aad",
+        "start_line": 267
+      },
+      "upstream_definition": "CodexRunner.run",
+      "upstream_path": "src/use_case_icp/codex_runner.py"
+    },
+    {
+      "changes": "Adapt reported event usage extraction with strict nonnegative counts and unknown usage retained. M2-O01 retains the latest partial/malformed receipt and its exact raw metadata; shared review_usage distinguishes reported and derived counts without older-receipt backfill. F01/F02: shared strict raw-alias validation and transcript-derived arm-policy replay; no claim these stricter guards are upstream behaviour.",
+      "compatibility_tests": [
+        "tests/test_m2_v4_boundaries.py",
+        "tests/test_m2_v4_delivery.py",
+        "tests/test_m2_v4_tester_corrections.py",
+        "tests/test_m2_v4_usage.py"
+      ],
+      "local": {
+        "definition_sha256": "cfa341615b120ac0972588945f7d68b9ae909189e577a59204aef24947627fc1",
+        "end_line": 111,
+        "file_sha256": "5a75148b1ee0cba796c8f1afe81c8cf31d720108a3182fdb3e9f5138e14779b3",
+        "start_line": 100
+      },
+      "local_definition": "_usage_candidates",
+      "local_path": "src/intentlineage/review_provider.py",
+      "snapshot": "resources/reference-use-case-icp/upstream/codex_runner.py",
+      "upstream": {
+        "definition_sha256": "d3befa1d58045e8c7f9a8448ffc5ccd627bd040bf394e1c93c8cdcdb029041d4",
+        "end_line": 207,
+        "file_sha256": "d2a690828093ca0e119e73402128b1058e2f6787a75f8fbb6e87506353b97aad",
+        "start_line": 198
+      },
+      "upstream_definition": "_usage_candidates",
+      "upstream_path": "src/use_case_icp/codex_runner.py"
+    },
+    {
+      "changes": "Adapt reported event usage extraction with strict nonnegative counts and unknown usage retained. M2-O01 retains the latest partial/malformed receipt and its exact raw metadata; shared review_usage distinguishes reported and derived counts without older-receipt backfill. F01/F02: shared strict raw-alias validation and transcript-derived arm-policy replay; no claim these stricter guards are upstream behaviour.",
+      "compatibility_tests": [
+        "tests/test_m2_v4_boundaries.py",
+        "tests/test_m2_v4_delivery.py",
+        "tests/test_m2_v4_tester_corrections.py",
+        "tests/test_m2_v4_usage.py"
+      ],
+      "local": {
+        "definition_sha256": "00deec2ba21cd161625d32749ee39540221404308c15496a96110a52d4753e35",
+        "end_line": 123,
+        "file_sha256": "5a75148b1ee0cba796c8f1afe81c8cf31d720108a3182fdb3e9f5138e14779b3",
+        "start_line": 114
+      },
+      "local_definition": "extract_usage",
+      "local_path": "src/intentlineage/review_provider.py",
+      "snapshot": "resources/reference-use-case-icp/upstream/codex_runner.py",
+      "upstream": {
+        "definition_sha256": "a41bcaadbcd5ecae51cce7895894425accd6870fde5d3dd6ea25100fb2e5cac4",
+        "end_line": 248,
+        "file_sha256": "d2a690828093ca0e119e73402128b1058e2f6787a75f8fbb6e87506353b97aad",
+        "start_line": 210
+      },
+      "upstream_definition": "extract_usage",
+      "upstream_path": "src/use_case_icp/codex_runner.py"
+    },
+    {
+      "changes": "Adapt fresh explicit model/schema/ephemeral/config-ignore argv into a human-only template; inspect local CLI 0.160.0, no launch or isolation certification. F01/F02: shared strict raw-alias validation and transcript-derived arm-policy replay; no claim these stricter guards are upstream behaviour.",
+      "compatibility_tests": [
+        "tests/test_m2_v4_boundaries.py",
+        "tests/test_m2_v4_delivery.py",
+        "tests/test_m2_v4_tester_corrections.py",
+        "tests/test_m2_v4_usage.py"
+      ],
+      "local": {
+        "definition_sha256": "eb795b81a0a2681a68db706e9e9be18ab210c6c493a73e44b20c486b700378d1",
+        "end_line": 71,
+        "file_sha256": "5a75148b1ee0cba796c8f1afe81c8cf31d720108a3182fdb3e9f5138e14779b3",
+        "start_line": 47
+      },
+      "local_definition": "prepare_provider_command",
+      "local_path": "src/intentlineage/review_provider.py",
+      "snapshot": "resources/reference-use-case-icp/upstream/codex_runner.py",
+      "upstream": {
+        "definition_sha256": "3d4062558910d28beb45fc125f2c436ee21ba07e699eff0d6e8d82ff120c50a7",
+        "end_line": 429,
+        "file_sha256": "d2a690828093ca0e119e73402128b1058e2f6787a75f8fbb6e87506353b97aad",
+        "start_line": 267
+      },
+      "upstream_definition": "CodexRunner.run",
+      "upstream_path": "src/use_case_icp/codex_runner.py"
+    }
+  ],
+  "commit": "5bd37b1ca3e49e940fc885839fa56411203afee0",
+  "corrected_contracts": {
+    "historical": "4.0/4.1 retained under archived producers, not corrected-current replay",
+    "matrix": "m2-matrix.4.2",
+    "session": "m2-session.4.2"
+  },
+  "definition_hash_scheme": "SHA-256 of complete raw UTF-8 AST line span including original line endings and final newline. M1 reuse-v4 hashes instead use normalized ast.get_source_segment without final newline.",
+  "isolation": "n05 provider-capable Bubblewrap inspected. Actual boundary implementation and qualification remain M3; fresh invocation folders are not enforced isolation.",
+  "licence_status": "No top-level licence located; authorized local adaptation only; redistribution terms unresolved.",
+  "m1_reused_unchanged": [
+    "evidence_inventory.inventory_from_spec",
+    "evidence_packages.build_packages",
+    "artifact_views.open_group",
+    "artifact_views.inspect_artifact",
+    "artifact_views.cached_summary"
+  ],
+  "repository": "https://github.com/raluca07/use_case_icp"
+}

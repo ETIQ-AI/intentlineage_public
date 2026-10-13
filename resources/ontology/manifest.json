@@ -1,0 +1,204 @@
+{
+  "version": "1.0.0",
+  "sources": [
+    {
+      "id": "epo:ePayment",
+      "family": "epo",
+      "version": "v5.2.0",
+      "commit": "2276eb5638bac5f66c80ec133bc6a24d0fdd5b76",
+      "upstream_path": "implementation/ePayment/owl_ontology/ePayment.ttl",
+      "url": "https://raw.githubusercontent.com/OP-TED/ePO/2276eb5638bac5f66c80ec133bc6a24d0fdd5b76/implementation/ePayment/owl_ontology/ePayment.ttl",
+      "file": "upstream/epo/ePayment.ttl",
+      "sha256": "4169349bbe94c5e5ca64b3b49a93e09c6ba4acbd358c0685ff081424c499131a",
+      "licence": "EUPL-1.2",
+      "licence_file": "licenses/epo-LICENSE",
+      "imports_resolved": false
+    },
+    {
+      "id": "epo:eInvoicing",
+      "family": "epo",
+      "version": "v5.2.0",
+      "commit": "2276eb5638bac5f66c80ec133bc6a24d0fdd5b76",
+      "upstream_path": "implementation/eInvoicing/owl_ontology/eInvoicing.ttl",
+      "url": "https://raw.githubusercontent.com/OP-TED/ePO/2276eb5638bac5f66c80ec133bc6a24d0fdd5b76/implementation/eInvoicing/owl_ontology/eInvoicing.ttl",
+      "file": "upstream/epo/eInvoicing.ttl",
+      "sha256": "71011461d2220103f6ad83727922d460701e85e343e716603f7036f03db04de0",
+      "licence": "EUPL-1.2",
+      "licence_file": "licenses/epo-LICENSE",
+      "imports_resolved": false
+    },
+    {
+      "id": "epo:eOrdering",
+      "family": "epo",
+      "version": "v5.2.0",
+      "commit": "2276eb5638bac5f66c80ec133bc6a24d0fdd5b76",
+      "upstream_path": "implementation/eOrdering/owl_ontology/eOrdering.ttl",
+      "url": "https://raw.githubusercontent.com/OP-TED/ePO/2276eb5638bac5f66c80ec133bc6a24d0fdd5b76/implementation/eOrdering/owl_ontology/eOrdering.ttl",
+      "file": "upstream/epo/eOrdering.ttl",
+      "sha256": "eb0d543c9c9e4e2a3660e8a01af8dbadb37e339c00f3fc67365cdc1c5f3d8f60",
+      "licence": "EUPL-1.2",
+      "licence_file": "licenses/epo-LICENSE",
+      "imports_resolved": false
+    },
+    {
+      "id": "epo:ePO_core",
+      "family": "epo",
+      "version": "v5.2.0",
+      "commit": "2276eb5638bac5f66c80ec133bc6a24d0fdd5b76",
+      "upstream_path": "implementation/ePO_core/owl_ontology/ePO_core.ttl",
+      "url": "https://raw.githubusercontent.com/OP-TED/ePO/2276eb5638bac5f66c80ec133bc6a24d0fdd5b76/implementation/ePO_core/owl_ontology/ePO_core.ttl",
+      "file": "upstream/epo/ePO_core.ttl",
+      "sha256": "a9e1e8d6a482df087d3df863241b9d5ecee540069d6fbd5503da038f160cf69e",
+      "licence": "EUPL-1.2",
+      "licence_file": "licenses/epo-LICENSE",
+      "imports_resolved": false
+    },
+    {
+      "id": "fibo:PaymentsAndSchedules",
+      "family": "fibo",
+      "version": "master_2026Q2",
+      "commit": "f59157fe156e3d91b1c045222d0a7dc06b7d78a2",
+      "upstream_path": "FND/ProductsAndServices/PaymentsAndSchedules.rdf",
+      "url": "https://raw.githubusercontent.com/edmcouncil/fibo/f59157fe156e3d91b1c045222d0a7dc06b7d78a2/FND/ProductsAndServices/PaymentsAndSchedules.rdf",
+      "file": "upstream/fibo/PaymentsAndSchedules.rdf",
+      "sha256": "7f9f6645a2e8e5387cd0d4dd9f5ba28c053283acb47bd37595851d7919d75dc0",
+      "licence": "MIT",
+      "licence_file": "licenses/fibo-LICENSE",
+      "imports_resolved": false
+    }
+  ],
+  "bindings": [
+    {
+      "key": "epo:PaymentInformation",
+      "iri": "http://data.europa.eu/a4g/ontology#PaymentInformation",
+      "source_id": "epo:ePayment",
+      "declaration_line": 10
+    },
+    {
+      "key": "epo:hasTotalPaymentAmount",
+      "iri": "http://data.europa.eu/a4g/ontology#hasTotalPaymentAmount",
+      "source_id": "epo:ePayment",
+      "declaration_line": 100
+    },
+    {
+      "key": "epo:refersToInvoice",
+      "iri": "http://data.europa.eu/a4g/ontology#refersToInvoice",
+      "source_id": "epo:ePayment",
+      "declaration_line": 106
+    },
+    {
+      "key": "epo:Invoice",
+      "iri": "http://data.europa.eu/a4g/ontology#Invoice",
+      "source_id": "epo:eInvoicing",
+      "declaration_line": 436
+    },
+    {
+      "key": "epo:CreditTransferInformation",
+      "iri": "http://data.europa.eu/a4g/ontology#CreditTransferInformation",
+      "source_id": "epo:eInvoicing",
+      "declaration_line": 24
+    },
+    {
+      "key": "epo:Payee",
+      "iri": "http://data.europa.eu/a4g/ontology#Payee",
+      "source_id": "epo:eInvoicing",
+      "declaration_line": 37
+    },
+    {
+      "key": "epo:hasPaymentAccountIdentifier",
+      "iri": "http://data.europa.eu/a4g/ontology#hasPaymentAccountIdentifier",
+      "source_id": "epo:eInvoicing",
+      "declaration_line": 164
+    },
+    {
+      "key": "epo:hasAmountDueForPayment",
+      "iri": "http://data.europa.eu/a4g/ontology#hasAmountDueForPayment",
+      "source_id": "epo:eInvoicing",
+      "declaration_line": 82
+    },
+    {
+      "key": "epo:refersToOrder",
+      "iri": "http://data.europa.eu/a4g/ontology#refersToOrder",
+      "source_id": "epo:eInvoicing",
+      "declaration_line": 371
+    },
+    {
+      "key": "epo:Order",
+      "iri": "http://data.europa.eu/a4g/ontology#Order",
+      "source_id": "epo:eOrdering",
+      "declaration_line": 639
+    },
+    {
+      "key": "epo:MonetaryValue",
+      "iri": "http://data.europa.eu/a4g/ontology#MonetaryValue",
+      "source_id": "epo:ePO_core",
+      "declaration_line": 401
+    },
+    {
+      "key": "epo:hasAmountValue",
+      "iri": "http://data.europa.eu/a4g/ontology#hasAmountValue",
+      "source_id": "epo:ePO_core",
+      "declaration_line": 1465
+    },
+    {
+      "key": "epo:hasCurrency",
+      "iri": "http://data.europa.eu/a4g/ontology#hasCurrency",
+      "source_id": "epo:ePO_core",
+      "declaration_line": 1778
+    },
+    {
+      "key": "epo:MaskableObject",
+      "iri": "http://data.europa.eu/a4g/ontology#MaskableObject",
+      "source_id": "epo:ePO_core",
+      "declaration_line": 4549
+    },
+    {
+      "key": "fibo:Payment",
+      "iri": "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/Payment",
+      "source_id": "fibo:PaymentsAndSchedules",
+      "declaration_line": 122
+    },
+    {
+      "key": "fibo:PaymentObligation",
+      "iri": "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/PaymentObligation",
+      "source_id": "fibo:PaymentsAndSchedules",
+      "declaration_line": 154
+    },
+    {
+      "key": "fibo:Payee",
+      "iri": "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/Payee",
+      "source_id": "fibo:PaymentsAndSchedules",
+      "declaration_line": 93
+    },
+    {
+      "key": "fibo:fulfillsObligation",
+      "iri": "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/fulfillsObligation",
+      "source_id": "fibo:PaymentsAndSchedules",
+      "declaration_line": 193
+    }
+  ],
+  "local_extensions": [
+    {
+      "key": "approval_revision",
+      "iri": "urn:intentlineage:approvalRevision",
+      "definition": "Approval binds the exact payment revision and all authorised fields.",
+      "source": "local-payment-policy",
+      "version": "1.0.0"
+    }
+  ],
+  "unresolved": [
+    "bank_account_ownership_proof"
+  ],
+  "reference_only": [
+    "P2P-O"
+  ],
+  "engine": {
+    "package": "open-ontologies-lite",
+    "version": "0.5.0",
+    "source_commit": "c729e7a31da0a10886d3d832a3415ff66ffc9e5b",
+    "source_tag": "py-v0.5.0",
+    "licence": "MIT",
+    "selected_path": "Python API",
+    "cli_executed": false
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "repository": "https://github.com/raluca07/use_case_icp",
+  "commit": "5bd37b1ca3e49e940fc885839fa56411203afee0",
+  "reviewed_on": "2026-10-08",
+  "inspection": "static source inspection; reference code/tests/model calls not executed",
+  "licence_status": "No top-level licence located; retain provenance/notices for authorized local reuse and resolve redistribution terms at any future publication boundary.",
+  "files": {
+    "README.md": "87af1a13d0f5e78e1dc79f5967aa98cd8e35d99f9e8eabffea0845c6e1eca1c7",
+    "src/use_case_icp/etiq_worker.py": "a83525d2936a0f2de27858b17364bc3d696ae1c3d373e39c13a7c1691b9535ea",
+    "src/use_case_icp/etiq_executor.py": "87b5b76eb2f9601233683f9d328498fc662b0e0e867adb649e216f95dce8d8ec",
+    "src/use_case_icp/etiq_graph.py": "bb1c157a53f36a8ba462a384592b12bf19c9d6dc82e1beac1c58c7ae425970d3",
+    "src/use_case_icp/codex_runner.py": "d2a690828093ca0e119e73402128b1058e2f6787a75f8fbb6e87506353b97aad",
+    "src/use_case_icp/n05_runner.py": "690cbe736cba54f8720a9366d4dde39bda2aaadba210f5746049879bc6d94341",
+    "src/use_case_icp/n27phb_experiment.py": "63b0445cc635c15b86ab116b8e8d7aef6125ce2f700fd4c1eecb8d5e1dd4758b",
+    "src/use_case_icp/n27phf_experiment.py": "934ca64ded58f679796d3a3e1f7bdf5ed629319c5552aa62efd9bcaed816d170",
+    "docs/experiments/attempt-057/PROTOCOL.md": "0b4a5ccb8ab2f42edd33169e9e69b0c8e987748e2176d803a36b441d0de1e16b",
+    "docs/experiments/attempt-057/RUN.md": "0d4dbb7bc8bf837a512bfc9d232aa78cfc117b08b2ecb9295550123730d38aa7",
+    "src/use_case_icp/n27pb_experiment.py": "b1a86b317b588f8fd19c25662f8bf6c53c96e7109bbb2c686a99db25cde1298b",
+    "src/use_case_icp/fault_operations.py": "da575cd834c9a9e7427e33148ef832897a4969ff602ef2ee0bc30c8b9224551a"
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "version": "2.0.0",
+  "split": "extraction_instruction_examples_only",
+  "frozen_before_development_model_execution": true,
+  "examples": [
+    {
+      "text": "Pay invoice DEMO-11 for USD 12.34 to supplier DEMO-S using account DEMO-A and order DEMO-PO. Keep the amount unchanged. Keep the supplier account unchanged. Require approval of the current revision. Carry these requirements and reconcile the receipt.",
+      "extractions": [
+        {
+          "extraction_class": "goal",
+          "extraction_text": "Pay",
+          "attributes": {
+            "action": "pay"
+          }
+        },
+        {
+          "extraction_class": "object",
+          "extraction_text": "invoice",
+          "attributes": {
+            "ontology_term": "Invoice"
+          }
+        },
+        {
+          "extraction_class": "parameter",
+          "extraction_text": "DEMO-11",
+          "attributes": {
+            "field": "invoice_id",
+            "value": "DEMO-11"
+          }
+        },
+        {
+          "extraction_class": "parameter",
+          "extraction_text": "USD",
+          "attributes": {
+            "field": "currency",
+            "value": "USD"
+          }
+        },
+        {
+          "extraction_class": "parameter",
+          "extraction_text": "12.34",
+          "attributes": {
+            "field": "amount",
+            "value": "12.34"
+          }
+        },
+        {
+          "extraction_class": "parameter",
+          "extraction_text": "DEMO-S",
+          "attributes": {
+            "field": "supplier_id",
+            "value": "DEMO-S"
+          }
+        },
+        {
+          "extraction_class": "parameter",
+          "extraction_text": "DEMO-A",
+          "attributes": {
+            "field": "account_id",
+            "value": "DEMO-A"
+          }
+        },
+        {
+          "extraction_class": "parameter",
+          "extraction_text": "DEMO-PO",
+          "attributes": {
+            "field": "purchase_order_id",
+            "value": "DEMO-PO"
+          }
+        },
+        {
+          "extraction_class": "constraint",
+          "extraction_text": "Keep the amount unchanged",
+          "attributes": {
+            "operator": "preserve",
+            "field": "amount"
+          }
+        },
+        {
+          "extraction_class": "constraint",
+          "extraction_text": "Keep the supplier account unchanged",
+          "attributes": {
+            "operator": "preserve",
+            "field": "account_id"
+          }
+        },
+        {
+          "extraction_class": "constraint",
+          "extraction_text": "Require approval of the current revision",
+          "attributes": {
+            "operator": "bind",
+            "field": "revision"
+          }
+        },
+        {
+          "extraction_class": "constraint",
+          "extraction_text": "Carry these requirements",
+          "attributes": {
+            "operator": "carry"
+          }
+        },
+        {
+          "extraction_class": "constraint",
+          "extraction_text": "reconcile the receipt",
+          "attributes": {
+            "operator": "reconcile"
+          }
+        }
+      ]
+    },
+    {
+      "text": "Do not pay invoice DEMO-N. Prepare a draft only. Email the receipt only if the order matches.",
+      "extractions": [
+        {
+          "extraction_class": "goal",
+          "extraction_text": "Do not pay",
+          "attributes": {
+            "action": "pay",
+            "negated": true
+          }
+        },
+        {
+          "extraction_class": "object",
+          "extraction_text": "invoice",
+          "attributes": {
+            "ontology_term": "Invoice"
+          }
+        },
+        {
+          "extraction_class": "parameter",
+          "extraction_text": "DEMO-N",
+          "attributes": {
+            "field": "invoice_id",
+            "value": "DEMO-N"
+          }
+        },
+        {
+          "extraction_class": "goal",
+          "extraction_text": "Prepare a draft only",
+          "attributes": {
+            "action": "draft"
+          }
+        },
+        {
+          "extraction_class": "goal",
+          "extraction_text": "Email the receipt",
+          "attributes": {
+            "action": "email"
+          }
+        },
+        {
+          "extraction_class": "condition",
+          "extraction_text": "only if the order matches",
+          "attributes": {
+            "condition": "order_matches"
+          }
+        }
+      ]
+    }
+  ]
+}

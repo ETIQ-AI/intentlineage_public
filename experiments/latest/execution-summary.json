@@ -1,0 +1,22 @@
+{
+  "campaign_sha256": "5988fca873f1d1af1fe1bbbfba51fee58155ae4f9ee0b52779d2d987709cc924",
+  "protocol_sha256": "b50ba93045dfdab4740aa5e3f4e728c585ca731c8250636e451336c812e88e3b",
+  "parent_protocol_sha256": "bc033ba73edab345a362002cb5351681a5419058be54bbe76d775e7f0bc67f04",
+  "execution_finished": true,
+  "scientific_complete": false,
+  "scheduled_units": 6,
+  "completed_units": 6,
+  "retained_charged_calls": 79,
+  "new_charged_calls": 99,
+  "invalid_response_arms": 3,
+  "data_class": "empirical",
+  "synthetic": false,
+  "format_version": "m3-public-execution-summary.1",
+  "campaign_calls": 178,
+  "independent_case_count": 1,
+  "final_acceptance": "pending",
+  "served_backend_model": "unknown",
+  "monetary_cost": "unknown",
+  "finished_at": "2026-10-13T20:14:50.110791+00:00",
+  "publication_note": "Derived summary of genuine delivered outcomes; full raw/private replay evidence is retained locally."
+}

@@ -1,0 +1,415 @@
+{
+  "langextract_version": "1.7.0",
+  "new_distributions": [
+    {
+      "name": "langextract",
+      "version": "1.7.0",
+      "requires_python": ">=3.10",
+      "license_expression": "Apache-2.0",
+      "license_classifiers": [],
+      "license_files": [
+        {
+          "file": "langextract-1.7.0.dist-info/licenses/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "download": {
+        "url": "https://files.pythonhosted.org/packages/ae/ec/2883a93872701045971ea77e30434d72556a557f188df575b154d179854c/langextract-1.7.0-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=908f8ec696ab13578cdc3862efcf1a4fda929ae426410d99e86977d50e52136d",
+          "hashes": {
+            "sha256": "908f8ec696ab13578cdc3862efcf1a4fda929ae426410d99e86977d50e52136d"
+          }
+        }
+      }
+    },
+    {
+      "name": "absl-py",
+      "version": "2.5.0",
+      "requires_python": ">=3.10",
+      "license_expression": "Apache-2.0",
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "license_files": [
+        {
+          "file": "absl_py-2.5.0.dist-info/licenses/AUTHORS",
+          "sha256": "6282ee76cca569083b5b998b9f816ba1032e127b8dc7c46942b86477fc6fbfa5"
+        },
+        {
+          "file": "absl_py-2.5.0.dist-info/licenses/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "download": {
+        "url": "https://files.pythonhosted.org/packages/58/0a/a10b45aab35b175aded078a462dc8d0c698f5b13946e7cb0869097b78bb6/absl_py-2.5.0-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=0f17b89f2a4eaaedc4f28c622998aa690564b3012a396a4ffad0821007fe03ba",
+          "hashes": {
+            "sha256": "0f17b89f2a4eaaedc4f28c622998aa690564b3012a396a4ffad0821007fe03ba"
+          }
+        }
+      }
+    },
+    {
+      "name": "aiohttp",
+      "version": "3.14.4",
+      "requires_python": ">=3.10",
+      "license_expression": "Apache-2.0 AND MIT",
+      "license_classifiers": [],
+      "license_files": [
+        {
+          "file": "aiohttp-3.14.4.dist-info/licenses/LICENSE.txt",
+          "sha256": "2e4be5fc6c4c72a466fcb665d726e049a6891981fe536c4f04b6366749461d23"
+        },
+        {
+          "file": "aiohttp-3.14.4.dist-info/licenses/vendor/llhttp/LICENSE",
+          "sha256": "628168d68bb5a8a17e0bbefb3bd74e326e1edc20583d76f52f457c82c921867d"
+        }
+      ],
+      "download": {
+        "url": "https://files.pythonhosted.org/packages/e7/0b/21bdd70a1e072222d9dbd96bed4fbed26f7c46c5a20af11b78d32fd049d6/aiohttp-3.14.4-cp311-cp311-win_amd64.whl",
+        "archive_info": {
+          "hash": "sha256=2efbdb87e79d596325c4eefaef0f4495d701145e882351310ebc538e854dc7a3",
+          "hashes": {
+            "sha256": "2efbdb87e79d596325c4eefaef0f4495d701145e882351310ebc538e854dc7a3"
+          }
+        }
+      }
+    },
+    {
+      "name": "async-timeout",
+      "version": "5.0.1",
+      "requires_python": ">=3.8",
+      "license_expression": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "license_files": [
+        {
+          "file": "async_timeout-5.0.1.dist-info/LICENSE",
+          "sha256": "e18d7bb8f513e2c46bb585c94b585bd30720dd3ccb21ddb0786f72d16658f92c"
+        }
+      ],
+      "download": {
+        "url": "https://files.pythonhosted.org/packages/fe/ba/e2081de779ca30d473f21f5b30e0e737c438205440784c7dfc81efc2b029/async_timeout-5.0.1-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=39e3809566ff85354557ec2398b55e096c8364bacac9405a7a1fa429e77fe76c",
+          "hashes": {
+            "sha256": "39e3809566ff85354557ec2398b55e096c8364bacac9405a7a1fa429e77fe76c"
+          }
+        }
+      }
+    },
+    {
+      "name": "google-cloud-storage",
+      "version": "3.16.0",
+      "requires_python": ">=3.10",
+      "license_expression": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "license_files": [
+        {
+          "file": "google_cloud_storage-3.16.0.dist-info/licenses/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "download": {
+        "url": "https://files.pythonhosted.org/packages/47/bf/1a0f5f7fc1d4af8b95fc1da72d3cfe84ac709ef4dcabfd2182ef9cfe3a7a/google_cloud_storage-3.16.0-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=59e54ff1f7f8a7253c01f593f79d253728c122a8901b83f68fe7464a4131539f",
+          "hashes": {
+            "sha256": "59e54ff1f7f8a7253c01f593f79d253728c122a8901b83f68fe7464a4131539f"
+          }
+        }
+      }
+    },
+    {
+      "name": "ml_collections",
+      "version": "1.1.0",
+      "requires_python": ">=3.10",
+      "license_expression": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "license_files": [
+        {
+          "file": "ml_collections-1.1.0.dist-info/licenses/LICENSE",
+          "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+        }
+      ],
+      "download": {
+        "url": "https://files.pythonhosted.org/packages/ab/8a/18d4ff2c7bd83f30d6924bd4ad97abf418488c3f908dea228d6f0961ad68/ml_collections-1.1.0-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=23b6fa4772aac1ae745a96044b925a5746145a70734f087eaca6626e92c05cbc",
+          "hashes": {
+            "sha256": "23b6fa4772aac1ae745a96044b925a5746145a70734f087eaca6626e92c05cbc"
+          }
+        }
+      }
+    },
+    {
+      "name": "aiohappyeyeballs",
+      "version": "2.7.1",
+      "requires_python": ">=3.10",
+      "license_expression": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: Python Software Foundation License"
+      ],
+      "license_files": [
+        {
+          "file": "aiohappyeyeballs-2.7.1.dist-info/licenses/LICENSE",
+          "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf"
+        }
+      ],
+      "download": {
+        "url": "https://files.pythonhosted.org/packages/71/43/1947f06babed6b3f1d7f38b0c767f52df66bfb2bc10b468c4a7de9eceff2/aiohappyeyeballs-2.7.1-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=9243213661e29250eb41368e5daa826fc017156c3b8a11440826b2e3ed376472",
+          "hashes": {
+            "sha256": "9243213661e29250eb41368e5daa826fc017156c3b8a11440826b2e3ed376472"
+          }
+        }
+      }
+    },
+    {
+      "name": "aiosignal",
+      "version": "1.4.0",
+      "requires_python": ">=3.9",
+      "license_expression": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "license_files": [
+        {
+          "file": "aiosignal-1.4.0.dist-info/licenses/LICENSE",
+          "sha256": "6fd5243e92dd7f98ec69c7ac377728e74905709ff527a5bf98d6d0263c04f5b6"
+        }
+      ],
+      "download": {
+        "url": "https://files.pythonhosted.org/packages/fb/76/641ae371508676492379f16e2fa48f4e2c11741bd63c48be4b12a6b09cba/aiosignal-1.4.0-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=053243f8b92b990551949e63930a839ff0cf0b0ebbe0597b0f3fb19e1a0fe82e",
+          "hashes": {
+            "sha256": "053243f8b92b990551949e63930a839ff0cf0b0ebbe0597b0f3fb19e1a0fe82e"
+          }
+        }
+      }
+    },
+    {
+      "name": "frozenlist",
+      "version": "1.8.0",
+      "requires_python": ">=3.9",
+      "license_expression": null,
+      "license_classifiers": [],
+      "license_files": [
+        {
+          "file": "frozenlist-1.8.0.dist-info/licenses/LICENSE",
+          "sha256": "6fd5243e92dd7f98ec69c7ac377728e74905709ff527a5bf98d6d0263c04f5b6"
+        }
+      ],
+      "download": {
+        "url": "https://files.pythonhosted.org/packages/0a/f5/603d0d6a02cfd4c8f2a095a54672b3cf967ad688a60fb9faf04fc4887f65/frozenlist-1.8.0-cp311-cp311-win_amd64.whl",
+        "archive_info": {
+          "hash": "sha256=ac913f8403b36a2c8610bbfd25b8013488533e71e62b4b4adce9c86c8cea905b",
+          "hashes": {
+            "sha256": "ac913f8403b36a2c8610bbfd25b8013488533e71e62b4b4adce9c86c8cea905b"
+          }
+        }
+      }
+    },
+    {
+      "name": "google-api-core",
+      "version": "2.41.0",
+      "requires_python": ">=3.10",
+      "license_expression": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "license_files": [
+        {
+          "file": "google_api_core-2.41.0.dist-info/licenses/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "download": {
+        "url": "https://files.pythonhosted.org/packages/18/93/98877c3d38474e3c4a8f9149e4b63c31f9e474abf09def1cada7489bfeaa/google_api_core-2.41.0-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=1f3d626b7a8022dda8deef200b845057231ddc7cbf0d999026bdf61ba38d7fdf",
+          "hashes": {
+            "sha256": "1f3d626b7a8022dda8deef200b845057231ddc7cbf0d999026bdf61ba38d7fdf"
+          }
+        }
+      }
+    },
+    {
+      "name": "google-cloud-core",
+      "version": "2.8.0",
+      "requires_python": ">=3.10",
+      "license_expression": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "license_files": [
+        {
+          "file": "google_cloud_core-2.8.0.dist-info/licenses/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "download": {
+        "url": "https://files.pythonhosted.org/packages/12/ed/1b09640a565e5d34d4e517463f65a67a11f9dcdeb6b6e8220f2d06aaf489/google_cloud_core-2.8.0-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=e235b0952f7ffe7b9c71a4cf96b506d9cfb557e22557c412f0df9b7068b5d007",
+          "hashes": {
+            "sha256": "e235b0952f7ffe7b9c71a4cf96b506d9cfb557e22557c412f0df9b7068b5d007"
+          }
+        }
+      }
+    },
+    {
+      "name": "google-crc32c",
+      "version": "1.9.0",
+      "requires_python": ">=3.10",
+      "license_expression": null,
+      "license_classifiers": [],
+      "license_files": [
+        {
+          "file": "google_crc32c-1.9.0.dist-info/licenses/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "download": {
+        "url": "https://files.pythonhosted.org/packages/cb/ce/4e90102e84880e97d3cf935f2672ecd29191bdeacf57f01740f92debda00/google_crc32c-1.9.0-cp311-cp311-win_amd64.whl",
+        "archive_info": {
+          "hash": "sha256=43a2dc26f9be213fbe0b4fc4a1088c5d45cbfcb3247420ccc820f0fc3edeea86",
+          "hashes": {
+            "sha256": "43a2dc26f9be213fbe0b4fc4a1088c5d45cbfcb3247420ccc820f0fc3edeea86"
+          }
+        }
+      }
+    },
+    {
+      "name": "google-resumable-media",
+      "version": "2.11.0",
+      "requires_python": ">= 3.10",
+      "license_expression": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "license_files": [
+        {
+          "file": "google_resumable_media-2.11.0.dist-info/licenses/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "download": {
+        "url": "https://files.pythonhosted.org/packages/5e/2e/4f0a152f2e576e496f31ba1c3c62ed174a8878d06008916a7edc58b1bb28/google_resumable_media-2.11.0-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=f43d15e6a7f818f762eaead0f369c551f8275a4179c9d6225d0d259f49b87b5d",
+          "hashes": {
+            "sha256": "f43d15e6a7f818f762eaead0f369c551f8275a4179c9d6225d0d259f49b87b5d"
+          }
+        }
+      }
+    },
+    {
+      "name": "multidict",
+      "version": "6.9.1",
+      "requires_python": ">=3.10",
+      "license_expression": null,
+      "license_classifiers": [],
+      "license_files": [
+        {
+          "file": "multidict-6.9.1.dist-info/licenses/LICENSE",
+          "sha256": "2e4be5fc6c4c72a466fcb665d726e049a6891981fe536c4f04b6366749461d23"
+        }
+      ],
+      "download": {
+        "url": "https://files.pythonhosted.org/packages/91/17/c2064aef64efc007bc89a571f843e5772f27946eb9bc018731bf8016e319/multidict-6.9.1-cp311-cp311-win_amd64.whl",
+        "archive_info": {
+          "hash": "sha256=5f89dad732280e7a10b74d40b91364f88e13c3f2c08c2ef83a8cd42f7a61af2e",
+          "hashes": {
+            "sha256": "5f89dad732280e7a10b74d40b91364f88e13c3f2c08c2ef83a8cd42f7a61af2e"
+          }
+        }
+      }
+    },
+    {
+      "name": "propcache",
+      "version": "0.5.4",
+      "requires_python": ">=3.10",
+      "license_expression": null,
+      "license_classifiers": [],
+      "license_files": [
+        {
+          "file": "propcache-0.5.4.dist-info/licenses/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "file": "propcache-0.5.4.dist-info/licenses/NOTICE",
+          "sha256": "56d6ac6c8105c0a51304c21db060e361af9a8ea0af9a75c239c28b5d13693838"
+        }
+      ],
+      "download": {
+        "url": "https://files.pythonhosted.org/packages/0a/8a/3db6a3543d8101263b4c52978b6276a04ead2caff2c5ab880d934f47bd89/propcache-0.5.4-cp311-cp311-win_amd64.whl",
+        "archive_info": {
+          "hash": "sha256=e904d4d01f36bd6e197590be1533c44e06058771e0746dd073a8ebb3ef880858",
+          "hashes": {
+            "sha256": "e904d4d01f36bd6e197590be1533c44e06058771e0746dd073a8ebb3ef880858"
+          }
+        }
+      }
+    },
+    {
+      "name": "yarl",
+      "version": "1.25.1",
+      "requires_python": ">=3.10",
+      "license_expression": null,
+      "license_classifiers": [],
+      "license_files": [
+        {
+          "file": "yarl-1.25.1.dist-info/licenses/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "file": "yarl-1.25.1.dist-info/licenses/NOTICE",
+          "sha256": "56d6ac6c8105c0a51304c21db060e361af9a8ea0af9a75c239c28b5d13693838"
+        }
+      ],
+      "download": {
+        "url": "https://files.pythonhosted.org/packages/aa/9d/8cdceec66a9b940700cb45931741403f045b162afd79bcb93c41cadd0972/yarl-1.25.1-cp311-cp311-win_amd64.whl",
+        "archive_info": {
+          "hash": "sha256=d7306dee25b8a0e737363f347362b875094b4dc4e367311470656ae420fdbf8e",
+          "hashes": {
+            "sha256": "d7306dee25b8a0e737363f347362b875094b4dc4e367311470656ae420fdbf8e"
+          }
+        }
+      }
+    },
+    {
+      "name": "proto-plus",
+      "version": "1.29.0",
+      "requires_python": ">=3.10",
+      "license_expression": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "license_files": [
+        {
+          "file": "proto_plus-1.29.0.dist-info/licenses/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "download": {
+        "url": "https://files.pythonhosted.org/packages/b1/05/a3ef5b1161498e7b5a2a60288a9cf41b9149e94555423a43ec536737ac1a/proto_plus-1.29.0-py3-none-any.whl",
+        "archive_info": {
+          "hash": "sha256=8acd070469a7aaf43f440b022ef9757c8cac1a9f866e933f59ae98669ddc6c8b",
+          "hashes": {
+            "sha256": "8acd070469a7aaf43f440b022ef9757c8cac1a9f866e933f59ae98669ddc6c8b"
+          }
+        }
+      }
+    }
+  ]
+}

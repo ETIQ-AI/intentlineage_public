@@ -1,0 +1,382 @@
+{
+  "$defs": {
+    "AxiomSource": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "const": "ontology_axiom",
+          "default": "ontology_axiom",
+          "title": "Kind",
+          "type": "string"
+        },
+        "axiom_id": {
+          "title": "Axiom Id",
+          "type": "string"
+        },
+        "source_id": {
+          "title": "Source Id",
+          "type": "string"
+        },
+        "file": {
+          "title": "File",
+          "type": "string"
+        },
+        "sha256": {
+          "title": "Sha256",
+          "type": "string"
+        },
+        "commit": {
+          "title": "Commit",
+          "type": "string"
+        },
+        "licence": {
+          "title": "Licence",
+          "type": "string"
+        },
+        "start_line": {
+          "title": "Start Line",
+          "type": "integer"
+        },
+        "end_line": {
+          "title": "End Line",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "axiom_id",
+        "source_id",
+        "file",
+        "sha256",
+        "commit",
+        "licence",
+        "start_line",
+        "end_line"
+      ],
+      "title": "AxiomSource",
+      "type": "object"
+    },
+    "Grounding": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "resolved",
+            "ambiguous",
+            "unmapped"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "candidates": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Candidates",
+          "type": "array"
+        }
+      },
+      "required": [
+        "status",
+        "candidates"
+      ],
+      "title": "Grounding",
+      "type": "object"
+    },
+    "PromptDocument": {
+      "additionalProperties": false,
+      "properties": {
+        "source_id": {
+          "minLength": 1,
+          "title": "Source Id",
+          "type": "string"
+        },
+        "version": {
+          "pattern": "^\\d+\\.\\d+\\.\\d+$",
+          "title": "Version",
+          "type": "string"
+        },
+        "text": {
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "sha256": {
+          "title": "Sha256",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_id",
+        "version",
+        "text",
+        "sha256"
+      ],
+      "title": "PromptDocument",
+      "type": "object"
+    },
+    "PromptElement": {
+      "additionalProperties": false,
+      "properties": {
+        "element_id": {
+          "title": "Element Id",
+          "type": "string"
+        },
+        "identity_key": {
+          "title": "Identity Key",
+          "type": "string"
+        },
+        "revision": {
+          "minimum": 1,
+          "title": "Revision",
+          "type": "integer"
+        },
+        "supersedes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Supersedes"
+        },
+        "semantic_sha256": {
+          "title": "Semantic Sha256",
+          "type": "string"
+        },
+        "kind": {
+          "enum": [
+            "intent",
+            "concept",
+            "rule"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "category": {
+          "enum": [
+            "intent",
+            "ontology",
+            "business_rules"
+          ],
+          "title": "Category",
+          "type": "string"
+        },
+        "role": {
+          "title": "Role",
+          "type": "string"
+        },
+        "meaning": {
+          "additionalProperties": true,
+          "title": "Meaning",
+          "type": "object"
+        },
+        "source": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/PromptSource"
+            },
+            {
+              "$ref": "#/$defs/AxiomSource"
+            }
+          ],
+          "title": "Source"
+        },
+        "grounding": {
+          "$ref": "#/$defs/Grounding"
+        },
+        "operator": {
+          "anyOf": [
+            {
+              "enum": [
+                "equals",
+                "preserve",
+                "bind",
+                "carry",
+                "reconcile",
+                "exists_typed_relation"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Operator"
+        },
+        "parameters": {
+          "additionalProperties": true,
+          "title": "Parameters",
+          "type": "object"
+        },
+        "supporting_elements": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Supporting Elements",
+          "type": "array"
+        },
+        "operationalization": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Operationalization"
+        }
+      },
+      "required": [
+        "element_id",
+        "identity_key",
+        "revision",
+        "supersedes",
+        "semantic_sha256",
+        "kind",
+        "category",
+        "role",
+        "meaning",
+        "source",
+        "grounding",
+        "operator",
+        "parameters",
+        "supporting_elements",
+        "operationalization"
+      ],
+      "title": "PromptElement",
+      "type": "object"
+    },
+    "PromptSource": {
+      "additionalProperties": false,
+      "properties": {
+        "source_id": {
+          "title": "Source Id",
+          "type": "string"
+        },
+        "prompt_sha256": {
+          "title": "Prompt Sha256",
+          "type": "string"
+        },
+        "start": {
+          "minimum": 0,
+          "title": "Start",
+          "type": "integer"
+        },
+        "end": {
+          "exclusiveMinimum": 0,
+          "title": "End",
+          "type": "integer"
+        },
+        "quote": {
+          "minLength": 1,
+          "title": "Quote",
+          "type": "string"
+        },
+        "kind": {
+          "const": "prompt",
+          "default": "prompt",
+          "title": "Kind",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_id",
+        "prompt_sha256",
+        "start",
+        "end",
+        "quote"
+      ],
+      "title": "PromptSource",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "format_version": {
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "title": "Format Version",
+      "type": "string"
+    },
+    "compiler_version": {
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "title": "Compiler Version",
+      "type": "string"
+    },
+    "prompt": {
+      "$ref": "#/$defs/PromptDocument"
+    },
+    "provenance": {
+      "additionalProperties": true,
+      "title": "Provenance",
+      "type": "object"
+    },
+    "status": {
+      "enum": [
+        "compiled",
+        "conflicted"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "elements": {
+      "items": {
+        "$ref": "#/$defs/PromptElement"
+      },
+      "title": "Elements",
+      "type": "array"
+    },
+    "conditions": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Conditions",
+      "type": "array"
+    },
+    "rejected_records": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Rejected Records",
+      "type": "array"
+    },
+    "diagnostics": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Diagnostics",
+      "type": "array"
+    },
+    "review_status": {
+      "const": "pending_overseer_review",
+      "title": "Review Status",
+      "type": "string"
+    }
+  },
+  "required": [
+    "format_version",
+    "compiler_version",
+    "prompt",
+    "provenance",
+    "status",
+    "elements",
+    "conditions",
+    "rejected_records",
+    "diagnostics",
+    "review_status"
+  ],
+  "title": "PromptSpecification",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "x-intentlineage-ingestion": {
+    "runtime_validation_required": true,
+    "validator": "PromptSpecification.model_validate_json",
+    "schema_integer_semantics": "mathematical; lexical syntax enforced at runtime"
+  }
+}

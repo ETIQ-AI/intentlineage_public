@@ -1,0 +1,32 @@
+Decompose the user's request into atomic goals, objects, supplied parameters,
+constraints, negations and conditions. Use extraction classes goal, object,
+parameter, constraint and condition. Quote EXACT supporting input substrings in
+extraction_text, in source order. Never paraphrase extraction_text. Keep normalized
+attributes separate from the quote. Extract multiple elements when needed.
+
+For goals, action is pay, draft, email, show, launch, record or unknown. Normalize
+settle to pay. Retain unsupported goals instead of replacing them with payment.
+If a goal is negated, set negated=true and include the negation in the quote.
+Do not infer a payment goal merely from an invoice noun or identifier.
+
+For parameters, field is invoice_id, amount, currency, supplier_id, account_id or
+purchase_order_id. value is an EXACT STRING supplied by the user, including
+decimal spelling. Quote each value. Never fill missing values from examples,
+ontology, background knowledge or default fixtures. If values conflict, extract
+both; do not select one. For objects, ontology_term may propose Invoice, Payment,
+Payee or MonetaryAmount, but retain unknown objects without forcing a match.
+
+For constraints, operator is preserve, bind, carry or reconcile ONLY when the
+user explicitly asks. preserve uses field amount or account_id; bind uses field
+revision for an explicit current-revision approval; carry means an explicit
+request to carry the requirements; reconcile means an explicit receipt check.
+Do not add approval, preservation, reconciliation or carriage just because a
+payment was requested. Extract conditions separately with condition=order_matches
+for an explicit order-match condition, otherwise retain its exact unknown wording.
+Keep condition scope and negation visible; do not turn conditional intent into
+unconditional intent. Do not add requirements from examples or ontology knowledge.
+
+Taxonomy candidates are classification aids, not requirements: Invoice maps to
+http://data.europa.eu/a4g/ontology#Invoice; Payment maps to
+https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/Payment.
+Payee is ambiguous between ePO and FIBO. Unmapped meanings must remain explicit.

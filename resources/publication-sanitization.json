@@ -1,0 +1,1048 @@
+{
+  "format_version": "2.0.0",
+  "scope": "latest M3 experiment publication only",
+  "export_kind": "compact public derivatives with exact executed source",
+  "original_hash_scope": "Entire original file bytes, including records naming JSON substructures",
+  "original_evidence_retained": true,
+  "original_git_identity_unchanged": true,
+  "git_identity": {
+    "name": "IntentLineage contributors",
+    "email": "noreply@example.invalid"
+  },
+  "source_commit": "005383bab020ac52a04f0a0d4713d87377c4bd64",
+  "delivery_commit": "ee5e377",
+  "controller_source_sha256": "8c3369b80d6c36f5757dcb7cafe0447480270a76df194f9db22137b7d1b9e5a9",
+  "controller_sources": {
+    "requirements.txt": "c093093562e71c2aaa849a69823f753401b583df0730fab1bf925fb0dd271a66",
+    "scripts/audit_m3b.py": "04f8ed27e9220ea6223ffacaaef2371b69d88abc1c7356b3d563e64e125e5103",
+    "scripts/audit_m3b_execution.py": "3c29817f55c8d40498048280b988c32ba63b42b802fd80b807002d55a6f69277",
+    "scripts/capture_m1_v4.py": "907e8956c8c82c964947cecb7b80bac3853a8f32b05fca2906ccfa320ea2e5f3",
+    "scripts/m3b.py": "14f644fed799e0b8ecf265eab3e7eaa6514ee35fb318b5bdb77eba032fd49352",
+    "src/intentlineage/__init__.py": "0951ef8146e1492cb98fdeedf6becd2d6ca6ba12fc2f1ac9a5dbdb1737735c9c",
+    "src/intentlineage/_reference/__init__.py": "52b840caa8bcadccddb7eebcedcd35b9cb8c415a0e203960ac29000b7dbda9ef",
+    "src/intentlineage/_reference/artifact_operations.py": "8cc479750b30c13c7bfef7239f0f9dbcb1bc7a53e14581f215b610d5eda62818",
+    "src/intentlineage/_reference/chatgpt_boundary.py": "4cc1b6896af7103f471f3db494b6c21e21a6366e9996d2244ab9d7e31efd2b24",
+    "src/intentlineage/_reference/lazy_catalogue.py": "df1b93e63c6ad97cf0afca3c61909cef7473da3c75bd32aa12c3e07b56fbfe81",
+    "src/intentlineage/_reference/native_graph.py": "b44170f86fd52cd1ec94b5294ed55932b01ada0d48722bff6beef11306b58b17",
+    "src/intentlineage/_reference/offline_boundary.py": "dfaa559a379a62bfce6b96fedb1b6a9dab547651b3782c389efa3d7bcbd97210",
+    "src/intentlineage/_reference/provider_boundary.py": "6efcfff6058478fd687060b8284df7d73d1caf9f1fb32fada4f54ec607a4e397",
+    "src/intentlineage/_reference/records.py": "818f4d072fe1bb1f6132a71d00f992932f0e48f68d48f8c5b2e31b8a71018423",
+    "src/intentlineage/annotations.py": "6835687467a47a2bd3079906bfe8f8ab20cc42fb49baa6b4dc2fe7456f6a0fe9",
+    "src/intentlineage/artifact_views.py": "acd6f02cedf8b7a90de1ec6815ea7502c4add53baf2b900112113d78027bba74",
+    "src/intentlineage/capture.py": "0ce2ccbcadb87bf8590c3d4b60db41c8f05b139cd1facb3570b95bdf307409e9",
+    "src/intentlineage/changes.py": "575aa4485b5d6e1decf7e5e1f7696cb4dd5749935599fe87ecbbb52294685289",
+    "src/intentlineage/compiler.py": "099e9c26b1797a10daa5f2fd1615a5d63be164ccd3d0d2bf80bdf1c5f24870f6",
+    "src/intentlineage/contracts.py": "f266e6545ec9ce1b2caaface7d2ed5de7349e9db8b03e82071958cda5ad508b8",
+    "src/intentlineage/evidence_inventory.py": "b5646f8da1a269ffe5c446bd6f76bd01c6ed38c56b240fe94aa476e5e4b8caba",
+    "src/intentlineage/evidence_packages.py": "bc18ef8ef85cde30c04e9ccbd0f06c7757af1707676fad432adefd9a8bdb98a4",
+    "src/intentlineage/experiment_bundle.py": "d96eb7d67401709ad6253362291b9a71e9a611980d6e788690e887ff809823cb",
+    "src/intentlineage/experiment_campaign.py": "f85f795eb4dce53ca25d94d8fe50dbc39bbde88bb21fa2dc1449d22dc2682899",
+    "src/intentlineage/experiment_chatgpt.py": "f742a48ac3b4d25060311f5cf362739b0ca205540632a20002368da3bd0c5831",
+    "src/intentlineage/experiment_execution.py": "aa7b6f444517489f3d4fa6f0dc43917fcf2f6be20566089cb0c82e32903aa748",
+    "src/intentlineage/experiment_faults.py": "b396468fe137eddf879edf3068f0a7a8474398ad1b7a1c21bc6397739857f2df",
+    "src/intentlineage/experiment_function.py": "abd656e0f69c52c558519ba1107abf576e10b2851f96d9645cecc6f14d1dc3c4",
+    "src/intentlineage/experiment_history.py": "f234ff0d3e0286faf01198d66e5817cd18c9c0265e56df63054a3a11d58cc0a7",
+    "src/intentlineage/experiment_isolation.py": "f367487eacc4230a934d6d63341d90e185cbc2c66556af7ca195504711691d41",
+    "src/intentlineage/experiment_preflight.py": "2adae44351b8e58644078987c56f04955dd1e3b24ea02065a31d8a8e8049b1de",
+    "src/intentlineage/experiment_protocol.py": "85e9a91f9ec13234e9c051b48be4d14edf0c8a90e81266c40e5ed1e208edc2d2",
+    "src/intentlineage/experiment_qualification.py": "323f2bca5ac7c036aa26fbc78e3418f204567d28ad770cdd853c2db1407ece0e",
+    "src/intentlineage/experiment_resume.py": "0357cec557625c9aa7155bccb02318c9e79dd1fc21e84d6f53e88cb4be720c8a",
+    "src/intentlineage/experiment_scoring.py": "dc0acd6023f537c057f3ec4cd9dc2c39b8163ac7bab8afdfad21cff11107ccd3",
+    "src/intentlineage/experiment_transport.py": "b1c7e87ecb7aa4396e558ed7ec11e0b131cd1a111d431f88dd92e593672da2a3",
+    "src/intentlineage/experiment_user_authorization.py": "28c3747f7af8d862f4f4d7cc83de1b56ab681e6a7e5ae7045e382fe4f53086ab",
+    "src/intentlineage/extraction.py": "d915905e79d3c9f301bbc1df77941cf46dd9cd8761dd4f17ec4c564bb7e493e6",
+    "src/intentlineage/extraction_evaluation.py": "89be633aa5572bc2ad170049ed39c91dcf459b2d43b20a8c90653e7d370aae62",
+    "src/intentlineage/native_capture.py": "add3489d4e5a14e3af614f0852fbba9c3dc822e9148264958e74baa19277e96e",
+    "src/intentlineage/native_workflow.py": "4d274ec868f9cc95006d3328ec01a92e3040e71cbec425858e086e04d309ef89",
+    "src/intentlineage/ontology.py": "b4e43d7c9ffe4ee04faeaea83ef1333282d451f513b967fecf4ce61361cdc950",
+    "src/intentlineage/payloads.py": "d1fccb82b2c89338b07ea1f639878ab92f816f9fcbf4a576923c9331731787b9",
+    "src/intentlineage/payment.py": "d00ef52b91ab7c35d531bf982c69e95267eff82305bb2e6d9fef75a3e16ba8cd",
+    "src/intentlineage/prompt_compiler.py": "c638075b4ad92159ccafd3dfd80c221988d06164e6988c5f71fa35c4d3f4e8f3",
+    "src/intentlineage/prompt_dispatch.py": "0e7a121bb17debed6f92efb05f6ed4e1b15190c8ee8218d8f7cc139b95c1097c",
+    "src/intentlineage/prompt_runtime.py": "0b3060197692ad6ccd5fb9ed5b81bb22343123209b76c53ece50026939105b5d",
+    "src/intentlineage/prompt_views.py": "77c706cedce51b8084f59a0b2bd8346601ab879fed7bdeaa168201a741857337",
+    "src/intentlineage/review_batches.py": "4c8f9189f30f1236503ff3cba2078dc6b3ab238334d73c2f27bc2780d3591d22",
+    "src/intentlineage/review_contract.py": "2ee05830d74906335707bae431c628bd3c611cea38384be945a04a21b204d709",
+    "src/intentlineage/review_disclosure.py": "1ea00eaee797d2e315285c6ea867aa30379f5cf8b52a5a687882212c47ceb2ca",
+    "src/intentlineage/review_failures.py": "d2a6d46cf1a887eb7fc8ed9624d971f73c8bae9436fef53750b276faa506c42b",
+    "src/intentlineage/review_function.py": "ec79be622124d07603a37a918e359839882747bf73a12d5cd87c76efc5d02d47",
+    "src/intentlineage/review_provider.py": "5a75148b1ee0cba796c8f1afe81c8cf31d720108a3182fdb3e9f5138e14779b3",
+    "src/intentlineage/review_runner.py": "5133d1654c0a80aacb11a680562d86ec13a3688b5a8e1b8be43c9ccfe840a092",
+    "src/intentlineage/review_usage.py": "5441466490b0567336a161264aeb87d7701447b19fd36db234ce8dc17b9bbe51",
+    "src/intentlineage/source_scope.py": "6fbf70f6d4f6772961737c72841968a83e04ed1b0129960854e8b9ad99fafdcc",
+    "src/intentlineage/taxonomy.py": "2a09c3618a98008254f36b90942808d426e2a404ed7dbb0c947a64039d5f0001"
+  },
+  "result_campaign_sha256": "5988fca873f1d1af1fe1bbbfba51fee58155ae4f9ee0b52779d2d987709cc924",
+  "public_sandbox_namespaces": [
+    "/home/runner and /home/codex are fixed isolated sandbox paths, not personal profiles"
+  ],
+  "synthetic_auth_fixture": {
+    "path": "tests/test_m3b_chatgpt_correction.py",
+    "reason": "Explicit synthetic-secret-* values test that credentials never enter public descriptors"
+  },
+  "fixture_adaptations": [
+    {
+      "path": "tests/test_m3_response_bindings.py",
+      "reason": "Use a minimal expected-file manifest for the unchanged membership-refusal assertion; no private historical bundle needed"
+    }
+  ],
+  "source_records": [
+    {
+      "published_path": "requirements.txt",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/requirements.txt",
+      "original_sha256": "c093093562e71c2aaa849a69823f753401b583df0730fab1bf925fb0dd271a66",
+      "published_sha256": "c093093562e71c2aaa849a69823f753401b583df0730fab1bf925fb0dd271a66",
+      "derivative": false
+    },
+    {
+      "published_path": "scripts/audit_m3b.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/scripts/audit_m3b.py",
+      "original_sha256": "04f8ed27e9220ea6223ffacaaef2371b69d88abc1c7356b3d563e64e125e5103",
+      "published_sha256": "04f8ed27e9220ea6223ffacaaef2371b69d88abc1c7356b3d563e64e125e5103",
+      "derivative": false
+    },
+    {
+      "published_path": "scripts/audit_m3b_execution.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/scripts/audit_m3b_execution.py",
+      "original_sha256": "3c29817f55c8d40498048280b988c32ba63b42b802fd80b807002d55a6f69277",
+      "published_sha256": "3c29817f55c8d40498048280b988c32ba63b42b802fd80b807002d55a6f69277",
+      "derivative": false
+    },
+    {
+      "published_path": "scripts/capture_m1_v4.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/scripts/capture_m1_v4.py",
+      "original_sha256": "907e8956c8c82c964947cecb7b80bac3853a8f32b05fca2906ccfa320ea2e5f3",
+      "published_sha256": "907e8956c8c82c964947cecb7b80bac3853a8f32b05fca2906ccfa320ea2e5f3",
+      "derivative": false
+    },
+    {
+      "published_path": "scripts/m3b.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/scripts/m3b.py",
+      "original_sha256": "14f644fed799e0b8ecf265eab3e7eaa6514ee35fb318b5bdb77eba032fd49352",
+      "published_sha256": "14f644fed799e0b8ecf265eab3e7eaa6514ee35fb318b5bdb77eba032fd49352",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/__init__.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/__init__.py",
+      "original_sha256": "0951ef8146e1492cb98fdeedf6becd2d6ca6ba12fc2f1ac9a5dbdb1737735c9c",
+      "published_sha256": "0951ef8146e1492cb98fdeedf6becd2d6ca6ba12fc2f1ac9a5dbdb1737735c9c",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/_reference/__init__.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/_reference/__init__.py",
+      "original_sha256": "52b840caa8bcadccddb7eebcedcd35b9cb8c415a0e203960ac29000b7dbda9ef",
+      "published_sha256": "52b840caa8bcadccddb7eebcedcd35b9cb8c415a0e203960ac29000b7dbda9ef",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/_reference/artifact_operations.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/_reference/artifact_operations.py",
+      "original_sha256": "8cc479750b30c13c7bfef7239f0f9dbcb1bc7a53e14581f215b610d5eda62818",
+      "published_sha256": "8cc479750b30c13c7bfef7239f0f9dbcb1bc7a53e14581f215b610d5eda62818",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/_reference/chatgpt_boundary.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/_reference/chatgpt_boundary.py",
+      "original_sha256": "4cc1b6896af7103f471f3db494b6c21e21a6366e9996d2244ab9d7e31efd2b24",
+      "published_sha256": "4cc1b6896af7103f471f3db494b6c21e21a6366e9996d2244ab9d7e31efd2b24",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/_reference/lazy_catalogue.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/_reference/lazy_catalogue.py",
+      "original_sha256": "df1b93e63c6ad97cf0afca3c61909cef7473da3c75bd32aa12c3e07b56fbfe81",
+      "published_sha256": "df1b93e63c6ad97cf0afca3c61909cef7473da3c75bd32aa12c3e07b56fbfe81",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/_reference/native_graph.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/_reference/native_graph.py",
+      "original_sha256": "b44170f86fd52cd1ec94b5294ed55932b01ada0d48722bff6beef11306b58b17",
+      "published_sha256": "b44170f86fd52cd1ec94b5294ed55932b01ada0d48722bff6beef11306b58b17",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/_reference/offline_boundary.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/_reference/offline_boundary.py",
+      "original_sha256": "dfaa559a379a62bfce6b96fedb1b6a9dab547651b3782c389efa3d7bcbd97210",
+      "published_sha256": "dfaa559a379a62bfce6b96fedb1b6a9dab547651b3782c389efa3d7bcbd97210",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/_reference/provider_boundary.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/_reference/provider_boundary.py",
+      "original_sha256": "6efcfff6058478fd687060b8284df7d73d1caf9f1fb32fada4f54ec607a4e397",
+      "published_sha256": "6efcfff6058478fd687060b8284df7d73d1caf9f1fb32fada4f54ec607a4e397",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/_reference/records.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/_reference/records.py",
+      "original_sha256": "818f4d072fe1bb1f6132a71d00f992932f0e48f68d48f8c5b2e31b8a71018423",
+      "published_sha256": "818f4d072fe1bb1f6132a71d00f992932f0e48f68d48f8c5b2e31b8a71018423",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/annotations.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/annotations.py",
+      "original_sha256": "6835687467a47a2bd3079906bfe8f8ab20cc42fb49baa6b4dc2fe7456f6a0fe9",
+      "published_sha256": "6835687467a47a2bd3079906bfe8f8ab20cc42fb49baa6b4dc2fe7456f6a0fe9",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/artifact_views.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/artifact_views.py",
+      "original_sha256": "acd6f02cedf8b7a90de1ec6815ea7502c4add53baf2b900112113d78027bba74",
+      "published_sha256": "acd6f02cedf8b7a90de1ec6815ea7502c4add53baf2b900112113d78027bba74",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/capture.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/capture.py",
+      "original_sha256": "0ce2ccbcadb87bf8590c3d4b60db41c8f05b139cd1facb3570b95bdf307409e9",
+      "published_sha256": "0ce2ccbcadb87bf8590c3d4b60db41c8f05b139cd1facb3570b95bdf307409e9",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/changes.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/changes.py",
+      "original_sha256": "575aa4485b5d6e1decf7e5e1f7696cb4dd5749935599fe87ecbbb52294685289",
+      "published_sha256": "575aa4485b5d6e1decf7e5e1f7696cb4dd5749935599fe87ecbbb52294685289",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/compiler.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/compiler.py",
+      "original_sha256": "099e9c26b1797a10daa5f2fd1615a5d63be164ccd3d0d2bf80bdf1c5f24870f6",
+      "published_sha256": "099e9c26b1797a10daa5f2fd1615a5d63be164ccd3d0d2bf80bdf1c5f24870f6",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/contracts.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/contracts.py",
+      "original_sha256": "f266e6545ec9ce1b2caaface7d2ed5de7349e9db8b03e82071958cda5ad508b8",
+      "published_sha256": "f266e6545ec9ce1b2caaface7d2ed5de7349e9db8b03e82071958cda5ad508b8",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/evidence_inventory.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/evidence_inventory.py",
+      "original_sha256": "b5646f8da1a269ffe5c446bd6f76bd01c6ed38c56b240fe94aa476e5e4b8caba",
+      "published_sha256": "b5646f8da1a269ffe5c446bd6f76bd01c6ed38c56b240fe94aa476e5e4b8caba",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/evidence_packages.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/evidence_packages.py",
+      "original_sha256": "bc18ef8ef85cde30c04e9ccbd0f06c7757af1707676fad432adefd9a8bdb98a4",
+      "published_sha256": "bc18ef8ef85cde30c04e9ccbd0f06c7757af1707676fad432adefd9a8bdb98a4",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/experiment_bundle.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/experiment_bundle.py",
+      "original_sha256": "d96eb7d67401709ad6253362291b9a71e9a611980d6e788690e887ff809823cb",
+      "published_sha256": "d96eb7d67401709ad6253362291b9a71e9a611980d6e788690e887ff809823cb",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/experiment_campaign.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/experiment_campaign.py",
+      "original_sha256": "f85f795eb4dce53ca25d94d8fe50dbc39bbde88bb21fa2dc1449d22dc2682899",
+      "published_sha256": "f85f795eb4dce53ca25d94d8fe50dbc39bbde88bb21fa2dc1449d22dc2682899",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/experiment_chatgpt.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/experiment_chatgpt.py",
+      "original_sha256": "f742a48ac3b4d25060311f5cf362739b0ca205540632a20002368da3bd0c5831",
+      "published_sha256": "f742a48ac3b4d25060311f5cf362739b0ca205540632a20002368da3bd0c5831",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/experiment_execution.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/experiment_execution.py",
+      "original_sha256": "aa7b6f444517489f3d4fa6f0dc43917fcf2f6be20566089cb0c82e32903aa748",
+      "published_sha256": "aa7b6f444517489f3d4fa6f0dc43917fcf2f6be20566089cb0c82e32903aa748",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/experiment_faults.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/experiment_faults.py",
+      "original_sha256": "b396468fe137eddf879edf3068f0a7a8474398ad1b7a1c21bc6397739857f2df",
+      "published_sha256": "b396468fe137eddf879edf3068f0a7a8474398ad1b7a1c21bc6397739857f2df",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/experiment_function.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/experiment_function.py",
+      "original_sha256": "abd656e0f69c52c558519ba1107abf576e10b2851f96d9645cecc6f14d1dc3c4",
+      "published_sha256": "abd656e0f69c52c558519ba1107abf576e10b2851f96d9645cecc6f14d1dc3c4",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/experiment_history.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/experiment_history.py",
+      "original_sha256": "f234ff0d3e0286faf01198d66e5817cd18c9c0265e56df63054a3a11d58cc0a7",
+      "published_sha256": "f234ff0d3e0286faf01198d66e5817cd18c9c0265e56df63054a3a11d58cc0a7",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/experiment_isolation.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/experiment_isolation.py",
+      "original_sha256": "f367487eacc4230a934d6d63341d90e185cbc2c66556af7ca195504711691d41",
+      "published_sha256": "f367487eacc4230a934d6d63341d90e185cbc2c66556af7ca195504711691d41",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/experiment_preflight.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/experiment_preflight.py",
+      "original_sha256": "2adae44351b8e58644078987c56f04955dd1e3b24ea02065a31d8a8e8049b1de",
+      "published_sha256": "2adae44351b8e58644078987c56f04955dd1e3b24ea02065a31d8a8e8049b1de",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/experiment_protocol.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/experiment_protocol.py",
+      "original_sha256": "85e9a91f9ec13234e9c051b48be4d14edf0c8a90e81266c40e5ed1e208edc2d2",
+      "published_sha256": "85e9a91f9ec13234e9c051b48be4d14edf0c8a90e81266c40e5ed1e208edc2d2",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/experiment_qualification.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/experiment_qualification.py",
+      "original_sha256": "323f2bca5ac7c036aa26fbc78e3418f204567d28ad770cdd853c2db1407ece0e",
+      "published_sha256": "323f2bca5ac7c036aa26fbc78e3418f204567d28ad770cdd853c2db1407ece0e",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/experiment_resume.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/experiment_resume.py",
+      "original_sha256": "0357cec557625c9aa7155bccb02318c9e79dd1fc21e84d6f53e88cb4be720c8a",
+      "published_sha256": "0357cec557625c9aa7155bccb02318c9e79dd1fc21e84d6f53e88cb4be720c8a",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/experiment_scoring.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/experiment_scoring.py",
+      "original_sha256": "dc0acd6023f537c057f3ec4cd9dc2c39b8163ac7bab8afdfad21cff11107ccd3",
+      "published_sha256": "dc0acd6023f537c057f3ec4cd9dc2c39b8163ac7bab8afdfad21cff11107ccd3",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/experiment_transport.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/experiment_transport.py",
+      "original_sha256": "b1c7e87ecb7aa4396e558ed7ec11e0b131cd1a111d431f88dd92e593672da2a3",
+      "published_sha256": "b1c7e87ecb7aa4396e558ed7ec11e0b131cd1a111d431f88dd92e593672da2a3",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/experiment_user_authorization.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/experiment_user_authorization.py",
+      "original_sha256": "28c3747f7af8d862f4f4d7cc83de1b56ab681e6a7e5ae7045e382fe4f53086ab",
+      "published_sha256": "28c3747f7af8d862f4f4d7cc83de1b56ab681e6a7e5ae7045e382fe4f53086ab",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/extraction.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/extraction.py",
+      "original_sha256": "d915905e79d3c9f301bbc1df77941cf46dd9cd8761dd4f17ec4c564bb7e493e6",
+      "published_sha256": "d915905e79d3c9f301bbc1df77941cf46dd9cd8761dd4f17ec4c564bb7e493e6",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/extraction_evaluation.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/extraction_evaluation.py",
+      "original_sha256": "89be633aa5572bc2ad170049ed39c91dcf459b2d43b20a8c90653e7d370aae62",
+      "published_sha256": "89be633aa5572bc2ad170049ed39c91dcf459b2d43b20a8c90653e7d370aae62",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/native_capture.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/native_capture.py",
+      "original_sha256": "add3489d4e5a14e3af614f0852fbba9c3dc822e9148264958e74baa19277e96e",
+      "published_sha256": "add3489d4e5a14e3af614f0852fbba9c3dc822e9148264958e74baa19277e96e",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/native_workflow.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/native_workflow.py",
+      "original_sha256": "4d274ec868f9cc95006d3328ec01a92e3040e71cbec425858e086e04d309ef89",
+      "published_sha256": "4d274ec868f9cc95006d3328ec01a92e3040e71cbec425858e086e04d309ef89",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/ontology.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/ontology.py",
+      "original_sha256": "b4e43d7c9ffe4ee04faeaea83ef1333282d451f513b967fecf4ce61361cdc950",
+      "published_sha256": "b4e43d7c9ffe4ee04faeaea83ef1333282d451f513b967fecf4ce61361cdc950",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/payloads.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/payloads.py",
+      "original_sha256": "d1fccb82b2c89338b07ea1f639878ab92f816f9fcbf4a576923c9331731787b9",
+      "published_sha256": "d1fccb82b2c89338b07ea1f639878ab92f816f9fcbf4a576923c9331731787b9",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/payment.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/payment.py",
+      "original_sha256": "d00ef52b91ab7c35d531bf982c69e95267eff82305bb2e6d9fef75a3e16ba8cd",
+      "published_sha256": "d00ef52b91ab7c35d531bf982c69e95267eff82305bb2e6d9fef75a3e16ba8cd",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/prompt_compiler.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/prompt_compiler.py",
+      "original_sha256": "c638075b4ad92159ccafd3dfd80c221988d06164e6988c5f71fa35c4d3f4e8f3",
+      "published_sha256": "c638075b4ad92159ccafd3dfd80c221988d06164e6988c5f71fa35c4d3f4e8f3",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/prompt_dispatch.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/prompt_dispatch.py",
+      "original_sha256": "0e7a121bb17debed6f92efb05f6ed4e1b15190c8ee8218d8f7cc139b95c1097c",
+      "published_sha256": "0e7a121bb17debed6f92efb05f6ed4e1b15190c8ee8218d8f7cc139b95c1097c",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/prompt_runtime.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/prompt_runtime.py",
+      "original_sha256": "0b3060197692ad6ccd5fb9ed5b81bb22343123209b76c53ece50026939105b5d",
+      "published_sha256": "0b3060197692ad6ccd5fb9ed5b81bb22343123209b76c53ece50026939105b5d",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/prompt_views.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/prompt_views.py",
+      "original_sha256": "77c706cedce51b8084f59a0b2bd8346601ab879fed7bdeaa168201a741857337",
+      "published_sha256": "77c706cedce51b8084f59a0b2bd8346601ab879fed7bdeaa168201a741857337",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/review_batches.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/review_batches.py",
+      "original_sha256": "4c8f9189f30f1236503ff3cba2078dc6b3ab238334d73c2f27bc2780d3591d22",
+      "published_sha256": "4c8f9189f30f1236503ff3cba2078dc6b3ab238334d73c2f27bc2780d3591d22",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/review_contract.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/review_contract.py",
+      "original_sha256": "2ee05830d74906335707bae431c628bd3c611cea38384be945a04a21b204d709",
+      "published_sha256": "2ee05830d74906335707bae431c628bd3c611cea38384be945a04a21b204d709",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/review_disclosure.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/review_disclosure.py",
+      "original_sha256": "1ea00eaee797d2e315285c6ea867aa30379f5cf8b52a5a687882212c47ceb2ca",
+      "published_sha256": "1ea00eaee797d2e315285c6ea867aa30379f5cf8b52a5a687882212c47ceb2ca",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/review_failures.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/review_failures.py",
+      "original_sha256": "d2a6d46cf1a887eb7fc8ed9624d971f73c8bae9436fef53750b276faa506c42b",
+      "published_sha256": "d2a6d46cf1a887eb7fc8ed9624d971f73c8bae9436fef53750b276faa506c42b",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/review_function.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/review_function.py",
+      "original_sha256": "ec79be622124d07603a37a918e359839882747bf73a12d5cd87c76efc5d02d47",
+      "published_sha256": "ec79be622124d07603a37a918e359839882747bf73a12d5cd87c76efc5d02d47",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/review_provider.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/review_provider.py",
+      "original_sha256": "5a75148b1ee0cba796c8f1afe81c8cf31d720108a3182fdb3e9f5138e14779b3",
+      "published_sha256": "5a75148b1ee0cba796c8f1afe81c8cf31d720108a3182fdb3e9f5138e14779b3",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/review_runner.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/review_runner.py",
+      "original_sha256": "5133d1654c0a80aacb11a680562d86ec13a3688b5a8e1b8be43c9ccfe840a092",
+      "published_sha256": "5133d1654c0a80aacb11a680562d86ec13a3688b5a8e1b8be43c9ccfe840a092",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/review_usage.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/review_usage.py",
+      "original_sha256": "5441466490b0567336a161264aeb87d7701447b19fd36db234ce8dc17b9bbe51",
+      "published_sha256": "5441466490b0567336a161264aeb87d7701447b19fd36db234ce8dc17b9bbe51",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/source_scope.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/source_scope.py",
+      "original_sha256": "6fbf70f6d4f6772961737c72841968a83e04ed1b0129960854e8b9ad99fafdcc",
+      "published_sha256": "6fbf70f6d4f6772961737c72841968a83e04ed1b0129960854e8b9ad99fafdcc",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/taxonomy.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/taxonomy.py",
+      "original_sha256": "2a09c3618a98008254f36b90942808d426e2a404ed7dbb0c947a64039d5f0001",
+      "published_sha256": "2a09c3618a98008254f36b90942808d426e2a404ed7dbb0c947a64039d5f0001",
+      "derivative": false
+    },
+    {
+      "published_path": "pyproject.toml",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/pyproject.toml",
+      "original_sha256": "42842b4f6f8ece54571121d87390b59fb6637ca64e0bf05a65bc96f35819d010",
+      "published_sha256": "42842b4f6f8ece54571121d87390b59fb6637ca64e0bf05a65bc96f35819d010",
+      "derivative": false
+    },
+    {
+      "published_path": "etiq_agent_wrapper.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/etiq_agent_wrapper.py",
+      "original_sha256": "3c6e3f2fad136bcf26a0c5cdb7af4d2d5e97abb2eb7f3399609b2f9466039688",
+      "published_sha256": "3c6e3f2fad136bcf26a0c5cdb7af4d2d5e97abb2eb7f3399609b2f9466039688",
+      "derivative": false
+    },
+    {
+      "published_path": "scripts/scan_entry.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/scripts/scan_entry.py",
+      "original_sha256": "c8585e3b10de19f11de26f6a9239743e2a1ea6175ba2f812a27f8c914061885b",
+      "published_sha256": "c8585e3b10de19f11de26f6a9239743e2a1ea6175ba2f812a27f8c914061885b",
+      "derivative": false
+    },
+    {
+      "published_path": "scripts/m3a.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/scripts/m3a.py",
+      "original_sha256": "3497928e54fad60ad30f686822389c774496d3ab5195392848c31a80539f2bc8",
+      "published_sha256": "3497928e54fad60ad30f686822389c774496d3ab5195392848c31a80539f2bc8",
+      "derivative": false
+    },
+    {
+      "published_path": "scripts/audit_m3a.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/scripts/audit_m3a.py",
+      "original_sha256": "6bdd0d3fdc6763bb7c4fef33cfd98d2113d95615735c74f12f6accef806e8eda",
+      "published_sha256": "6bdd0d3fdc6763bb7c4fef33cfd98d2113d95615735c74f12f6accef806e8eda",
+      "derivative": false
+    },
+    {
+      "published_path": "examples/native_payment_workflow.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/examples/native_payment_workflow.py",
+      "original_sha256": "1a90ae68b10368efe12b99d8f1e8cb4f784b599b1d220f055415899922dd637e",
+      "published_sha256": "1a90ae68b10368efe12b99d8f1e8cb4f784b599b1d220f055415899922dd637e",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/evidence/m3a-m2-interface.json",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/evidence/m3a-m2-interface.json",
+      "original_sha256": "7fa67ec7048910440cef0dc7b7211f65d0c620bc5220951d0745c3d17a0d3fb9",
+      "published_sha256": "7fa67ec7048910440cef0dc7b7211f65d0c620bc5220951d0745c3d17a0d3fb9",
+      "derivative": false
+    },
+    {
+      "published_path": "evidence/normalization-v2-f01-development/dev-01/extraction.json",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/evidence/normalization-v2-f01-development/dev-01/extraction.json",
+      "original_sha256": "b8d0566cf099fe936d110ef8e26873da011c5f3db0273b6cff4c2e4e647c5138",
+      "published_sha256": "b8d0566cf099fe936d110ef8e26873da011c5f3db0273b6cff4c2e4e647c5138",
+      "derivative": false
+    },
+    {
+      "published_path": "schemas/prompt-specification.schema.json",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/schemas/prompt-specification.schema.json",
+      "original_sha256": "d2809873cdfc0b60fc8c9f450e26f7aff9d7923bda6dfd669a3bea91cfdf1e85",
+      "published_sha256": "d2809873cdfc0b60fc8c9f450e26f7aff9d7923bda6dfd669a3bea91cfdf1e85",
+      "derivative": false
+    },
+    {
+      "published_path": "specifications/generated/prompts/dev-01.json",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/specifications/generated/prompts/dev-01.json",
+      "original_sha256": "06090c5c1d43cd3005b6e18f3040350e101b55c0a2cf8bc5ba75cef439ffbbbb",
+      "published_sha256": "06090c5c1d43cd3005b6e18f3040350e101b55c0a2cf8bc5ba75cef439ffbbbb",
+      "derivative": false
+    },
+    {
+      "published_path": "src/intentlineage/_reference/NOTICE.md",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/src/intentlineage/_reference/NOTICE.md",
+      "original_sha256": "f5ae575fc48aa59484f32857a7d220cbe6192108d18c2dc94dfe081a43b43b26",
+      "published_sha256": "f5ae575fc48aa59484f32857a7d220cbe6192108d18c2dc94dfe081a43b43b26",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/etiq-wrapper-provenance.json",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/etiq-wrapper-provenance.json",
+      "original_sha256": "5d8134f43e8c643967059b32a5f907b73884107199e80af7b412e2e17f1d7cfa",
+      "published_sha256": "53f8a301eb94f258f67ba55238cf35562899133f33ea99b8d3146e35bce90376",
+      "derivative": true
+    },
+    {
+      "published_path": "etiq_runner/__init__.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/etiq_runner/__init__.py",
+      "original_sha256": "772daa9a531eb616d04008f46a0c6f64e6d8b28c7e66e1254f781ba952e72559",
+      "published_sha256": "772daa9a531eb616d04008f46a0c6f64e6d8b28c7e66e1254f781ba952e72559",
+      "derivative": false
+    },
+    {
+      "published_path": "etiq_runner/validation.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/etiq_runner/validation.py",
+      "original_sha256": "269868f0844ca38aeb4b56b33ec7e517fad84fa22f736fd45b9eddb0b88f0b0e",
+      "published_sha256": "269868f0844ca38aeb4b56b33ec7e517fad84fa22f736fd45b9eddb0b88f0b0e",
+      "derivative": false
+    },
+    {
+      "published_path": "etiq_runner/wrapper.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/etiq_runner/wrapper.py",
+      "original_sha256": "90861a22412455f7cb4ba0e31668870357d0f1e39162979cb8899037a6d9ec7d",
+      "published_sha256": "90861a22412455f7cb4ba0e31668870357d0f1e39162979cb8899037a6d9ec7d",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/ontology/generated/bindings.json",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/ontology/generated/bindings.json",
+      "original_sha256": "4fe2c72cd7c2cd8a5a725b432a15069e9e03710b7042083ea833c6990680c4c6",
+      "published_sha256": "4fe2c72cd7c2cd8a5a725b432a15069e9e03710b7042083ea833c6990680c4c6",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/ontology/generated/operations.json",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/ontology/generated/operations.json",
+      "original_sha256": "2e5e4c4d22d3c2cfbac50fca293985de75989d01145b17297e9949a9fa6fe6dd",
+      "published_sha256": "2e5e4c4d22d3c2cfbac50fca293985de75989d01145b17297e9949a9fa6fe6dd",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/ontology/generated/slice.ttl",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/ontology/generated/slice.ttl",
+      "original_sha256": "0056e13fbbadd3a1551bb35d112d1e9dc9541080d1c512587196c7361849661d",
+      "published_sha256": "0056e13fbbadd3a1551bb35d112d1e9dc9541080d1c512587196c7361849661d",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/ontology/generated/taxonomy-v2.json",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/ontology/generated/taxonomy-v2.json",
+      "original_sha256": "0a6120dddaa74518c3ff58e19f082c7cf2b39f8a0efe6a23fc38abec67c16637",
+      "published_sha256": "0a6120dddaa74518c3ff58e19f082c7cf2b39f8a0efe6a23fc38abec67c16637",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/ontology/licenses/epo-LICENSE",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/ontology/licenses/epo-LICENSE",
+      "original_sha256": "6fc9e709ccbfe0d77fbffa2427a983282be2eb88e47b1cdb49f21a83b4d1e665",
+      "published_sha256": "6fc9e709ccbfe0d77fbffa2427a983282be2eb88e47b1cdb49f21a83b4d1e665",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/ontology/licenses/fibo-LICENSE",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/ontology/licenses/fibo-LICENSE",
+      "original_sha256": "59f852c87fa59411aa7dc527bd5629074d2caced7de4a48bbe7c5763359d8559",
+      "published_sha256": "59f852c87fa59411aa7dc527bd5629074d2caced7de4a48bbe7c5763359d8559",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/ontology/licenses/open-ontologies-LICENSE",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/ontology/licenses/open-ontologies-LICENSE",
+      "original_sha256": "8aecab11d51f3cf7b43440859eb51e7a256f294a648a11b4ed224e9e91ce18bd",
+      "published_sha256": "8aecab11d51f3cf7b43440859eb51e7a256f294a648a11b4ed224e9e91ce18bd",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/ontology/manifest.json",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/ontology/manifest.json",
+      "original_sha256": "47119fcdbfe9e151bb54365842f707a1408f70e77972aa90e893826faf4e81b5",
+      "published_sha256": "47119fcdbfe9e151bb54365842f707a1408f70e77972aa90e893826faf4e81b5",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/ontology/prompt-sources.json",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/ontology/prompt-sources.json",
+      "original_sha256": "6d2b2322274a98654738962e4a23b5cd16f4bc457adad3ec99b449c8ef884331",
+      "published_sha256": "6d2b2322274a98654738962e4a23b5cd16f4bc457adad3ec99b449c8ef884331",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/ontology/README.md",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/ontology/README.md",
+      "original_sha256": "855635bbe244ed5b755367e99a6d6614605a3fbbe0e86e47777432f8b8c5f5de",
+      "published_sha256": "855635bbe244ed5b755367e99a6d6614605a3fbbe0e86e47777432f8b8c5f5de",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/ontology/upstream/epo/eInvoicing.ttl",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/ontology/upstream/epo/eInvoicing.ttl",
+      "original_sha256": "71011461d2220103f6ad83727922d460701e85e343e716603f7036f03db04de0",
+      "published_sha256": "71011461d2220103f6ad83727922d460701e85e343e716603f7036f03db04de0",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/ontology/upstream/epo/eOrdering.ttl",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/ontology/upstream/epo/eOrdering.ttl",
+      "original_sha256": "eb0d543c9c9e4e2a3660e8a01af8dbadb37e339c00f3fc67365cdc1c5f3d8f60",
+      "published_sha256": "eb0d543c9c9e4e2a3660e8a01af8dbadb37e339c00f3fc67365cdc1c5f3d8f60",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/ontology/upstream/epo/ePayment.ttl",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/ontology/upstream/epo/ePayment.ttl",
+      "original_sha256": "4169349bbe94c5e5ca64b3b49a93e09c6ba4acbd358c0685ff081424c499131a",
+      "published_sha256": "4169349bbe94c5e5ca64b3b49a93e09c6ba4acbd358c0685ff081424c499131a",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/ontology/upstream/epo/ePO_core.ttl",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/ontology/upstream/epo/ePO_core.ttl",
+      "original_sha256": "a9e1e8d6a482df087d3df863241b9d5ecee540069d6fbd5503da038f160cf69e",
+      "published_sha256": "a9e1e8d6a482df087d3df863241b9d5ecee540069d6fbd5503da038f160cf69e",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/ontology/upstream/fibo/CurrencyAmount.rdf",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/ontology/upstream/fibo/CurrencyAmount.rdf",
+      "original_sha256": "fe5b6c81be202255d76f0ad61c7fedbcbed08a6e7bd1fcd9a491fe568db7cfce",
+      "published_sha256": "fe5b6c81be202255d76f0ad61c7fedbcbed08a6e7bd1fcd9a491fe568db7cfce",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/ontology/upstream/fibo/PaymentsAndSchedules.rdf",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/ontology/upstream/fibo/PaymentsAndSchedules.rdf",
+      "original_sha256": "7f9f6645a2e8e5387cd0d4dd9f5ba28c053283acb47bd37595851d7919d75dc0",
+      "published_sha256": "7f9f6645a2e8e5387cd0d4dd9f5ba28c053283acb47bd37595851d7919d75dc0",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/extraction/dependencies-v2.json",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/extraction/dependencies-v2.json",
+      "original_sha256": "e81dd725495471fbdc706c232bfabc67fc2f22ea42aa1fbf6b0e5700e998ba41",
+      "published_sha256": "e81dd725495471fbdc706c232bfabc67fc2f22ea42aa1fbf6b0e5700e998ba41",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/extraction/examples-v2.json",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/extraction/examples-v2.json",
+      "original_sha256": "383efcc2059cb7ca3c0d2e1c2ebf278a02676b056bf0cb9ab0c3f221dbbc9d4e",
+      "published_sha256": "383efcc2059cb7ca3c0d2e1c2ebf278a02676b056bf0cb9ab0c3f221dbbc9d4e",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/extraction/instructions-v2.txt",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/extraction/instructions-v2.txt",
+      "original_sha256": "94e680e58ac351a375cbb4bf4ca84f9795c9d0dfa9b992f816196b856a14f80c",
+      "published_sha256": "94e680e58ac351a375cbb4bf4ca84f9795c9d0dfa9b992f816196b856a14f80c",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/extraction/licenses/ollama-LICENSE",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/extraction/licenses/ollama-LICENSE",
+      "original_sha256": "5934ed2ce0d15154bcdb9c85203210abac0da4314af34081e36df4599f90b226",
+      "published_sha256": "5934ed2ce0d15154bcdb9c85203210abac0da4314af34081e36df4599f90b226",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/extraction/licenses/qwen2.5-1.5b-LICENSE",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/extraction/licenses/qwen2.5-1.5b-LICENSE",
+      "original_sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+      "published_sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/extraction/model-v2.json",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/extraction/model-v2.json",
+      "original_sha256": "bd1ad637e5b4730e74cfb34858b641eda0af1492053154349bf1ebdffa881b24",
+      "published_sha256": "bd1ad637e5b4730e74cfb34858b641eda0af1492053154349bf1ebdffa881b24",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/reference-use-case-icp/inspection.json",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/reference-use-case-icp/inspection.json",
+      "original_sha256": "8ecf73f086aad9e03206aba82149bd7af4f357d2bef33b9446d73084cbcd0d86",
+      "published_sha256": "8ecf73f086aad9e03206aba82149bd7af4f357d2bef33b9446d73084cbcd0d86",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/reference-use-case-icp/reuse-m2-6dd91fa.json",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/reference-use-case-icp/reuse-m2-6dd91fa.json",
+      "original_sha256": "00594b9c93357ce219a6026df2c5a314529798fe865b5e03677b963a3650513e",
+      "published_sha256": "00594b9c93357ce219a6026df2c5a314529798fe865b5e03677b963a3650513e",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/reference-use-case-icp/reuse-m2-v4.json",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/reference-use-case-icp/reuse-m2-v4.json",
+      "original_sha256": "92e8ab2d91971321e7e1e6726fecec21e9bc6f9a981e8bd9474773112857f8ea",
+      "published_sha256": "92e8ab2d91971321e7e1e6726fecec21e9bc6f9a981e8bd9474773112857f8ea",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/reference-use-case-icp/reuse-m3a.json",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/reference-use-case-icp/reuse-m3a.json",
+      "original_sha256": "ee34e45e424fabef141d858cda6316a0d4609ddf98e28148458c88d9eea909e9",
+      "published_sha256": "ee34e45e424fabef141d858cda6316a0d4609ddf98e28148458c88d9eea909e9",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/reference-use-case-icp/reuse-m3b-execution.json",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/reference-use-case-icp/reuse-m3b-execution.json",
+      "original_sha256": "c8e70fb7fa08c4e00d12c029088b23be5af1b4ac11b70431e05d4234a9d5eee0",
+      "published_sha256": "c8e70fb7fa08c4e00d12c029088b23be5af1b4ac11b70431e05d4234a9d5eee0",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/reference-use-case-icp/reuse-m3b-preparation.json",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/reference-use-case-icp/reuse-m3b-preparation.json",
+      "original_sha256": "ccc077b2aaf1315a70383e74634ac062114a5ffe814c79606f798090a9c4760f",
+      "published_sha256": "ccc077b2aaf1315a70383e74634ac062114a5ffe814c79606f798090a9c4760f",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/reference-use-case-icp/reuse-v4.json",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/reference-use-case-icp/reuse-v4.json",
+      "original_sha256": "84d9fb614b070a29e30a9e5ae0a84b66df8d8011cb3b50fc26bcbbdca2d3eb2f",
+      "published_sha256": "84d9fb614b070a29e30a9e5ae0a84b66df8d8011cb3b50fc26bcbbdca2d3eb2f",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/reference-use-case-icp/upstream/codex_runner.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/reference-use-case-icp/upstream/codex_runner.py",
+      "original_sha256": "d2a690828093ca0e119e73402128b1058e2f6787a75f8fbb6e87506353b97aad",
+      "published_sha256": "d2a690828093ca0e119e73402128b1058e2f6787a75f8fbb6e87506353b97aad",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/reference-use-case-icp/upstream/etiq_graph.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/reference-use-case-icp/upstream/etiq_graph.py",
+      "original_sha256": "bb1c157a53f36a8ba462a384592b12bf19c9d6dc82e1beac1c58c7ae425970d3",
+      "published_sha256": "bb1c157a53f36a8ba462a384592b12bf19c9d6dc82e1beac1c58c7ae425970d3",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/reference-use-case-icp/upstream/fault_experiment.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/reference-use-case-icp/upstream/fault_experiment.py",
+      "original_sha256": "cdd991e8bd3a7ea849818bc70fd8783e6e9a78a15e937aa86d02bd2e92fd32b1",
+      "published_sha256": "cdd991e8bd3a7ea849818bc70fd8783e6e9a78a15e937aa86d02bd2e92fd32b1",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/reference-use-case-icp/upstream/fault_operations.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/reference-use-case-icp/upstream/fault_operations.py",
+      "original_sha256": "da575cd834c9a9e7427e33148ef832897a4969ff602ef2ee0bc30c8b9224551a",
+      "published_sha256": "da575cd834c9a9e7427e33148ef832897a4969ff602ef2ee0bc30c8b9224551a",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/reference-use-case-icp/upstream/n05_runner.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/reference-use-case-icp/upstream/n05_runner.py",
+      "original_sha256": "690cbe736cba54f8720a9366d4dde39bda2aaadba210f5746049879bc6d94341",
+      "published_sha256": "690cbe736cba54f8720a9366d4dde39bda2aaadba210f5746049879bc6d94341",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/reference-use-case-icp/upstream/n27pb_experiment.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/reference-use-case-icp/upstream/n27pb_experiment.py",
+      "original_sha256": "b1a86b317b588f8fd19c25662f8bf6c53c96e7109bbb2c686a99db25cde1298b",
+      "published_sha256": "b1a86b317b588f8fd19c25662f8bf6c53c96e7109bbb2c686a99db25cde1298b",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/reference-use-case-icp/upstream/n27phb_experiment.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/reference-use-case-icp/upstream/n27phb_experiment.py",
+      "original_sha256": "63b0445cc635c15b86ab116b8e8d7aef6125ce2f700fd4c1eecb8d5e1dd4758b",
+      "published_sha256": "63b0445cc635c15b86ab116b8e8d7aef6125ce2f700fd4c1eecb8d5e1dd4758b",
+      "derivative": false
+    },
+    {
+      "published_path": "resources/reference-use-case-icp/upstream/records.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/resources/reference-use-case-icp/upstream/records.py",
+      "original_sha256": "e9bb11c59fe26767c7162e6dafff1664569e80a2a2e8cf804aead1a87e644656",
+      "published_sha256": "e9bb11c59fe26767c7162e6dafff1664569e80a2a2e8cf804aead1a87e644656",
+      "derivative": false
+    },
+    {
+      "published_path": "tests/test_m3_response_bindings.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/tests/test_m3_response_bindings.py",
+      "original_sha256": "bea981f2d8229166d6436af7550f5a10e84945935b68853c3c03ccf02801cacc",
+      "published_sha256": "aa94b3c27625e8307f717728b1afcfd86e6d7619229f4118e2045b8f6199d0ba",
+      "derivative": true
+    },
+    {
+      "published_path": "tests/test_m3_response_checkpoint.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/tests/test_m3_response_checkpoint.py",
+      "original_sha256": "9ba6834cb8b1d22f2c4b012d48dddce0ac03cb15d66e7c8be9a2d18660d063bb",
+      "published_sha256": "9ba6834cb8b1d22f2c4b012d48dddce0ac03cb15d66e7c8be9a2d18660d063bb",
+      "derivative": false
+    },
+    {
+      "published_path": "tests/test_m3_native_wire_schema.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/tests/test_m3_native_wire_schema.py",
+      "original_sha256": "6d9d5c80aabab2982846c5e356c006607164625b8db58d33087b9e59b2e10628",
+      "published_sha256": "6d9d5c80aabab2982846c5e356c006607164625b8db58d33087b9e59b2e10628",
+      "derivative": false
+    },
+    {
+      "published_path": "tests/test_m3_function_qualification_dispatch.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/tests/test_m3_function_qualification_dispatch.py",
+      "original_sha256": "1edbcb04e8bcb67e099d121c75eb4afaf0a60444953e9c884f75d50d3f17f225",
+      "published_sha256": "1edbcb04e8bcb67e099d121c75eb4afaf0a60444953e9c884f75d50d3f17f225",
+      "derivative": false
+    },
+    {
+      "published_path": "tests/test_m3b_chatgpt_boundary.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/tests/test_m3b_chatgpt_boundary.py",
+      "original_sha256": "c1a50e56a8c4a03ab45ad3a0cd41108d53ad830b38530f9cb250fddf48eaceac",
+      "published_sha256": "c1a50e56a8c4a03ab45ad3a0cd41108d53ad830b38530f9cb250fddf48eaceac",
+      "derivative": false
+    },
+    {
+      "published_path": "tests/test_m3b_chatgpt_correction.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/tests/test_m3b_chatgpt_correction.py",
+      "original_sha256": "6e35c84ecd5e51ce829e7b3e0cd05a6744b73e1a778250098f63e603ef96fc78",
+      "published_sha256": "6e35c84ecd5e51ce829e7b3e0cd05a6744b73e1a778250098f63e603ef96fc78",
+      "derivative": false
+    },
+    {
+      "published_path": "tests/test_m3_public_runtime.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/tests/test_m3_public_runtime.py",
+      "original_sha256": "4501fa7e0db3c87ec15776db07b448912ec07a809acd459691d9023d5b203f84",
+      "published_sha256": "4501fa7e0db3c87ec15776db07b448912ec07a809acd459691d9023d5b203f84",
+      "derivative": false
+    },
+    {
+      "published_path": "tests/test_m3_network_runtime_drift.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/tests/test_m3_network_runtime_drift.py",
+      "original_sha256": "0f5bf0fd206b36009090d20565d81c6e766e04bf75f0acbb75695d163be7d77e",
+      "published_sha256": "0f5bf0fd206b36009090d20565d81c6e766e04bf75f0acbb75695d163be7d77e",
+      "derivative": false
+    },
+    {
+      "published_path": "tests/test_m3_completion_boundary.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/tests/test_m3_completion_boundary.py",
+      "original_sha256": "0afc1035dbd97836ff44bdb76315ccda4d01e90163e27e008e8e0a0208a4e6ac",
+      "published_sha256": "0afc1035dbd97836ff44bdb76315ccda4d01e90163e27e008e8e0a0208a4e6ac",
+      "derivative": false
+    },
+    {
+      "published_path": "tests/test_m3_completion_audit.py",
+      "local_source": ".tmp/m3b-chatgpt-correction-20261012/tests/test_m3_completion_audit.py",
+      "original_sha256": "3f796ef1f281a71510ac41260ee21caf3e5e4acadd04fb8b008f0e851a75e780",
+      "published_sha256": "3f796ef1f281a71510ac41260ee21caf3e5e4acadd04fb8b008f0e851a75e780",
+      "derivative": false
+    },
+    {
+      "published_path": "experiments/latest/arm-costs.json",
+      "local_source": "evidence/actual-response-campaign-launch-e889a63ac44d4a2f80d3d0314a977925/arm-costs.json",
+      "original_sha256": "e473b3dfd164a5236d6b64b5a0714f39d265543ebfc0f6ae9ba63a381c13bb9c",
+      "published_sha256": "e473b3dfd164a5236d6b64b5a0714f39d265543ebfc0f6ae9ba63a381c13bb9c",
+      "derivative": false
+    },
+    {
+      "published_path": "experiments/latest/complete-campaign-costs.json",
+      "local_source": "evidence/actual-response-campaign-launch-e889a63ac44d4a2f80d3d0314a977925/complete-campaign-costs.json",
+      "original_sha256": "c476826424b6e3c3feceffc27c31a08dd07c269bf8298b103a2f71d7683fae3d",
+      "published_sha256": "c476826424b6e3c3feceffc27c31a08dd07c269bf8298b103a2f71d7683fae3d",
+      "derivative": false
+    },
+    {
+      "published_path": "experiments/latest/complete-outcome-coverage-cost-rows.json",
+      "local_source": "evidence/actual-response-campaign-launch-e889a63ac44d4a2f80d3d0314a977925/complete-outcome-coverage-cost-rows.json",
+      "original_sha256": "9de0aaad878b203f936ab47b056e5054eb09fc00c711c993c85b7c56de6a6a8c",
+      "published_sha256": "9de0aaad878b203f936ab47b056e5054eb09fc00c711c993c85b7c56de6a6a8c",
+      "derivative": false
+    },
+    {
+      "published_path": "experiments/latest/complete-outcome-coverage-cost-rows.csv",
+      "local_source": "evidence/actual-response-campaign-launch-e889a63ac44d4a2f80d3d0314a977925/complete-outcome-coverage-cost-rows.csv",
+      "original_sha256": "8a45ca926bfea01748d227f3007a13b510f41874ba699244721477821c9ec0e6",
+      "published_sha256": "8a45ca926bfea01748d227f3007a13b510f41874ba699244721477821c9ec0e6",
+      "derivative": false
+    },
+    {
+      "published_path": "experiments/latest/scheduled-observation-coverage.json",
+      "local_source": "evidence/actual-response-campaign-launch-e889a63ac44d4a2f80d3d0314a977925/scheduled-observation-coverage.json",
+      "original_sha256": "da48fdb6e04efad3bcecacbd2a2ed0b042f2238d16eec37249dca0e05fc05753",
+      "published_sha256": "da48fdb6e04efad3bcecacbd2a2ed0b042f2238d16eec37249dca0e05fc05753",
+      "derivative": false
+    },
+    {
+      "published_path": "experiments/latest/invalid-response-evidence.json",
+      "local_source": "evidence/actual-response-campaign-launch-e889a63ac44d4a2f80d3d0314a977925/invalid-response-evidence.json",
+      "original_sha256": "4b5946cc7ddc087c62a35308e61cfacf07654698ee739b55f6cf8af1f1ba51ac",
+      "published_sha256": "4b5946cc7ddc087c62a35308e61cfacf07654698ee739b55f6cf8af1f1ba51ac",
+      "derivative": false
+    },
+    {
+      "published_path": "experiments/latest/protocol.json",
+      "local_source": "evidence/actual-response-campaign-launch-e889a63ac44d4a2f80d3d0314a977925/frozen-protocol.json",
+      "original_sha256": "9e1d19f67cb84b731989dd1cf43a44a3aad2e4b51be759f2fef62358180b4a30",
+      "published_sha256": "3f7953ea9824655017d901f4e49a56353696393e53476ca5d83e6de475981584",
+      "derivative": true
+    },
+    {
+      "published_path": "experiments/latest/score-summary.json",
+      "local_source": "evidence/actual-response-campaign-launch-e889a63ac44d4a2f80d3d0314a977925/verified-campaign-result.json#score",
+      "original_sha256": "0a5b5f9fea802156590ae8d848eda005434f7522a482b1faee7eaa2a6815b6c7",
+      "published_sha256": "79d5dc86e8c6354f79b882cf0fd2b53fee6a6dc16d670f074fd43be46849a851",
+      "derivative": true
+    },
+    {
+      "published_path": "experiments/latest/cases.json",
+      "local_source": "evidence/actual-response-campaign-launch-e889a63ac44d4a2f80d3d0314a977925/verified-campaign-result.json#truth",
+      "original_sha256": "0a5b5f9fea802156590ae8d848eda005434f7522a482b1faee7eaa2a6815b6c7",
+      "published_sha256": "5117b7f004b4c4168e6e4a99b3756b0b34a17302494bc5bbe13ae8d243e44622",
+      "derivative": true
+    },
+    {
+      "published_path": "experiments/latest/cases.json",
+      "local_source": ".tmp/m3-function-native-bank-59b2621a7b064d5fa37eb0714a809045/bank.json",
+      "original_sha256": "0fd2fa5d19da33d93e738cc2f6027c6cd1baeb9f84fd2c52d1a99521c19afa52",
+      "published_sha256": "5117b7f004b4c4168e6e4a99b3756b0b34a17302494bc5bbe13ae8d243e44622",
+      "derivative": true
+    },
+    {
+      "published_path": "experiments/latest/execution-summary.json",
+      "local_source": "evidence/actual-response-campaign-launch-e889a63ac44d4a2f80d3d0314a977925/verified-campaign-result.json",
+      "original_sha256": "0a5b5f9fea802156590ae8d848eda005434f7522a482b1faee7eaa2a6815b6c7",
+      "published_sha256": "199a776f88c1fe552713969036138faee33462dc1d78ca405cdf1622b99d1aa1",
+      "derivative": true
+    },
+    {
+      "published_path": "experiments/latest/inputs/inventory.json",
+      "local_source": "local current native-bank/inventory.json",
+      "original_sha256": "e3c45e702cb8cab53e8b1706e6ecfe8511add817b28e02dae15da9ee9a3325cf",
+      "published_sha256": "e3c45e702cb8cab53e8b1706e6ecfe8511add817b28e02dae15da9ee9a3325cf",
+      "derivative": false
+    },
+    {
+      "published_path": "experiments/latest/inputs/runtime.json",
+      "local_source": "local current native-bank/runtime.json",
+      "original_sha256": "b80ea4ca908fa72e4be6f954ae7cda81306cbfbad7283b25de9fdfd674c33948",
+      "published_sha256": "b80ea4ca908fa72e4be6f954ae7cda81306cbfbad7283b25de9fdfd674c33948",
+      "derivative": false
+    },
+    {
+      "published_path": "experiments/latest/inputs/extraction-current.json",
+      "local_source": "local current native-bank/extraction-current.json",
+      "original_sha256": "87942b73f2339af6341df414f6bcbf8e7ac00f0776042e09ac932b2f1133208d",
+      "published_sha256": "87942b73f2339af6341df414f6bcbf8e7ac00f0776042e09ac932b2f1133208d",
+      "derivative": false
+    },
+    {
+      "published_path": "experiments/latest/README.md",
+      "local_source": "instructions_between_agents/m3-experiment-developer-handoff.md",
+      "original_sha256": "9c7af312606ad6ea00d279255197e704aacbfacc4ccdd50afe58ba8d4207d7da",
+      "published_sha256": "b0b718f35698d9636b2029c17dcca5771ed1484c43060b9e112a69f38041560a",
+      "derivative": true
+    }
+  ],
+  "limits": [
+    "Full original sealed/raw-call replay and live authorization remain local.",
+    "Public derivative hashes do not establish original artifact signature validity.",
+    "Execution finished; scientific completeness and final acceptance remain pending.",
+    "Original account/authentication metadata is omitted.",
+    "Source ownership/licence notes are retained; no licence grant is invented."
+  ],
+  "wrapper_public_upstream": {
+    "repository": "https://github.com/ETIQ-AI/etiq-demo-scripts",
+    "visibility": "public",
+    "licence_status": "No redistribution licence established by the inspected recovery records"
+  }
+}

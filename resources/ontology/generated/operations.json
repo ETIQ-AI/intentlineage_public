@@ -1,0 +1,92 @@
+{
+  "engine": {
+    "package": "open-ontologies-lite",
+    "version": "0.5.0",
+    "source_commit": "c729e7a31da0a10886d3d832a3415ff66ffc9e5b",
+    "source_tag": "py-v0.5.0",
+    "licence": "MIT",
+    "selected_path": "Python API",
+    "cli_executed": false
+  },
+  "syntax_valid": true,
+  "malformed_rejected": true,
+  "triples": 271,
+  "selected_terms_found": 18,
+  "subclass_path_found": true,
+  "declared_vocab": {
+    "conforms": true,
+    "undeclared_terms": [],
+    "checked_namespaces": [
+      "http://data.europa.eu/a4g/ontology#",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/"
+    ],
+    "predicates_checked": 2,
+    "types_checked": 2,
+    "ontology_terms": 18
+  },
+  "undeclared_vocab": {
+    "conforms": false,
+    "undeclared_terms": [
+      "http://data.europa.eu/a4g/ontology#InventedPaymentClass"
+    ],
+    "checked_namespaces": [
+      "http://data.europa.eu/a4g/ontology#",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/"
+    ],
+    "predicates_checked": 1,
+    "types_checked": 1,
+    "ontology_terms": 18
+  },
+  "shacl_valid": {
+    "conforms": true,
+    "count": 0,
+    "by_severity": {},
+    "violations": [],
+    "focus_nodes": 1,
+    "unmatched_shapes": [],
+    "text": "Validation Report\nConforms: True\n"
+  },
+  "shacl_invalid": {
+    "conforms": false,
+    "count": 1,
+    "by_severity": {
+      "Violation": 1
+    },
+    "violations": [
+      {
+        "focus_node": "urn:example:invoice",
+        "path": "http://data.europa.eu/a4g/ontology#hasAmountDueForPayment",
+        "value": "",
+        "message": "Less than 1 values on ex:invoice->epo:hasAmountDueForPayment",
+        "severity": "Violation",
+        "source_shape": "n012a9affc7a34de4b70538392870e1deb1",
+        "constraint": "MinCountConstraintComponent"
+      }
+    ],
+    "focus_nodes": 1,
+    "unmatched_shapes": [],
+    "text": "Validation Report\nConforms: False\nResults (1):\nConstraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n\tSeverity: sh:Violation\n\tSource Shape: [ sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path epo:hasAmountDueForPayment ]\n\tFocus Node: ex:invoice\n\tResult Path: epo:hasAmountDueForPayment\n\tMessage: Less than 1 values on ex:invoice->epo:hasAmountDueForPayment\n"
+  },
+  "shacl_no_focus": {
+    "conforms": null,
+    "count": 0,
+    "by_severity": {},
+    "violations": [],
+    "focus_nodes": 0,
+    "unmatched_shapes": [
+      {
+        "shape": "urn:example:shape",
+        "target_class": "http://data.europa.eu/a4g/ontology#Invoice"
+      }
+    ],
+    "text": "Validation Report\nConforms: True\n",
+    "warning": "no focus node was selected: all 1 targeted shape(s) match nothing in the data, so conformance is undetermined. See unmatched_shapes."
+  },
+  "imports_resolved": false,
+  "limits": [
+    "Selected declarations and reachable blank-node axioms only.",
+    "No import closure, OWL-DL consistency, or payment business verification.",
+    "SHACL shape is a local operation demonstration, not an upstream rule."
+  ],
+  "slice_sha256": "0056e13fbbadd3a1551bb35d112d1e9dc9541080d1c512587196c7361849661d"
+}
