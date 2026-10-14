@@ -1,1 +1,128 @@
-[{"arm":"E","cached_input_tokens":20480,"calls":6,"elapsed_seconds":771.844000000041,"input_tokens":77383,"invalid_arms":0,"output_tokens":32159,"partial_assessments":156,"scheduled_rows":6,"total_tokens":109542,"valid_replies":6},{"arm":"H","cached_input_tokens":53760,"calls":42,"elapsed_seconds":5354.873000000254,"input_tokens":740320,"invalid_arms":0,"output_tokens":217760,"partial_assessments":1078,"scheduled_rows":6,"total_tokens":958080,"valid_replies":42},{"arm":"A","cached_input_tokens":64512,"calls":44,"elapsed_seconds":5154.737000000314,"input_tokens":800964,"invalid_arms":3,"output_tokens":218059,"partial_assessments":957,"scheduled_rows":6,"total_tokens":1019023,"valid_replies":41},{"arm":"R-H","cached_input_tokens":55296,"calls":42,"elapsed_seconds":5258.182999999961,"input_tokens":540903,"invalid_arms":0,"output_tokens":219090,"partial_assessments":1092,"scheduled_rows":6,"total_tokens":759993,"valid_replies":42},{"arm":"R-A","cached_input_tokens":64512,"calls":44,"elapsed_seconds":5369.66999999946,"input_tokens":566740,"invalid_arms":0,"output_tokens":227983,"partial_assessments":1143,"scheduled_rows":6,"total_tokens":794723,"valid_replies":44}]
+{
+  "A": {
+    "charged_calls": 45,
+    "controller_operations": 3,
+    "coverage_statuses": {
+      "incomplete": 6
+    },
+    "evidence_bytes_added": 14677,
+    "invalid_responses": 0,
+    "outcomes": {
+      "detected": 4,
+      "no_alarm": 2
+    },
+    "scheduled_rows": 6,
+    "terminal_outcomes": {
+      "None": 6
+    },
+    "tokens": {
+      "cached_input_tokens": 67584,
+      "input_tokens": 776674,
+      "output_tokens": 188042,
+      "total_tokens": 964716
+    },
+    "usage_complete_rows": 6
+  },
+  "E": {
+    "charged_calls": 6,
+    "controller_operations": 0,
+    "coverage_statuses": {
+      "complete": 6
+    },
+    "evidence_bytes_added": 0,
+    "invalid_responses": 0,
+    "outcomes": {
+      "detected": 2,
+      "missed": 2,
+      "no_alarm": 2
+    },
+    "scheduled_rows": 6,
+    "terminal_outcomes": {
+      "None": 6
+    },
+    "tokens": {
+      "cached_input_tokens": 6144,
+      "input_tokens": 76315,
+      "output_tokens": 24370,
+      "total_tokens": 100685
+    },
+    "usage_complete_rows": 6
+  },
+  "H": {
+    "charged_calls": 38,
+    "controller_operations": 0,
+    "coverage_statuses": {
+      "complete": 3,
+      "incomplete": 3
+    },
+    "evidence_bytes_added": 0,
+    "invalid_responses": 1,
+    "outcomes": {
+      "detected": 3,
+      "invalid_response": 1,
+      "no_alarm": 2
+    },
+    "scheduled_rows": 6,
+    "terminal_outcomes": {
+      "None": 5,
+      "invalid_response": 1
+    },
+    "tokens": {
+      "cached_input_tokens": 52224,
+      "input_tokens": 645269,
+      "output_tokens": 167453,
+      "total_tokens": 812722
+    },
+    "usage_complete_rows": 6
+  },
+  "R-A": {
+    "charged_calls": 45,
+    "controller_operations": 0,
+    "coverage_statuses": {
+      "complete": 6
+    },
+    "evidence_bytes_added": 0,
+    "invalid_responses": 0,
+    "outcomes": {
+      "detected": 2,
+      "missed": 2,
+      "no_alarm": 2
+    },
+    "scheduled_rows": 6,
+    "terminal_outcomes": {
+      "None": 6
+    },
+    "tokens": {
+      "cached_input_tokens": 67584,
+      "input_tokens": 572653,
+      "output_tokens": 184750,
+      "total_tokens": 757403
+    },
+    "usage_complete_rows": 6
+  },
+  "R-H": {
+    "charged_calls": 38,
+    "controller_operations": 0,
+    "coverage_statuses": {
+      "complete": 6
+    },
+    "evidence_bytes_added": 0,
+    "invalid_responses": 0,
+    "outcomes": {
+      "detected": 2,
+      "missed": 2,
+      "no_alarm": 2
+    },
+    "scheduled_rows": 6,
+    "terminal_outcomes": {
+      "None": 6
+    },
+    "tokens": {
+      "cached_input_tokens": 53760,
+      "input_tokens": 483350,
+      "output_tokens": 155892,
+      "total_tokens": 639242
+    },
+    "usage_complete_rows": 6
+  }
+}

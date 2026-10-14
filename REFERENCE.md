@@ -1,153 +1,247 @@
-# Latest published experiment — 13 October 2026
+## Real 32 MiB capture verified; new qualification failure (13 October)
 
-This snapshot contains the delivered amended M3 experiment: six cases,
-30 scheduled arm outcomes and 178 charged campaign calls. Execution
-finished; scientific completeness and final acceptance remain pending.
-Historical milestones below are planning/research history. Old captures,
-QA outputs and private replay bundles stay local. See
-[the current experiment](experiments/latest/README.md).
+Latest publication — 14 October 2026: the completed single-review campaign
+contains six cases,30 outcomes and172 fresh calls,zero separate qualification
+calls. One H arm is invalid; nine sessions have incomplete coverage. Full final
+acceptance remains pending. Historical material below is project/planning
+history. See [the current experiment](experiments/latest/README.md).
+
+Native gpt-5.5/low call completed; full 4,348,482 raw bytes fit 32 MiB and all 14 probes passed. Qualification failed: 16,218 output tokens exceed unchanged 8,192 stop and two omissions citations are not allowed M2 evidence IDs. Second call/campaign stopped; complete wire/decoded reply, actual usage and original/relocated replay retained. No pipeline/Etiq/schema/citation/token/time/scientific changes or answer repair. See final handoff and token-citation issue.
+
+## Exact 32 MiB native capture correction (13 October)
+
+Recorded Overseer disposition authorizes only max_output_bytes=33,554,432 in qualification and every arm. Derived contract is checked against the original review with that sole amendment. Native collector/worker, raw evidence, pipeline/Etiq, M2, model/token/time/call/scientific bounds remain unchanged. Original 1 MiB settings/failure stay archived. Focused checks: 135 pass; actual two-call qualification follows native checks.
+
+## Actual qualification stopped (13 October)
+
+Fresh real-endpoint qualification call 1 exceeded the fixed 1 MiB raw native event limit (1,049,393 bytes; 3,684 deltas / 11,931 partial text bytes). All 14 probes passed; gpt-5.5/low acknowledged. No completed turn, tokens, decoded reply or qualification packet. Call 2 and campaign were not launched. One conservative failed qualification charge, costs unknown; originals/relocated replay and private ZIP preserved. Bounds/schema/M2 remain unchanged. See `instructions_between_agents/m3-experiment-developer-handoff.md` and the focused event-limit issue.
+
+Qualification contract note: the reviewed e777 completion brief is preserved exactly. Only the exact df7bf4 main amendment adding the user override is recognized; the approved f93 launch contract remains unchanged and the actual amended brief is separately recorded.
+
+## House Pattern: conditional user continuation
+
+Do not impersonate an Overseer when the user supersedes a manual release. Pin the actual instruction, reviewed ancestor and source snapshots; admit only mechanical gate functions, then bind genuine qualification and the exact fixed frozen campaign. Native admission and relocated replay check the same honest record. Source changes must finish before paid qualification.
 
 # Reference
 
-## House pattern: private audit keys and publication
+House Pattern, qualification input: use an already sealed real endpoint
+package with original prompt, complete inventory and whole-job I/O. Bind exact
+input bytes and the unchanged M2 request digest in qualification approval and
+retain a replay-checked snapshot. Repeat that evidence in two fresh invocations;
+qualification costs are excluded from scientific outcomes. An empty-inventory
+smoke request can elicit an unbound question despite working native transport.
 
-Wrapper source clarification: the recovered `etiq_improvements2` checkout has
-remote `etiq_demo1` pointing to the public repository
-https://github.com/ETIQ-AI/etiq-demo-scripts. Its recorded remote-tracking
-branch `etiq_demo1/etiq_demo_library2` points to recovered commit
-`1a544516c44ae21547e1814338ff3f31ab604f7a`. The public repository lists
-`etiq_agent_wrapper.py`, `scripts/scan_entry.py` and `etiq_runner/`.
-Earlier uncertainty reflected incomplete provenance inspection. Public
-visibility is established; a redistribution licence was not established
-by the recovered checkout inspection. Preserve attribution without treating
-missing licence text as proof that the user lacks publication rights.
+House Pattern, empty-inventory qualification: native strict-envelope acceptance
+and a completed actual client turn do not establish a valid M2 reply. Unresolved
+question objects require nonempty inventoried element IDs; a question explaining
+missing inventory with element_ids=[] is rejected. Preserve the exact invalid
+answer and observed costs, stop the qualifier and route the actual failure. Do
+not delete the question, weaken M2 or invent a successful second invocation.
 
-13 October 2026: controller `catalogue.json` embeds a random `projection_key`
-used for HMAC signatures. It is private even though it grants no provider-account
-access. Ignore `**/controller/catalogue.json` as well as credentials/authentication
-files. `.gitignore` does not remove tracked files or their historical versions;
-untrack with `git rm --cached` while retaining local immutable evidence. Raw-blob
-scanning of all 171 local commits (9,014 unique blobs) found 23 distinct key-bearing
-JSON blobs; remaining raw-blob credential matches were synthetic test fixtures.
-No provider token, JWT or PEM private-key match was found in raw blob contents.
-Compressed members require separate handling: three of four current raw-evidence
-archives contain private catalogue files. Ignore `/evidence/**/*.zip`; remove the
-two tracked archives from the index but preserve their bytes locally. A raw-blob
-pattern scan cannot certify compressed or arbitrarily encoded secrets.
+House Pattern, native strict output: the real service rejected M2 `uniqueItems`
+with HTTP 400. Preserve the accepted M2 schema, prompt, validator and citations.
+Use one closed native envelope with required string `reply_json`, unwrap only that
+one layer, then validate the original M2 reply unchanged. Retain exact native
+final-message text/events and decoded UTF-8 bytes; replay rejects any mismatch.
+Malformed inner replies keep their decoded bytes and observed usage as failed,
+conservatively charged calls. No repair, additional model call or schema weakening.
+Changed adapter source requires a replacement exact qualification decision.
 
-For the first publication, use `publish-ready/intentlineage/` with a fresh history.
-Keep the original reviewed commit identities and private audit evidence local.
-The publication snapshot follows current `main`, includes eligible untracked
-documents/evidence and excludes private catalogues. Historical signed-view replay
-needs those locally retained files; publishing a redacted/re-signed catalogue would
-change evidence bytes and invalidate preservation hashes. Separate development
-branches/worktrees are not imported by a current-tree publication snapshot.
+House Pattern, ChatGPT runtime drift: bind the two public DNS/TLS file hashes in
+the actual model metadata observation and verify that binding before copying
+cached authentication or starting a reviewer. Setup metadata is unqualified;
+provider qualification/campaign must reject a missing or changed runtime map.
 
-Windows House Pattern: a longer export directory can push retained evidence paths
-past Git's default Windows path limit. Set local `core.longpaths=true` before
-staging; use `git -c core.longpaths=true clone <repository-url>` for future Windows
-clones. Publication verification checked 28 ignore cases, unchanged bytes for all
-23 untracked private files/archives, zero content-pattern matches in exported files,
-all 50 members of the initially included provenance wheel (now retained locally
-with excluded Laya results) and clean Git repository integrity.
-See the publication safety report (local record: `instructions_between_agents/repository-publication-safety-report-20261013.md`).
+House Pattern, trusted client network runtime: the inherited offline namespace
+omits `/etc/resolv.conf` and CA roots. A networked cached-login client needs only
+these explicit public files, copied into fresh controller-owned storage and
+mounted read-only. Preserve their raw hashes; do not bind whole `/etc`. This
+does not grant networking to model-generated commands.
 
-User publication selection: retain PLAN.md, Agents.md, SKILL.md,
-PROJECT_DESCRIPTION.md, PROJECT_GUIDE.md, REFERENCE.md,
-EXPERIMENT_RETROSPECTIVE.md and README.md. Ignore `instructions_between_agents/`
-at every depth, untrack existing copies and preserve local bytes. Amend the fresh
-publication commit so ignored coordination files are absent from reachable history;
-do not rewrite original reviewed branches. In published root/project documentation,
-render references to excluded coordination records as plain local-record references.
-Extraction inputs and saved capture fixtures remain included for the existing
-regression/replay tools. Internal tester output folders, generated validation
-reports/logs and capture command records/logs stay local; retain the Python
-validation helpers referenced by tests. Exclude `/evidence/laya-pilot-*/`, including
-predictions, metrics, input/provenance files, failed attempts and the archived
-package wheel. Retain local bytes and standalone pilot implementation. Private
-catalogue keys and ZIP audit archives stay excluded. Do not label saved fixtures
-as final M3 results. Development-worktree outputs are not imported implicitly.
+House Pattern, native network denial: Codex may deny `socket.socket()` itself
+with EPERM. Include socket construction in the attempted-connection try block
+and close only a successfully created socket. This is an enforced denial, not
+evidence of transport failure or permission to relax networking.
 
-Results House Pattern: distinguish reusable fixtures from generated QA output.
-Extraction inputs and native capture graph/state/value/source fixtures support
-regression tests and replay. Tester summaries, repeated QA runs, command records
-and validation logs document local development and do not need publication.
-Exclude these outputs using Git ignore rules and `git rm --cached`; preserve
-original bytes and reviewed history locally. Keep validation source used by tests.
-Historical preservation/sealed-audit checks still require the local archive; do
-not change manifests or claim that the reduced snapshot passes those full audits.
-Update the publication sanitization manifest when redacted files are excluded.
+House Pattern, public runtime overlay: bind the fresh directory containing exactly
+the verified ELF read-only at `/usr/local/bin`; a new child filename under the
+read-only `/usr` bind cannot be created. Check membership/hash/links before and
+after launch. Compile every generated-worker variant: the probes-only prefix
+split previously omitted a newline and produced `SystemExit(0)print(...)`.
 
-12 October user steering: **experiment uses existing ChatGPT-authenticated Codex access; no API keys or Platform API fallback.** Fresh isolated reviewer sessions and model ceiling 5.5 remain. API-only implementation now requires ChatGPT adapter/native CLI corrections EXP-SETUP-01/02; prior API qualification proposal is historical. See correction brief (local record: `instructions_between_agents/developer_m3b-chatgpt-correction-20261012.md`).
+House Pattern, native cached-login correction: Codex forbids overriding its reserved
+`openai` provider ID. Use its supported built-in auth route and leave unreported
+backend attempts unknown. The native helper cannot execute from denied `/runtime`,
+and a new file cannot be created inside an existing read-only `/usr` bind. Retain
+all failures and ask for help after three; proposed public-runtime overlay must
+keep every denial unchanged. Apps traffic is outside command-network policy;
+disable account apps and memory context explicitly.
 
+Native correction: Codex override paths split on dots without unquoting literal
+path keys. Keep such keys inside TOML inline-table values, and pass only identifier
+keys as overrides. Codex 0.160.0 uses platform-native `sandbox -- COMMAND` and
+explicit `--permission-profile`; `sandbox linux` attempts to execute `linux`.
 
-12 October 2026: execution implementation `4896fce` passes scoped overseer review (75 local execution/operator checks; source/reuse audit). No new developer correction requested. Experiment Developer must set up native Linux CLI/API access and propose exact qualified model <=5.5/budgets; exact qualification review, actual provider qualification, frozen protocol and campaign release remain. See review (local record: `instructions_between_agents/m3b-execution-implementation-overseer-review-20261012.md`).
+House Pattern, 12 October ChatGPT correction: existing cached Codex authentication
+is the authorized route. Missing API keys are no longer a blocker. A model catalog
+may be cached/bundled; a completed fresh client turn is required for actual access.
+Keep unknown backend retry/model/cost counters unknown and distinguish them from
+logical reviewer turns. The original API implementation/proposal remains historical.
 
+Execution House Pattern: M2 `_write` refuses an existing path even in a copied
+bank. Rebatching a native candidate must create a fresh UUID copy excluding old
+controller plan/qualification records, then write fresh records with the existing
+M2 builder. Retain failed copies; never edit capture JSON or overwrite source
+evidence. Measured request bytes do not qualify a token cap: actual CLI/schema
+overhead requires provider token counting before reviewed protocol freeze.
 
-12 October 2026 integrated M3B preparation: `37a3bca` passes scoped overseer review; source/reuse/infrastructure audit and 11,016 archive hashes verify. Combined checks: 98 passed/one runtime-identity restart refusal; targeted rerun passed. Actual provider qualification, real-results path and protocol freeze remain required, including user model ceiling 5.5. No experiments authorized. See review (local record: `instructions_between_agents/m3b-integrated-overseer-review-20261012.md`).
+Execution House Pattern: the original M3A mount/cap definitions remain unchanged
+while their supervisor file gains runtime identity/dispatch. Update the source
+file hash in inherited reuse manifests and archive the original manifest; do not
+change definition hashes to conceal an altered function. The first execution
+infrastructure audit correctly caught the stale supervisor file binding.
 
+Execution House Pattern: native home/history/temp denial probes must first create
+noncredential canaries in the fresh namespace and remove them before CLI startup.
+An unreadable missing file establishes absence, not native filesystem enforcement.
 
-12 October 2026 M3A disposition: **integrated infrastructure at `fbedf3e` passes overseer review and is cleared for M3B integration coding.** Accepted M1/M2 are integrated; 43 focused checks, current audit and 20,620 archive hashes verify. M3B must import this delivery and qualify its integrated actual-provider path before experiments. Final M3 acceptance/testing remains after M3B. See M3A clearance (local record: `instructions_between_agents/m3a-overseer-clearance-20261012.md`). Prior M3A integration-pending statements are historical.
+Execution House Pattern: inspect streamed tool items as well as final response
+output. An empty final output array does not erase an earlier function-call event.
+Use the accepted M2 usage extractor for raw API counters too; preserve case aliases
+so conflicting reported counters fail. Recompute API facts from bytes on replay.
 
+Execution House Pattern (12 October): role updates in main authority documents
+must be archived and bound explicitly. Do not keep a stale brief hash or treat a
+separate Experiment Developer's launch authorization as code acceptance. Preserve
+the original authority snapshot. Canonical M2 request bytes must be used as CLI
+stdin; pretty printed evidence files are retained but differ in byte formatting.
 
-12 October 2026: M3B coding-only preparation at `330fd4e` passes overseer review (66 offline tests; archive/source/preservation/reuse verified). Corrected M3A review/integration and actual provider qualification remain outstanding; experiment gates stay closed. See preparation review (local record: `instructions_between_agents/m3b-preparation-overseer-review-20261012.md`).
+M3B human-launch RED, 12 October 2026: recorded-path GREEN f29f28f is
+committed. Thirteen failing tests specify native permissions, exact M2-derived
+command generation, pre-reasoning token caps, actual human factory/release
+refusal, native-ELF enforcement, interpreter hashing and human-only CLI stages.
+These tests precede implementation. No Linux Codex is installed on inspected
+runtime paths; no model/hosted call or actual provider qualification has run.
 
+M3B recorded execution-path GREEN (12 October 2026), after RED 6864460:
+**53 execution/path tests pass in 191.36s**, including local fake CLI isolation,
+recorded complete/interrupted/restart/relocated exports and 14 resealed transcript
+attacks. The existing M2 controller/usage/replay and M3A math/export are reused.
+Record-only scope remains synthetic and cannot become empirical by label edits.
+Broker quota/credential guards and actual qualification evidence validation are
+implemented. Guard: 38,360 prior files unchanged; 377 captures and 38 recipe
+fixtures backed up and unchanged. No model/hosted call. Actual launcher/factory,
+local bank/protocol proposal and human review/qualification stages remain next.
 
-11 October 2026 final M2 disposition: **accepted within tested local scope at `6dd91fa`; T07-T09 PASS and F01/F02 closed.** Tester: 896 final executions; overseer verified 14,246 evidence hashes and reran 207 additional checks. Two overwritten ignored smoke outputs remain an explicit preservation exception; no further M2 production correction required. M3A integration/review and real-provider/protocol qualification still gate M3B experiments. See M2 acceptance (local record: `instructions_between_agents/m2-overseer-acceptance-v4.md`). Earlier M2 pending/rejected statuses below are historical.
+M3B execution-path RED, 12 October 2026: foundation d8e518a is committed.
+The next recorded campaign/scoring/export, credential-broker and actual
+qualification contracts are specified before implementation: **nine failures,
+two passes and 17 fixture errors** (the recorded campaign route is absent).
+See tests/test_m3b_execution_paths.py and the visible execution plan. These
+are explicit fake/recorded contract fixtures, not actual qualification or results.
+Human hosted stages and Overseer release remain pending.
 
+M3B execution foundation GREEN (12 October 2026), after committed RED e328b75:
+25 new contract tests pass; combined local foundation/preparation checks are
+**89 passed, 35 offline-boundary checks deselected**. Curated <=5.5 model policy,
+full interpreter/runtime binding, recorded real-shaped intake, bounded broker
+request validation and actual reviewed-parent decision binding are implemented.
+Recorded fixtures remain synthetic and inadmissible for empirical campaign.
+Existing M2 sources are exact; current source/authority audit passes. Actual
+provider/campaign integration, qualification and protocol/release are still being
+implemented under the visible execution plan; no hosted/model call has run.
 
-Independent M2 tester reassessment (11 October 2026), frozen `6dd91fa`: **T07/T08/T09 PASS within local scope; F01/F02 closed.** 616 submitted, 73 unchanged independent and 207 additional checks pass; fresh native replay/dependency/reuse audits pass. Final acceptance belongs to the Overseer. Two ignored legacy T02 smoke files have an explicit tester preservation exception; the report records it. No semantic-model or OS/provider-isolation qualification is claimed. M3B remains gated. See complete independent report (local record: `instructions_between_agents/m2-tester-report-v4-f01-f02-corrections.md`).
+M3B execution continuation, 12 October 2026: the user invoked the Overseer
+qualification/actual-experiment brief. Local implementation begins under the
+visible plan (local record: `instructions_between_agents/m3b-execution-plan-20261012.md`), with
+**25 failing behavioural tests** before fixes. Reviewed preparation 37a3bca,
+accepted M1/M2 and cleared M3A remain the exact baseline. The model ceiling is 5.5;
+no eligible account/model is qualified or selected. Hosted launches belong to the
+human after concrete code/qualification/protocol review and release. No inference
+or experiment has run. Previous preparation status below is historical.
 
-House Pattern — test temp paths: use a globally unique pytest basetemp basename, even when its full outer path is fresh. Several integration tests graft that basename under the submission .tmp directory. Native export/recipe paths refuse reuse, while legacy smoke captures can overwrite. Snapshot ignored capture paths before a run and retain setup failures. Current 4.2 replay and archived 4.0/4.1 replay remain separate contracts.
+12 October 2026: reviewed M3A `fbedf3e` is integrated into M3B at merge
+`e260924`; production GREEN is `1ab91b5`. Accepted M1 `7178692` and M2 `6dd91fa`
+remain exact. **99 preparation/integration checks pass** with local fake CLIs and
+enforced offline probes. Complete combined run: **890 passed, five setup failures,
+one Windows symlink-privilege skip**; restoring historical inputs and the shared
+dependency path resolves all five in a fresh **5-pass** rerun without code changes.
+These are Developer runs; overlapping passes are not added as a new full-suite run.
 
+Source/reuse/dependency audits and `pip check` pass. The final guard verifies
+38,184 prior files unchanged in bytes/sizes/mtimes, including 279 captured files
+and 38 recipe fixtures backed up before rerun. Main/M2/M3A tracked bytes, heads and
+statuses remain unchanged. Fresh private archives retain 10,601 fake integration
+entries and 415 native test-capture files; synthetic/historical labels remain.
 
-Current overseer status ? 11 October 2026: M1 remains accepted. M2 `6dd91fa` passes correction review (186 M2 checks and 73 unchanged independent checks) and requires complete independent tester reassessment. M3A `6edec09` closes original partial-accounting correction but must import corrected M2 and requalify current integrated evidence before M3B. No live campaign authorized. Earlier statuses below are historical. See M2 review (local record: `instructions_between_agents/m2-review-20261011.md`), M2 tester brief (local record: `instructions_between_agents/tester_m2-reassessment-20261011.md`), M3A review (local record: `instructions_between_agents/m3a-review-20261011.md`) and M3A developer brief (local record: `instructions_between_agents/developer_m3a-integration-20261011.md`).
+Observed Overseer M1/M2 acceptance and M3A clearance are bound to exact Markdown
+bytes. Combined M3B review, a real-results path, actual-provider qualification,
+17 unresolved scientific settings and human-run authorization remain gates.
+Command preparation returns exit 2 and an empty campaign-command list. No model
+or hosted inference, real experiment, parallel agent, tester, push or publication
+occurred. Return the complete integrated handoff (local record: `instructions_between_agents/m3b-preparation-developer-handoff.md`)
+to the Overseer. The visible plan (local record: `instructions_between_agents/m3b-integration-plan-20261012.md`)
+and `evidence/m3b-verify-*/` contain RED/GREEN, argv/JUnit, audits and guards.
 
+## Historical M3A development record
 
-M2 tester disposition (8 October 2026): **changes required at `1f1c7c1`: T07/T08 PASS in local scope; T09 FAIL, M2-V4-F01/F02.** Accepted M1 integration already passes. See active developer correction (local record: `instructions_between_agents/developer_m2.md`) and tester report (local record: `instructions_between_agents/m2-tester-report-v4.md`). Earlier ready-for-testing statements are historical. M3A must consume the forthcoming corrected M2 delivery; M3B remains gated.
+Earlier pending/review notes below are superseded by current clearance above.
 
+M3A 4.2 integration resubmission, 12 October 2026: accepted M1 `7178692`
+and accepted M2 `6dd91fa` are integrated. RED `340dd9e`, merge `1a37b27`, policy
+`7038b22`, accepted-disposition metadata `b5bb64d`. Current campaign/protocol/bank
+version 3 reaches the exact M2 session/matrix 4.2 policy for replay, completed-unit
+restart and bundle verification. Shared raw-alias accounting preserves unknowns,
+valid subtotals, coverage and reported/derived totals. Historical 4.0/4.1 checks
+are separately source-bound and labelled; archived Python is never executed and
+current sessions cannot use the historical path.
 
-## M2 independent tester lessons — 8 October 2026
+Final guarded suite at `1fae74a`: **796 passed, 1 skipped in 623.61s**, with
+a globally unique basetemp outside the checkout and bytecode writing disabled.
+Includes all 186 M2 contracts, 73 unchanged M2 functions scoped to M3A, 43 new
+4.2 integration regressions and both unchanged M1 regression files. This is a
+developer run. Prior 372/1 affected and 796/1 policy runs remain separately dated;
+overlapping counts are not added. Windows symlink privilege is the single skip;
+fresh Linux escape and all 11 standalone offline probes pass. All 174 pins unchanged.
 
-- Normalize recognized usage aliases without overwriting raw case collisions.
-  At `1f1c7c1`, `input_tokens=-1` plus `INPUT_TOKENS=5` becomes complete valid
-  input=5 and derived total=7 when output=2. Validate all contributing raw entries
-  first; retain invalid-field diagnostics and incomplete coverage (M2-V4-F01).
-- A matching session/matrix checksum does not establish that a derived assessment
-  matches retained replies. Current replay accepts a replaced complete/supported
-  terminal summary alongside an unchanged no-match raw/parsed reply. Reconstruct
-  and compare arm-specific terminal/coverage/status metadata (M2-V4-F02); this is
-  transcript validation, not semantic model evaluation.
-- Positive access canaries must use fields outside the reference sensitive-field
-  redaction policy. A `secret` field is correctly redacted even after native
-  disclosure; the independent fixture uses `memo` for a bounded positive read.
+`evidence/validation-m3a-resubmission-20261012/` retains exact argv/JUnit/logs,
+backups and proofs: seven implicit roots checked absent, 3,735 prior capture and
+188 recipe-fixture files backed up; all 55,777 protected source/evidence files
+retain identical bytes/sizes/mtimes. Six fresh qualified native test captures and
+the fresh offline probe are retained in a 379-entry private archive. Existing
+accepted-dependency inputs/bank/campaign/bundles and all three prior archives
+remain unchanged. No production change since `1fae74a`; M3A review remains pending.
 
-See the complete report (local record: `instructions_between_agents/m2-tester-report-v4.md`) and
-preserved evidence (local record: `evidence/m2-tester-v4/summary.json`). These are tester findings;
-production remains unchanged and final disposition belongs to the Overseer.
+Fresh `.tmp/m3a-42-delivery/` contains regenerated 12 inventories/current caches/
+packages, six qualified actual native fault/control captures, offline probes and
+42 synthetic calls/six openings. Definitive denominators zero, rates and token
+totals null; no empirical model finding. Fourteen fully resealed campaign/bundle
+attacks are rejected with native captures unchanged. Read-only proofs verify
+2,477 file bytes/mtimes, and current/relocated complete/interrupted exports pass.
+`evidence/validation-m3a-42/` retains logs, report and 14,036-entry private archive.
+All 12,640 protected prior M3A files and 15 source archives verify unchanged.
 
-M2 status (8 October 2026): **`1f1c7c1` passes overseer correction review and is ready for complete independent tester assessment; final acceptance pending.** M2-O01/O02 are closed, accepted M1 is integrated, and 105 focused checks plus source/reuse/native replay audits pass. See current review and handoff (local record: `instructions_between_agents/m2-overseer-correction-review-v4.md`). Earlier correction-required statements below are historical.
+M2 acceptance explicitly retains two separately lost ignored smoke outputs; they
+are not used for acceptance or claimed preserved. No further M1/M2 correction is
+required by those acceptances. M3A overseer review, actual provider/model/CLI
+boundary qualification and frozen M3B protocol remain gates. No M3B experiment,
+hosted inference, independent M3 tester, parallel agent or publication occurred.
+See complete handoff (local record: `instructions_between_agents/m3a-developer-handoff.md`) and
+current report (local record: `evidence/validation-m3a-42/report.json`). Earlier dated status
+statements below are historical; verified capture agreements remain applicable.
 
+Correction follow-up house pattern: preflight every dependency preservation
+manifest for omitted ignored files before starting a complete suite. Standard
+pytest temporary paths remain outside this checkout; placing basetemp inside
+invalidates M1's outside-workspace recipe test. Preserve failed setup attempts;
+rerun the complete command after correcting fixtures, without changing accepted code.
 
-Current authoritative M1 status (8 October 2026): **accepted within tested scope at `7178692`**, following complete independent reassessment. See final overseer acceptance (local record: `instructions_between_agents/m1-overseer-acceptance-v4.md`). Earlier pending/rejected statements are historical. M2 still requires its own corrections, corrected-source integration and acceptance; M3B remains gated.
-
-Latest independent complete M1 reassessment (8 October 2026), `7178692`: **PASS
-within tested scope**, all T01–T06; 430 milestone checks and 20 independent contracts
-pass. V4-F01/V4-F02 recorded reproductions are corrected; previous negation/audit
-reproductions remain closed. Seven native captures, four abstentions and two exact
-audits validate without new inference. See tester report (local record: `instructions_between_agents/m1-tester-report-v4-corrections.md`)
-and durable evidence (local record: `evidence/m1-tester-v4-corrections/summary.json`).
-Final acceptance is the overseer's; existing M2/M3A scheduling exceptions remain.
-
-Current M1 developer corrections (V4-F01/V4-F02) are resubmitted: 430 tests pass
-including both unchanged tester files, `pip check` passes, six fresh native scans
-and three abstentions pass, and two exact historical/current audits preserve equal
-bytes/mtime. Normalizer/compiler 2.2.0 and summary 4.1.0 change M2 dependencies;
-schema/operationalization/package formats remain unchanged. 5,004 protected files
-and 23 exact predecessors verify. The first full-suite compatibility failure is
-retained; saved scoring now uses a temporary current revision against the archive.
-See complete handoff (local record: `instructions_between_agents/m1-developer-handoff-v4.md`).
-Acceptance remains pending overseer review and complete independent reassessment.
+House pattern from this correction: producer recipe byte identity belongs to
+the dependency contract. Keep accepted M1's recipe unchanged and put checkout
+interpreter relay in M3A. Regeneration also needs saved HTTP request/response and
+source snapshots, not only extraction/spec JSON; restore them with their original
+hashes. Derive a token total only from one call's input/output, never campaign
+subtotals. Archive old summary-policy evidence rather than recomputing it as current.
 
 Current M3 scheduling: implementation-only M3A may start now; M3B experiments remain gated on accepted M1/M2. See M3A (local record: `instructions_between_agents/developer_m3a.md`) and M3B (local record: `instructions_between_agents/developer_m3b.md`).
 
@@ -412,35 +506,93 @@ payment-correctness claim is implemented in M1.
 
 ## House Patterns
 
-- Validate the producer scope actually recorded by an artifact. `load_native`
-  binds the entry and five capture producers; these did not change in the V4-F01/
-  F02 correction, so an old mechanical native capture can still validate there.
-  Its older summary/compiler/full-package producers are separate: compare the
-  complete source manifest and policy versions before claiming a package current.
-  Keep historical frozen-source audits separate from current-source package audits.
+- A same-version Python runtime can have a different build. The retained Overseer
+  restart records differ in build dates (June 19 vs August 31). Treat this as
+  possible real drift and bind the interpreter binary; never strip build/kernel/OS
+  identity to turn an intermittent refusal into a qualified restart.
 
-- Saved-attempt scoring upgrades current extraction provenance and compiles a
-  separate temporary current revision from the archived predecessor. The strict
-  dispatcher validates that revision; original packets/specs remain immutable.
-  Equality with a historical packet checks prompt/raw data, not current provenance.
-- Mean and even median use stdlib statistics.mean's exact-ratio accumulation:
-  scaling every value or adding first can lose cancellation/subnormal values or
-  overflow. Keep original finite numeric inputs, exclude bool, and diagnose values
-  beyond finite support. Seal and strictly encode a summary before opening its final
-  cache file. Summary 4.1.0 and source-policy hashes prevent reuse of old semantics.
-- When correction sources change, historical captures verify their exact archived
-  producers and snapshots, including cache identity/seals, without requesting new
-  cache entries in old folders. Fresh correction captures independently require
-  current source equality. Retain both reports under versioned new paths.
-- Current normalization upgrades 2.0→2.1→2.2 canonically. Retain all predecessor
-  packet hashes: direct jumps from different saved versions otherwise produce
-  different registered specification provenance. Compiler interpretation correction
-  checks the matching predecessor hash/version without inventing a prompt edit.
-- Modal force belongs to the containing predicate clause, even when a model span
-  omits "Maybe" or "may". Current 2.2 rejects unsupported optional/uncertain force,
-  retains raw proposals/diagnostics, and limits shared modality to coordination;
-  unrelated optional clauses do not erase definite requirements. Historical replay
-  uses its declared source policy, while compiler/dispatch upgrade independently.
+- Deep bundle summary-cache names can exceed Windows Git path limits. Keep the
+  unpacked local output intact, verify all members in a tracked ZIP/manifest and
+  ignore only that unique raw directory. Never delete or trim original evidence
+  to make staging pass; extract the archive into a short fresh path for review.
+
+- A whole-suite setup failure is retained as a failure. Restore only the missing
+  frozen input/environment path and rerun the exact failed node IDs under a new
+  UUID. Report full and rerun JUnit counts separately; do not manufacture a single
+  clean full-suite result or repeat passing capture tests without another concern.
+- Provenance definition hashes can bind raw CRLF segments. Preparation's n05
+  mappings use exact raw spans; M3A's own mappings use their recorded LF convention.
+  Inspect the manifest's convention rather than rewriting retained upstream bytes.
+- Old M1 preservation manifests do not include every regression input. Also inspect
+  current tests' hard-coded input and `.venv` paths before a combined checkout run.
+  Reuse a local venv shim to shared read-only packages; no new install is needed.
+
+
+- A checksum on self-authored JSON authenticates its bytes, not an Overseer
+  decision. Current M3B gate records must match registered real decision paths,
+  commits and exact Markdown hashes. Synthetic declarations cannot satisfy them.
+- Preserve reviewed campaign default behavior when adding transport injection:
+  an optional source-bound fake identity is frozen only for the injected route,
+  leaving original synthetic restart protocols unchanged. Reuse matrix policy
+  replay and native catalogue rather than duplicating terminal reconstruction.
+
+- Merge incoming historical source/log archives byte-for-byte. Scope whitespace
+  exclusions to immutable incoming M2 archives/RED logs rather than trimming the
+  originals; ordinary source/document checks remain enabled.
+
+- Copied authority Markdown retains its original CRLF bytes. Scope `cr-at-eol`
+  whitespace handling to the exact authority archive so Git integrity checks pass
+  without rewriting originals or weakening checks on ordinary source/documents.
+
+- Existing acceptance can arrive while a separate preparation checkout is frozen.
+  Archive the new authority and update its status, but do not silently import a
+  moving infrastructure worktree or claim its unfinished proofs as reviewed.
+- JSON wire equality is type-sensitive. Canonical hashes reject boolean/integer
+  aliases in immutable matrix and raw probe fields; the existing M2 strict loader
+  rejects duplicate keys at CLI ingestion. A resealed summary needs raw receipt
+  agreement, not just its own hash.
+
+- Parse and seal a complete provenance JSON before committing it. Initial M3B
+  snapshot writes overlapped, leaving trailing bytes after one complete object.
+  The original is retained as `m3b-preparation-baseline-corrupt.bin`; the recovery
+  record preserves both hashes and the exact parse boundary. Known dependency
+  bytes and the original Git archive independently verify recovered observations.
+
+- M2's corrected runner replay also needs its corrected audit/CLI delegates.
+  A partial import let an old auditor accept a relabelled zero-call control;
+  reuse the exact M2 scripts rather than implementing another replay path.
+- M2's read_text collector normalizes CRLF. An adapter that promises exact
+  transport reads binary files, keeps them immutable and returns decoded raw
+  strings from those bytes around the same M2 usage parser. Own request hashes,
+  raw probe outcomes, argv and runtime must agree with qualification summaries.
+
+
+- A temporary directory outside the checkout can still overwrite ignored
+  evidence: legacy tests graft `tmp_path.parent.name` into repository-local roots.
+  Use a new UUID basename, preflight every implicit path and back up existing
+  ignored captures before the run. Keep hash/size/nanosecond-mtime proofs and
+  disable bytecode writing when reusing an unchanged test file from another checkout.
+  Seven implicit roots and both UUID-based M3A capture roots were protected in
+  the guarded resubmission. See the new verification report and repeat recipe.
+- Freeze every controller/dependency source hash before a campaign. Reject stale
+  native interpretations or changed restart protocols before staging a provider;
+  historical captures are verified against their own snapshots. Dependency
+  acceptance and mechanical qualification are separate gates.
+- Whole-job input evidence includes invoice, order and supplier-registry tables.
+  Capturing only the invoice drops authoritative data needed to assess account
+  association and order amount, even when final output rows repeat those fields.
+- Compute token totals from individually reported charged-call receipts. M2
+  aggregate zero placeholders do not report zero cost; partial known totals survive
+  alongside explicit unavailable fields/rows. Interrupted staging retains unknown
+  charging and no manufactured score.
+- A fresh Git worktree can omit ignored historical fixtures and convert protected
+  bytes through line endings. Restore only hash-matching originals into the new
+  checkout, record recovery, and preserve exact-byte attributes; never rewrite the
+  archived capture to make an audit pass.
+- Offline command isolation is qualified with actual namespace/access canaries.
+  Its proof does not qualify hosted provider transport, model credentials or CLI
+  behavior. M3A denies live mode and fails closed without a qualified backend.
+
 - Exact spans do not preserve modal force by themselves. At normalizer/compiler
   2.1.0, “Maybe require”, “may require” and “only optionally” become mandatory
   approval rules (V4-F01). Keep actual inference separate from synthetic contracts:
@@ -825,113 +977,54 @@ M3 remains one milestone: M3A implements experiment infrastructure now against e
 
 Briefs: M3A (local record: `instructions_between_agents/developer_m3a.md`), M3B (local record: `instructions_between_agents/developer_m3b.md`). All development uses separate checkouts from active correction/testing and preserves source/evidence versions. Current M1 defects must be reconciled before real campaign qualification. Mock outcomes are never experiment evidence.
 
-## V4-F01/V4-F02 overseer correction verification
+## M3A developer implementation in progress ? 8 October 2026
 
-At `7178692`, bounded clause modality rejection and independent current compiler replay correct reported source-force errors. Exact-ratio mean/middle-pair averaging retains finite huge statistics; cache JSON encoding precedes file creation. Overseer suite: 430 passes; historical/current audits both pass twice. Full independent tester reassessment remains required. Tests/helpers are tester-owned; production fixes remain developer-owned.
+House Pattern: importing shared site-packages into a new venv produced a partial native scan (`GeneratorExp` in astroid) while walking pandas internals. The same copied entry passes using the verified dependency interpreter and this checkout first on `PYTHONPATH`. `run_wrapper` now permits explicit interpreter/source-path arguments; its default remains unchanged. Keep the failed capture and use fresh paths. WSL access requires local execution permission in the Codex sandbox; Bubblewrap 0.9.0 actually works in Ubuntu WSL2. No unrestricted fallback is allowed. Upstream reconsideration is a branch of `run_review_session`; reuse the M2 adaptation, never duplicate a semantic assessor.
 
-## M2 usage completeness lesson
+Initial complete M3A developer contract result: **18 passed, 1 skipped in 135.77s**. The skip is Windows symbolic-link creation privilege; a real Linux symlink escape is denied by the passing namespace probe. Six actual captures and serial isolated five-arm/retry/replay checks pass. A final source/budget/denominator hardening pass and durable delivery remain.
 
-A nonempty usage dictionary is not complete token measurement. Input-only or unknown-key receipts must not turn missing fields into observed zeros or set usage_complete=true. Preserve raw metadata and per-field coverage; distinguish derived totals. M2 `c9fbff7` needs this correction and integration of corrected M1 before handoff. See the overseer review.
+M3A follow-up RED specifies all three pipeline inputs, pre-run source tamper rejection, frozen controller-source restart, partial reported tokens and incomplete audit export. Four original follow-up contracts fail in 123.04s; incomplete export fails separately. Commit these before corrections.
 
-## M3A review lesson ? 8 October 2026
+M3A usage RED: M2 zero-valued aggregate placeholders must not become reported token receipts when individual calls have unavailable usage. Preserve known individual reports only. This additional scoring regression fails before its correction.
 
-Offline namespace isolation must be checked with real OS probes; workspace-shell denial of the WSL service is distinct from a failing boundary. Final infrastructure/adapter rerun passes 34 tests with one host symlink privilege skip; Linux symlink probe passes. Partial token dictionaries still inherit falsely complete flags from old M2 into M3A rows; reconcile the corrected runner and verify per-field cost coverage end to end. Offline isolation does not qualify hosted provider transport. See instructions_between_agents/m3a-overseer-review.md.
+M3A final RED adds foreign assessment-element rejection and explicit unqualified mechanical results for missing native witnesses. These are synthetic failure-path contracts; no captured JSON is edited or presented as an injected execution.
 
+M2 delivery `d58cc5c` arrived during M3A validation. Its wire contract and public runner signatures are unchanged; provider failure handling, usage extraction and frozen session policy fields improve. Eight applicable delivery contracts are adapted into M3A before importing the committed source; the two immutable-M2-workspace audit assertions are replaced by M3A archive/current-source auditing. Corrected M1 `b55f7f4` is also submitted but unaccepted; real qualification remains gated on accepted dependency reconciliation.
 
-### Tester output-path preservation ? 11 October 2026
-
-A fresh outer pytest output directory does not guarantee fresh implicit capture paths: legacy integration tests graft the basetemp basename into worktree-local `.tmp` folders. Use a globally unique basetemp basename per role/commit/run and inspect derived output roots before running capture tests. Snapshot any potentially reused ignored capture files first. Never claim blanket preservation from a tracked/protected-file audit alone. M2 reassessment disclosed two overwritten ignored T02 smoke outputs whose original bytes cannot be restored; durable acceptance captures and frozen source were unaffected. See `instructions_between_agents/m2-tester-report-v4-f01-f02-corrections.md`.
-
-
-## Experiment delivery lessons ? 12 October 2026
-
-See [experiment retrospective](EXPERIMENT_RETROSPECTIVE.md). Confirm actual authentication/client/platform/model eligibility and execution owner before framework implementation; prove an isolated real reviewer call early. Offline passes do not establish actual client compatibility. Reuse versioned graph/review/accounting interfaces and immutable fixtures; rerun affected checks against exact bindings. Keep one current brief, archive superseded instructions, and record qualification versus runnable-campaign readiness distinctly. These are future process proposals; do not expand or interrupt the current correction.
+M3A O01 merge finding: summary-version changes make historical disclosure re-expansion differ. Historical bundle replay must audit its recorded source/receipt identity without relabelling it current; no archived Python is executed. Two committed REDs specify this and the accepted-recipe interpreter relay.
 
 
-## Research: Jev-style decomposed state labelling ? 13 October 2026
+## M3B preparation first increment
 
-User clarified JEV means TypeSafe Jev (https://typesafe.ai/blog/introducing-system-one-models-and-jev). Official docs https://docs.typesafe.ai/introduction describe state plus atomic Choice/Score/Noul questions and typed probabilistic decisions, mixed questions per call. This fits a proposed per-element/per-visible-state probabilistic labeler, distinct from a deterministic Python rule checker. Type safety does not prove semantic truth; vendor speed/calibration claims and reference-LLM workflow comparisons are not independent evidence on this pipeline.
-
-Primary-source OSS shortlist: https://github.com/NandhaKishorM/laya (Apache-2.0 typed non-autoregressive decisions; inspect context/checkpoint/calibration limits and benchmark provenance before selection), https://github.com/fastino-ai/GLiNER2 (Apache-2.0 local encoder classification/extraction; classification specialist family, not established a verifier of arbitrary numeric/business semantics). https://huggingface.co/openjev/openjev provides a close open-weight typed-decision interface but weights are CC BY-NC 4.0, 27B, not an unrestricted OSS model; card declares 16,384-token prompt cap. TypeSafe https://github.com/typesafe-ai/system-one-adapter-python is MIT comparison scaffolding backed by generative LLM APIs, not open Jev weights.
-
-No plan/experiment change authorized or made by this research. Proposed comparison separates monolithic versus decomposed assessment from endpoint versus intermediate access and model identity; merely switching models cannot establish a decomposition effect. Labels should distinguish violation/support/insufficient evidence/not applicable, with explicit confidence/abstention and original evidence identity from controller, not generated prose citations. Missing capture or uncertainty is not a business violation. Actual supplied context can span 12k?35k tokens, so compact classifiers are not drop-in replacements: explicit local facts/graph neighbourhood, scope and input/output context must be selected without silently discarding requirements. Three elements over two intermediate states plus endpoint input/output yield twelve element-state label decisions, not necessarily twelve calls; batch supported questions and count model work separately from API calls. Keep testable numeric identities/contradictions, paraphrases/negation and missing-context controls; do not tune to hidden experiment truth.
+House pattern: M3B provisional interfaces do not qualify M3A campaign/bundle evidence. M2 per-call usage omits unknown fields; its aggregate has nulls and coverage. M3A receipt_usage returns usage, not token_totals. Actual WSL service access denial is retained separately from a boundary failure; authorized offline reruns retain the same Bubblewrap restrictions. Source/runtime summaries must bind their raw launch receipts; raw CRLF byte fidelity needs a binary read around the reused M2 text collector.
 
 
-### Local Laya inference feasibility ? 13 October 2026
+## Historical integration authorization — 12 October 2026
 
-Read-only hardware inspection: Intel Core Ultra 7 155H (16 cores/22 threads), 31.5 GiB RAM, NVIDIA RTX 500 Ada Generation Laptop GPU with 4094 MiB VRAM, ~645.3 GiB free C: disk. Existing project venv has no torch. CPU inference is feasible by model size; CUDA small-batch inference appears plausible but untested. No package/model installation or inference benchmark performed.
+User authorizes coding-only integration of exact reviewed fbedf3e into M3B preparation. Accepted M1 7178692 and M2 6dd91fa stay intact; commit behavioural RED before integration. See instructions_between_agents/m3b-integration-plan-20261012.md. No real/provider campaign, inference or midway tester is authorized.
 
-Current primary docs https://github.com/NandhaKishorM/laya and https://huggingface.co/convaiinnovations/laya-typed-decisions describe 421M typed-decision checkpoint, 1024-token configured context, local load/predict/predict_batch and CPU/CUDA support. One resident pinned model in a separate environment is the appropriate pilot; avoid automatic checkpoint routing as an experiment confound. Repository README and pyproject dependency descriptions differ; verify/pin an actual working installation rather than assuming prose version requirements. Weights-only estimate for 421M is ~1.57 GiB FP32/~0.78 GiB FP16; activations/runtime/batches need extra memory. Confidence is not certified calibrated: specialist card documents temperature issues and synthetic domain training. predict may silently truncate oversized input; detect encoded length and reject or use a validated compact/window policy. Window aggregation is not automatically valid for cross-window relational intent checks. Keep the current 12k?35k-token Codex packages distinct from compact Laya state/atomic-question inputs; changing context changes the comparison.
+## House pattern: corrected-current versus historical replay
 
+Gate replay on campaign/protocol and registered producer versions, never the score
+version alone. Current 4.2 matrices delegate to the delivered M2 policy with exact
+native catalogues. Reuse unchanged tester functions with explicitly scoped WORK
+and fixture/audit paths; changing the source or silently reading M2 hides integration
+failures. Archived code stays data; historical structural checks are separately labelled.
 
-### Laya independent evidence and element-state batching ? 13 October 2026
+### User-authorized function reviewer, 13 October 2026
+The old 32 MiB attempt completed its native turn but generated 16,218 output tokens and cited unsupported omissions metadata. More capture space cannot fix verbosity or invalid citations. The explicit function brief now authorizes versioned compact semantics, one visible function per initial H/A call, listed small citation pointers and bounded concise replies. M2 schema/citation/disclosure/usage code remains exact; review_runner has explicit optional hooks, with its accepted bytes archived. Different scopes are separate observations; uncovered scopes never establish preservation. Full registry and signed graph remain private. Native transport, auth, worker, permissions and pipeline are unchanged.
 
-Measured existing endpoint request (qualification-input package cafeb1): 41,441 canonical bytes; evidence 37,772; elements 28,446; job inputs 4,874; outputs 3,382; schema 2,264; original prompt 374. Element operationalization contributes 7,347, source metadata 4,590, semantic hashes 1,716 among other fields. This is serialized metadata/provenance as well as semantic content, not necessarily 41KB essential per-question reasoning context. Measurements exclude native framing/backend overhead and do not license silent removal in current campaign.
+The new function protocol must also be registered in validate_provider_qualification, not only validate_execution_protocol and CLI dispatch. A direct native validator pass does not establish full campaign preflight. Preserve successful qualification at its original source; source corrections require a separate fresh bound qualification.
 
-Future decomposition can build compact element x visible-state inputs, each retaining element meaning/parameters/applicability, relevant ontology/rules, function input/output/local graph facts and explicit missingness, while controller retains original evidence IDs/hashes/source registry. With E elements/S state packages there are E*S decisions before declared applicability filtering; batch decisions rather than equating them with separate hosted calls. Three elements/two intermediates plus input/output = twelve decisions, potentially four Python calls with three questions each. Batched encoder rows still cost compute, and independently separating relational facts can destroy evidence needed to judge a requirement. Any compact-context comparison with Codex must separate context/decomposition effects from model identity.
-
-Independent primary reports reviewed: https://github.com/harrymunro/jev-laya-benchmark/blob/main/REPORT.md (September 21, synthetic 1,470 items/3,386 judgments, MLX on M3 Pro: Jev 92.9%, base Laya 65.3%, typed decisions 71.1%; short-question local speed benefit but calibration/context weaknesses; not today's pinned Windows/CPU model test). https://www.bks-lab.com/en/blog/laya-gegen-jev/ (own RTX4090 paired zero-shot 1,189-case study; short judgments more promising than large-choice/value-picking, poor invoice amount selection; checkpoint/threshold matter, synthetic data and no fine-tuning caveats). Reddit discussion https://www.reddit.com/r/LocalLLM/comments/1wmm8ql/jev_vs_laya_head_to_head_benchmark/ includes opposing views on zero-shot versus domain-tuned comparisons; claims of test-set training are not taken as established fact. https://github.com/NandhaKishorM/laya/issues/186 and model card document training/calibration separation concerns; distinguish training split use from test leakage.
-
-Recommendation remains experimental pilot, not validated Jev replacement. Test short source-grounded supported/contradicted/missing/irrelevant cases, numeric/entity/polarity/conditional distinctions, checkpoint versions and shuffled/renamed options; assess calibration/abstention on held-out data. Do not fine-tune on the same fault cases used to claim detection benefit. No installs, inference or active experiment-policy changes made in this research.
-
-
-Laya feasibility pilot is specified in small local pilot brief (local record: `instructions_between_agents/developer_laya_pilot_20261013.md`): separate pinned CPU environment, compact source-grounded element/state choice labels, 24 fixed balanced cases, no silent truncation or truth leakage, no training/prompt tuning, measured latency/quality/robustness. It does not alter current M3.
-
-## Separate local Laya pilot
-House Patterns from the separate Laya CPU pilot: compare complete token IDs against the pinned SDK sequence to refuse state, instruction and option clipping; retain truth/source/graph metadata in the controller. Dispatch multi-row requests from row count and persist timing/predictions per call. Preserve failed first attempts and identical-input reruns; distinguish Python calls, forward passes and encoder rows. Scope uncertainty must fit the declared insufficient-evidence definition: one missing-condition control was found ambiguous after prediction, preserved, and reported separately (24 planned / 23 unambiguous). Measured four-thread FP32 median/p95 was 4.384/6.469 s; 24-case batching saved Python calls but not CPU time. Amount/account and applicability failures support unsuitable-in-tested-scope, not a calibrated or general superiority claim. See handoff (local record: `instructions_between_agents/laya-pilot-developer-handoff.md`). No M3 changes.
+Corrected-source real qualification passed both fresh endpoint/function calls: q76a14f2724f60dc270aabca4c880f972d4bc818a67dd3b523804cdb35748d70b, sourcef5df2dadd1cb1f13dbbc37ab3765f06b94768a852ef5d317dd68b979e757192b, all14 native probes. Full campaign preflight passed. Frozen protocolbc033ba73edab345a362002cb5351681a5419058be54bbe76d775e7f0bc67f04 automatically launched the existing six-case/one-repeat serial campaign, maximum198 logical calls. Native gpt-5.5/low and all fixed bounds remain unchanged. Four function-qualification calls (two preserved source packages) cost61930 input/20275 output/82205 total tokens,1536 cached; money/backend attempts unknown. Campaign in progress; no final result is claimed here.
 
 House Pattern (13 October actual M3): M2 opening targets are unique by (kind, target_id), even across different questions. Preserve duplicate requests as invalid; do not deduplicate answers. Failure reasons built with str(dict) change after canonical JSON reload and can break strict policy replay; raw native/decoded verification and bundle integrity are separate from successful session-policy replay. See m3-failed-receipt-replay-defect-20261013.md.
 
-M3 response-failure continuation (13 October 2026): dictionary strings are not stable failure identities; compare versioned structured fields and preserve historical receipt bytes. Ordinary validated-transport assessment-content failures terminate the affected arm, count toward matched controls and remain explicit invalid outcomes; isolation/provenance/drift/budget failures still stop the campaign. Resume only exact-bound retained observations under a declared protocol amendment, with unchanged reviewer inputs and cumulative budgets. Authority and developer instructions: instructions_between_agents/developer_m3-response-failure-and-resume-20261013.md.
+Response-resume REDs preserve the actual legacy dictionary-order rejection and historical bytes; content errors and non-content hard stops require separate tests. The inherited79 calls remain charged.
 
-Follow-up publication audit: 6,221 unique committed blobs (199,746,408 bytes)
-matched no additional credential patterns or embedded archive/database signatures.
-Before the latest redaction, Windows profile paths appeared in 166 published files;
-corporate author email appeared in Git metadata and
-evidence/m2-tester-v4/git-baseline.txt. These are privacy choices,
-separate from credentials. Preserve sealed local evidence; anonymizing a publication
-copy changes recorded hashes, so curated exports or excluding raw logs are preferable
-to silently rewriting audit originals. Linux /home/index.html matches were public
-ontology URL paths, not local home-directory disclosures; distinguish URI context
-from filesystem paths before redacting.
+House Pattern: compare structured provider failure fields, preserving original reason strings only after safe supported-family parsing against the bound retained response. Reason-only and reason/exit-code families are explicit; unknown formats fail. Retained source references must bind case/arm/plan/path/session, and charge provenance is boolean, never coerced. Invalid arms retain partial assessments/costs and cannot contribute definitive paired findings.
 
-Source publication review remains explicit in
-[wrapper provenance](resources/etiq-wrapper-provenance.json) and
-[reference adaptation notice](src/intentlineage/_reference/NOTICE.md). The wrapper
-record says publication review is required; the reference notice records no located
-top-level licence and authorized local adaptation without inventing redistribution
-rights. These findings are reported for the human publication decision; credential
-scanning does not establish publication permission.
-
-User-authorized privacy removal: redact only the publication derivative, retaining
-all local audit originals and original Git settings. Replace machine-specific
-workspace/profile prefixes with JSON/XML-safe `WORKSPACE_ROOT`/`USER_HOME` markers;
-replace corporate author email with a neutral project address. All 167 original
-files are preserved and parsed JSON/XML stay valid. Application source is unchanged.
-The publication repository uses `IntentLineage contributors` and
-`noreply@example.invalid`; GitHub account association can use an owner-supplied
-GitHub privacy address later. Public changed-file hashes and redaction categories
-are in `resources/publication-sanitization.json`. Keep original recorded seals/
-hashes tied to originals; do not claim that redacted copies retain those signatures.
-Do not erase source attribution or invent redistribution grants to clear an IP note.
-
-Permission-note interpretation: the wrapper recovery includes five source files
-from `etiq_improvements2`; `_reference` helpers and upstream snapshots derive from
-`use_case_icp`. No public redistribution terms were established by their inspections.
-This is incomplete permission documentation, not a finding of unauthorized use.
-The copyright owner or authorized publisher can approve distribution and choose
-licensing; ownership/authorization remains unconfirmed here. The Etiq library is
-separately installed and its proprietary terms remain separate. See
-[GitHub licensing guidance](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
-and [commit email privacy](https://docs.github.com/en/account-and-profile/reference/email-addresses-reference).
-
-
-13 October user-selected QA-output exclusion: accumulated tester outputs,
-generated developer validation reports/logs and capture command/log records
-are local archive material. Remove them from both indexes and only amend the
-fresh publication commit. Keep fixture data and validation Python source used
-by regression tests; preserve all excluded bytes on disk. The sanitization
-manifest now covers only redacted files still present in the publication.
+House Pattern: the existing write helper intentionally opens files exclusively. Serial progress snapshots need immutable unique identities; never overwrite an earlier cost record or reuse one path across units.
 
 
 ## M3 amended actual execution finished — 13 October 2026
@@ -939,3 +1032,79 @@ manifest now covers only redacted files still present in the publication.
 The Developer/Experimenter completed all six cases and all30 E/H/A/R-H/R-A rows under the explicit response-policy/retained-continuation amendment.178 charged campaign calls (79 verified retained,99 fresh), three terminal invalid A answers, zero hard-stop failures; complete reported campaign usage3641361 tokens. All223 affected checks pass. Complete raw/policy/score/accounting replay and private export/relocated replay pass; original79-call interrupted evidence now replays without byte edits. H detects both persistent and both repaired faults; endpoint arms miss both repaired faults. A has three invalid rows. One dependent pair and incomplete semantic coverage limit these descriptive results. Execution is finished; scientific completeness and complete-M3 testing/acceptance remain pending. See instructions_between_agents/m3-experiment-developer-handoff.md for exact code005383b/source8c3369, qualification/protocol/campaign hashes, all costs/coverage and evidence paths. Source21f successful qualifications and zero-new-call checkpoint setup failure remain preserved; qualification costs stay separate. No reviewer prompts/schema/Etiq/permissions/bounds changed in this amendment.
 
 House Pattern: completed execution, valid assessments, semantic coverage and scientific acceptance are distinct. Report all scheduled invalid arms; compare only definitive paired observations. Reusable observations require immutable raw/request/source/transcript/usage bindings, exactly-once admission and the original cumulative ceiling. Reviewer history is never continuation state.
+
+
+## Single-review correction RED ? 13 October 2026
+
+The new brief is implementation/offline scope only. A local correction branch starts at completed delivery ee5e377; exact 58-source execution bytes (8c3369) are archived without editing the completed campaign.28 behavioral REDs cover the closed no-question/one-action response, joint element assessment, citations/coverage, ordinary-payment compilation, justified/unknown ontology mappings and stage applicability. These precede implementation; historical contracts and explicit-carriage tasks remain supported. No hosted qualification or experiment is launched. See instructions_between_agents/m3-single-review-correction-plan-20261013.md.
+
+
+Single-review first GREEN:28 contract/compiler/mapping checks pass after RED4196fe8. review_single.py declares a separate closed one-action, no-question wire and exact joint-review instruction, reusing compact public views and shared assessment/citation checks. ordinary_review_inputs.py compiles the new request with explicit versioned ordinary-data mappings and due stages; explicit-carriage legacy compilation remains supported. Native runner/disclosure/replay/candidate integration is not yet delivered. No hosted calls.
+
+
+Single-review integration RED:10 failing behavior checks specify runner/schema staging, nested levels and repeat outcomes, distinct artifact reads, invalid-answer/control accounting, hard stops, new native envelope dispatch, source mapping references and relocated replay before those integrations. The corrected request was genuinely decomposed once by the existing pinned loopback-only Qwen2.5:1.5b/LangExtract pipeline:12 accepted records,24 compiled elements, zero rejected records/diagnostics, zero hosted reviewer calls. Raw local extraction and the first compilation remain preserved; no old inventory was pruned to produce the new one.
+
+
+### Single-review runner integration (13 October 2026)
+
+The versioned single-review runner now stages its declared schema, uses the same joint task for nested follow-ups, records reason/element associations and explicit repeated-disclosure outcomes, matches fresh endpoint controls to actual charged calls, and replays the same native operations and transcripts. ChatGPT event validation and content-only failure classification dispatch on the explicit new contract; historical task/schema branches remain separate. The 28 contract/input checks and ten committed integration REDs pass (38 checks, offline). Existing call, operation, byte, isolation and invalid-answer guards remain required. No hosted qualification or campaign is authorized by this correction. Candidate/source admission and complete historical replay remain to be verified before handoff.
+
+
+### Single-review candidate and preservation REDs
+
+Nine behavioral REDs specify genuine extraction dispatch, versioned bank capture and unreleased fixed bounds, scoring without questions, per-scope insufficiency, pre-operation column validation, accurate native packaging and pinned completed-campaign replay. The first test attempt had an import/fixture issue; corrected REDs are retained separately. These tests precede candidate/admission and historical replay implementation. No new hosted budget or approval is implied.
+
+
+### Single-review admission guards
+
+The 47 contract/input/runner/candidate checks now pass offline. Additional REDs require the native invocation binder to accept only the declared versioned schema and explicit accepted-versus-pending M2 source provenance. Passing guard fixtures also cover content-only containment, model/tool/usage/probe hard stops, old authority refusal and archive tampering. New source admission uses fresh exact Overseer records; no user continuation or historical call allowance is transferred. Candidate captures and full historical replay remain delivery checks, not new reviewer outcomes.
+
+
+### Capture source versus launch source
+
+All six new ordinary-payment native cases completed. The first candidate audit correctly exposed an overbroad assumption: the native bank capture manifest does not include three CLI/audit scripts that the exact launch digest includes. A committed RED requires these source sets to remain distinct: retain sealed capture-time sources and bind the whole current launch source set separately. Refresh only the unreleased source/configuration package, preserve its first version, and keep runtime/capture/request evidence unchanged.
+
+
+### New qualification route REDs
+
+Two pure routing REDs require the new single-review protocol to enter the existing ChatGPT qualification validator and preparation-command path. No provider is qualified by these patched route fixtures. Fresh qualification itself still requires actual model-list events, two isolated completed turns, unchanged denial controls and exact source/configuration review. Model metadata is intentionally pending and must be observed during new qualification, rather than inherited from the completed campaign.
+
+
+### Single-review correction delivered (14 October 2026)
+
+The new `m3-single-review.1` contract supplies one joint task and one optional disclosure action with inventoried element associations. Historical M2 and function-review schemas remain separate. New `ordinary-payment-inventory.1` compilation uses a genuine local single-pass decomposition of the ordinary request: 12 accepted records, 24 elements, zero diagnostics; explicit carriage remains supported in the historical compiler. The declared Payment/amount domain mapping cites the actual PaymentRevision and receipt_for sources, separates existence from user preservation/approval rules, applies due stages, and keeps unsupported mappings insufficient.
+
+The existing capture/injection harness produced all six qualified native cases, with seven H calls per case, A capped at nine calls/two operations/100000 added bytes, one repeat and seed 20261012. The new candidate has 174 base calls and a proposed maximum of 198; it has zero hosted outcomes and no release. The largest measured request is 79797 bytes against the unchanged 200000 request guard (196608 input-token observed stop, 8192 output-token observed stop, 300 seconds, 33554432 raw-event bytes). Fresh ChatGPT gpt-5.5/low qualification and new exact Overseer decisions remain necessary. Completed 178-call authority is not reusable.
+
+Verification: 59 new focused checks plus 259 affected historical checks pass (318 distinct checks). The original completed six-unit, 178-call campaign and scores replayed under its pinned 58-source digest; archive code was verified as data, never executed. New private candidate export and relocated export replay, and tampered export rejection, passed. Three of 16 accepted M2 files are current optional extensions with separately pinned accepted bytes; the new extension is pending review. No hosted qualification, experiment, API-key access, push or publication occurred. See `instructions_between_agents/m3-single-review-correction-developer-handoff.md`, `resources/protocol/m3-single-profile.json`, examples, and `evidence/validation-single-review-20261013/`. Requirements pins and shared Etiq wrapper remain unchanged.
+
+
+### Direct-start scheduled-readiness REDs (14 October 2026)
+
+The user-authorized direct-start brief permits the reviewed new single-review campaign with zero separate qualification calls. Parent62-source digest de0585 and all prior evidence are archived unchanged. Nineteen behavioral REDs specify frozen-before-inference admission, exact scheduled E/H requests, once-only outcomes/costs, drift/ceiling refusal, content-versus-technical failure semantics, callback journaling/interruption and legacy gating. Genuine no-turn native setup completed with the pinned ELF and existing ChatGPT login; provider review calls0 and no credential leakage. No experimental outcome or readiness success is yet claimed. Source gate changes and scientific inputs remain distinct.
+
+
+### Scheduled startup accounting guards
+
+The initial nineteen REDs now pass offline. Additional behavioral checks distinguish technical readiness from structurally valid assessment, preserve unknown backend/provider/currency facts, reject model/usage/probe/runtime/tool/charge/freeze drift, require closed startup policy and globally once-only invocation admission, enforce198 before inference and retain empty/interrupted startup prefixes without inventing success. Native-shaped guard inputs are authored software fixtures and are never admitted as actual readiness or campaign evidence. Two uncovered policy/address guard REDs precede their fixes.
+
+
+### Scheduled-call readiness implementation verified (14 October 2026)
+
+The explicit m3b-chatgpt-scheduled-protocol.1 mode preserves reviewed scientific inputs and uses the actual direct-start user brief as authority. Archive62-parent source/protocol/bank identities and an AST/body allowlist constrain the mechanical gate adaptation. The native Linux stdlib gate passes without a fabricated qualification packet; no-turn cached ChatGPT metadata shows gpt-5.5 available, zero review turns and all14 probes passed. Effective served identity remains unknown until append-only campaign observations.
+
+The first scheduled E and H requests are frozen from the actual first scheduled case, not exemplars. Existing session/transport machinery records each once, with separate technical and assessment-validity facts; invalid content terminates its arm, while technical failure stops the campaign. Append-only admission/cost/startup journals enforce unique addresses/threads/calls and the cumulative198 ceiling. Neutral controls, raw framing, citation validation, privacy/namespace/network policies and historical qualification paths remain intact. Thirty-two new gate/accounting checks and185 focused/affected checks pass; At that preparation checkpoint genuine inference had not started. No new dependency or scientific-source change is required.
+
+
+Direct-start freeze (14 October): source 158049004ae760abf23b4326104db59e3a3d6c2b1fa7a11cce019601a1f8ec33; protocol 3a30c4900dace1bb6307d381c54e76f65eb0c90d928bdf2f0eaa45f948fd735a; user authority 679eb44b4d83333eadc7252a777a093877d9649bc8774c3f4b8cd77b2e91625a. All reviewed scientific/source/request/schedule bindings are fixed before the first actual E/H observations. Separate qualification calls0; cumulative campaign cap198. That freeze preceded the actual direct launch documented in the completed handoff below.
+
+
+## Completed single-review execution (14 October 2026)
+
+14 October 2026: the new single-review campaign completed all six cases/thirty rows with172 fresh charged gpt-5.5/low calls, zero separate qualifications, one contained invalid H answer and all12 actual control matches. Complete/exported/relocated raw/score/accounting replay passed. Source158049004ae760abf23b4326104db59e3a3d6c2b1fa7a11cce019601a1f8ec33; campaign8cc670e7d5e184eb2e5f371ecf8fb116f9ed15e49a062f7c2b037d24e76ec834. Results are descriptive one-pair observations; all6 A rows retain incomplete coverage. See `instructions_between_agents/m3-single-review-experiment-developer-handoff.md`. Execution/analysis are finished; complete-M3 testing and semantic acceptance remain Overseer-owned.
+
+House pattern: separate technical readiness, reply validity, target detection and complete coverage. Content-invalid calls retain raw/decoded data and costs, end their arm and count toward controls. Streaming protocol overhead can exceed1MiB with a small reply; preserve full32MiB-bounded events. Native ELF snapshots dominate bundle size, so allow full integrity scans and reuse/move only newly exported evidence without deleting history.
+
+Publication house pattern: replace the current experiment using a regular
+descendant commit after a version has been pushed; preserve history, local
+evidence and exact frozen source. Public wrapper upstream: https://github.com/ETIQ-AI/etiq-demo-scripts.

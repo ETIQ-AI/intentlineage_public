@@ -26,7 +26,7 @@ def receipt_usage(session):
     return aggregate_usage(calls)
 
 
-def rows_from_units(units,*,legacy=False,historical=False,data_class=None,evidence_root=None):
+def rows_from_units(units,*,legacy=False,historical=False,data_class=None,evidence_root=None,historical_source=None):
     if data_class is not None and data_class not in DATA_CLASSES:raise ValueError('Unknown review data class')
     rows=[]
     for unit in units:
@@ -35,7 +35,7 @@ def rows_from_units(units,*,legacy=False,historical=False,data_class=None,eviden
                 raise ValueError('Mixed or edited unit review provenance')
             if data_class=='empirical':
                 from .experiment_execution import validate_empirical_unit
-                validate_empirical_unit(unit,evidence_root)
+                validate_empirical_unit(unit,evidence_root,historical_source=historical_source)
         for arm in ARMS:
             session=unit['matrix']['sessions'][arm]
             # H assesses separate frozen batches. Adaptive terminal evidence may
@@ -43,7 +43,8 @@ def rows_from_units(units,*,legacy=False,historical=False,data_class=None,eviden
             replies=session.get('replies',[]) if arm=='H' else ([session['terminal_assessment']] if session.get('terminal_assessment') else [])
             assessments=[deepcopy(a) for reply in replies for a in reply['assessments']]
             from .review_function import SESSION_VERSION as FUNCTION_SESSION
-            function_mode=session.get('format_version') in {FUNCTION_SESSION,'m3-function-session.2'}
+            single_mode=session.get('format_version')=='m3-single-session.1'
+            function_mode=single_mode or session.get('format_version') in {FUNCTION_SESSION,'m3-function-session.2'}
             if function_mode:
                 replies=session.get('replies',[]) if arm in {'H','A'} else ([session['terminal_assessment']] if session.get('terminal_assessment') else [])
                 assessments=deepcopy(session['effective_scoped_assessments'])
@@ -74,7 +75,10 @@ def rows_from_units(units,*,legacy=False,historical=False,data_class=None,eviden
                 terminal=(unit['matrix'].get('terminal_outcomes') or {}).get(arm,session.get('terminal_outcome'))
                 row.update(terminal_outcome=terminal,invalid_response_count=sum(c.get('failure_kind')=='invalid_response' for c in session['calls']) or int(terminal=='invalid_response'),partial_assessments=[{**deepcopy(a),'scope_id':c.get('function_scope','endpoint'),'attempt':c['attempt']} for c,r in zip([c for c in session['calls'] if not c['failure']],session.get('replies',[])) for a in r['assessments']])
             if function_mode:
-                row.update(review_contract='m3-function-coverage.1',required_scopes=session['required_scopes'])
+                row.update(review_contract='m3-single-coverage.1' if single_mode else 'm3-function-coverage.1',required_scopes=session['required_scopes'])
+            if single_mode:
+                row.pop('unresolved_questions')
+                row.update(remaining_insufficiency=deepcopy(session['remaining_insufficiency']),action_outcomes=deepcopy(session['action_outcomes']))
             if data_class is not None:
                 row.update(data_class=data_class,synthetic=data_class!='empirical',
                     provenance={'kind':'verified-actual-provider' if data_class=='empirical' else 'recorded-contract-fixture' if data_class=='recorded_contract' else 'synthetic',
@@ -88,7 +92,7 @@ def _outcome(record,row):
     if row.get('terminal_outcome')=='invalid_response':return 'invalid_response'
     if row['failed']:return 'failed'
     if not row['valid_review']:return 'unknown'
-    if row.get('review_contract')=='m3-function-coverage.1':
+    if row.get('review_contract') in {'m3-function-coverage.1','m3-single-coverage.1'}:
         from .review_function import scoped_outcome
         return scoped_outcome(record,row)
     observations=defaultdict(set)

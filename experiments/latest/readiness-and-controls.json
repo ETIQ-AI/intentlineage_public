@@ -1,0 +1,523 @@
+{
+  "readiness": {
+    "assessment_validity": [
+      true,
+      true
+    ],
+    "charged_calls": 172,
+    "pending_attempts": 0,
+    "separate_qualification_calls": 0,
+    "startup_observations": 2,
+    "technical_ready": true
+  },
+  "control_matches": [
+    {
+      "actual_control_matches": {
+        "R-A": {
+          "control": 7,
+          "matched": true,
+          "paired": 7
+        },
+        "R-H": {
+          "control": 7,
+          "matched": true,
+          "paired": 7
+        }
+      },
+      "case_id": "case-002",
+      "unit_id": "5bccf0f30a74956d93a7"
+    },
+    {
+      "actual_control_matches": {
+        "R-A": {
+          "control": 8,
+          "matched": true,
+          "paired": 8
+        },
+        "R-H": {
+          "control": 7,
+          "matched": true,
+          "paired": 7
+        }
+      },
+      "case_id": "case-003",
+      "unit_id": "f077f1145ad06cb66b0a"
+    },
+    {
+      "actual_control_matches": {
+        "R-A": {
+          "control": 9,
+          "matched": true,
+          "paired": 9
+        },
+        "R-H": {
+          "control": 3,
+          "matched": true,
+          "paired": 3
+        }
+      },
+      "case_id": "case-006",
+      "unit_id": "92afd35a4d0238ec7a8e"
+    },
+    {
+      "actual_control_matches": {
+        "R-A": {
+          "control": 7,
+          "matched": true,
+          "paired": 7
+        },
+        "R-H": {
+          "control": 7,
+          "matched": true,
+          "paired": 7
+        }
+      },
+      "case_id": "case-005",
+      "unit_id": "2850c1d06e77a341f161"
+    },
+    {
+      "actual_control_matches": {
+        "R-A": {
+          "control": 7,
+          "matched": true,
+          "paired": 7
+        },
+        "R-H": {
+          "control": 7,
+          "matched": true,
+          "paired": 7
+        }
+      },
+      "case_id": "case-001",
+      "unit_id": "c38e58ec7c8f1eaf4b0e"
+    },
+    {
+      "actual_control_matches": {
+        "R-A": {
+          "control": 7,
+          "matched": true,
+          "paired": 7
+        },
+        "R-H": {
+          "control": 7,
+          "matched": true,
+          "paired": 7
+        }
+      },
+      "case_id": "case-004",
+      "unit_id": "2462d5a9d4f1acef53f7"
+    }
+  ],
+  "adaptive_disclosures": [
+    {
+      "action_outcomes": [],
+      "case_id": "case-002",
+      "controller_operations": 0,
+      "evidence_bytes_added": 0,
+      "logical_calls": 7,
+      "remaining_insufficiency": [
+        {
+          "element_id": "pe-fcf1cc98c1cf5179ab99d652",
+          "kind": "insufficient_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-002/capture:group:1"
+        }
+      ]
+    },
+    {
+      "action_outcomes": [
+        {
+          "before_evidence_sha256": "41f2f87b364e4304fe3b83369a1c262efcafc7fc1520dc939c00eb2a06d1dcc6",
+          "disclosure_operations": 1,
+          "effective_action": {
+            "kind": "function",
+            "target_id": ".tmp/m3-single-candidate-20261013/bank/case-003/capture:group:1"
+          },
+          "effective_action_sha256": "21460ed3bd1747a01e0e7029907b66a6fb4b6c580f10a931a63ea02d986f7350",
+          "followup_calls": 1,
+          "outcome": "disclosed",
+          "request": {
+            "element_ids": [
+              "pe-186ba4f219e358474db1e717",
+              "pe-54145b5fad2d10d3422f855a"
+            ],
+            "kind": "function",
+            "reason": "Inspect child steps to locate where amount changes from 100 to 10000.0.",
+            "target_id": ".tmp/m3-single-candidate-20261013/bank/case-003/capture:group:1"
+          }
+        }
+      ],
+      "case_id": "case-003",
+      "controller_operations": 1,
+      "evidence_bytes_added": 8535,
+      "logical_calls": 8,
+      "remaining_insufficiency": [
+        {
+          "element_id": "pe-8adacc21c3e2f6ed92a7f241",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-003/capture:group:1"
+        },
+        {
+          "element_id": "pe-fcf1cc98c1cf5179ab99d652",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-003/capture:group:1"
+        },
+        {
+          "element_id": "pe-30b0ca3a91b1d4464aa1d8ac",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-003/capture:group:1"
+        },
+        {
+          "element_id": "pe-d38ab52ae63c6e5741ebfdb6",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-003/capture:group:1"
+        },
+        {
+          "element_id": "pe-e971b627f716683c8ddb7ae8",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-003/capture:group:1"
+        },
+        {
+          "element_id": "pe-4fbe1aa775990f522e215a1e",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-003/capture:group:1"
+        },
+        {
+          "element_id": "pe-8b68d4d2b60cd1c6fb276be2",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-003/capture:group:1"
+        },
+        {
+          "element_id": "pe-3f53e30ad1cdb574a58ea2a5",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-003/capture:group:1"
+        },
+        {
+          "element_id": "pe-b17da3f46c7b56da878735a4",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-003/capture:group:1"
+        },
+        {
+          "element_id": "pe-a556e7c2b80d73190159ab9f",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-003/capture:group:1"
+        },
+        {
+          "element_id": "pe-1cb1e41ce6d325669caea678",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-003/capture:group:1"
+        },
+        {
+          "element_id": "pe-8d38e20ac29a9f117fdd846c",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-003/capture:group:1"
+        },
+        {
+          "element_id": "pe-5af0d49b75f51f5d37c69ca5",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-003/capture:group:1"
+        }
+      ]
+    },
+    {
+      "action_outcomes": [
+        {
+          "before_evidence_sha256": "5874fe5a1ec4983510a97dde8e7a2887398ebe7fd4fff5987facd9d3d76d3c1a",
+          "disclosure_operations": 1,
+          "effective_action": {
+            "kind": "function",
+            "target_id": ".tmp/m3-single-candidate-20261013/bank/case-006/capture:group:38"
+          },
+          "effective_action_sha256": "977947861f84180797a2db10032601dbf6e1bebe29f2bcb9f53eac9c57a8003b",
+          "followup_calls": 1,
+          "outcome": "disclosed",
+          "request": {
+            "element_ids": [
+              "pe-8b68d4d2b60cd1c6fb276be2",
+              "pe-a556e7c2b80d73190159ab9f",
+              "pe-311341cd56339d289d3c351d",
+              "pe-7df2facb3ceb331994c14d37"
+            ],
+            "kind": "function",
+            "reason": "Inspect why approve_payment changes account_id to ACC-18 before approval.",
+            "target_id": ".tmp/m3-single-candidate-20261013/bank/case-006/capture:group:38"
+          }
+        },
+        {
+          "before_evidence_sha256": "b7f6d7c559999b6c0c5a6f089b0dce29b7d4178a6d7e3aa94ae04e22225e19e3",
+          "disclosure_operations": 1,
+          "effective_action": {
+            "kind": "function",
+            "target_id": ".tmp/m3-single-candidate-20261013/bank/case-006/capture:group:39"
+          },
+          "effective_action_sha256": "107c856dfb355c2c8446455009dcb95a692d3b2440d59af911cdf6399c1eeb84",
+          "followup_calls": 1,
+          "outcome": "disclosed",
+          "request": {
+            "element_ids": [
+              "pe-8b68d4d2b60cd1c6fb276be2",
+              "pe-a556e7c2b80d73190159ab9f",
+              "pe-311341cd56339d289d3c351d",
+              "pe-7df2facb3ceb331994c14d37"
+            ],
+            "kind": "function",
+            "reason": "Inspect how approval_value sources account_id and why approval uses ACC-18.",
+            "target_id": ".tmp/m3-single-candidate-20261013/bank/case-006/capture:group:39"
+          }
+        },
+        {
+          "before_evidence_sha256": "58339077fbda945a0784256bb416cbdbe97db3048ee2619aab9d13957c11fc40",
+          "disclosure_operations": 0,
+          "effective_action": {
+            "kind": "function",
+            "target_id": ".tmp/m3-single-candidate-20261013/bank/case-006/capture:group:40"
+          },
+          "effective_action_sha256": "cc44c56c6d0abc593aa2cf672c4ccfbef8244106f14d8e8d706f95eb3ab65ead",
+          "followup_calls": 0,
+          "outcome": "call_budget_exhausted",
+          "request": {
+            "element_ids": [
+              "pe-8b68d4d2b60cd1c6fb276be2",
+              "pe-a556e7c2b80d73190159ab9f",
+              "pe-311341cd56339d289d3c351d",
+              "pe-7df2facb3ceb331994c14d37"
+            ],
+            "kind": "function",
+            "reason": "Inspect approval_for internals to explain why approval_value uses ACC-18.",
+            "target_id": ".tmp/m3-single-candidate-20261013/bank/case-006/capture:group:40"
+          }
+        }
+      ],
+      "case_id": "case-006",
+      "controller_operations": 2,
+      "evidence_bytes_added": 6142,
+      "logical_calls": 9,
+      "remaining_insufficiency": [
+        {
+          "kind": "unchecked_scope",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-006/capture:group:40"
+        },
+        {
+          "element_id": "pe-8adacc21c3e2f6ed92a7f241",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-006/capture:group:78"
+        },
+        {
+          "element_id": "pe-fcf1cc98c1cf5179ab99d652",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-006/capture:group:78"
+        },
+        {
+          "element_id": "pe-30b0ca3a91b1d4464aa1d8ac",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-006/capture:group:78"
+        },
+        {
+          "element_id": "pe-d38ab52ae63c6e5741ebfdb6",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-006/capture:group:78"
+        },
+        {
+          "element_id": "pe-e971b627f716683c8ddb7ae8",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-006/capture:group:78"
+        },
+        {
+          "element_id": "pe-4fbe1aa775990f522e215a1e",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-006/capture:group:78"
+        },
+        {
+          "element_id": "pe-8b68d4d2b60cd1c6fb276be2",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-006/capture:group:78"
+        },
+        {
+          "element_id": "pe-3f53e30ad1cdb574a58ea2a5",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-006/capture:group:78"
+        },
+        {
+          "element_id": "pe-b17da3f46c7b56da878735a4",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-006/capture:group:78"
+        },
+        {
+          "element_id": "pe-a556e7c2b80d73190159ab9f",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-006/capture:group:78"
+        },
+        {
+          "element_id": "pe-1cb1e41ce6d325669caea678",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-006/capture:group:78"
+        },
+        {
+          "element_id": "pe-8d38e20ac29a9f117fdd846c",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-006/capture:group:78"
+        },
+        {
+          "element_id": "pe-5af0d49b75f51f5d37c69ca5",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-006/capture:group:78"
+        },
+        {
+          "kind": "undischarged_opening",
+          "outcome": "call_budget_exhausted",
+          "request": {
+            "element_ids": [
+              "pe-8b68d4d2b60cd1c6fb276be2",
+              "pe-a556e7c2b80d73190159ab9f",
+              "pe-311341cd56339d289d3c351d",
+              "pe-7df2facb3ceb331994c14d37"
+            ],
+            "kind": "function",
+            "reason": "Inspect approval_for internals to explain why approval_value uses ACC-18.",
+            "target_id": ".tmp/m3-single-candidate-20261013/bank/case-006/capture:group:40"
+          }
+        }
+      ]
+    },
+    {
+      "action_outcomes": [],
+      "case_id": "case-005",
+      "controller_operations": 0,
+      "evidence_bytes_added": 0,
+      "logical_calls": 7,
+      "remaining_insufficiency": [
+        {
+          "element_id": "pe-8adacc21c3e2f6ed92a7f241",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-005/capture:group:46"
+        },
+        {
+          "element_id": "pe-fcf1cc98c1cf5179ab99d652",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-005/capture:group:46"
+        },
+        {
+          "element_id": "pe-30b0ca3a91b1d4464aa1d8ac",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-005/capture:group:46"
+        },
+        {
+          "element_id": "pe-d38ab52ae63c6e5741ebfdb6",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-005/capture:group:46"
+        },
+        {
+          "element_id": "pe-e971b627f716683c8ddb7ae8",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-005/capture:group:46"
+        },
+        {
+          "element_id": "pe-4fbe1aa775990f522e215a1e",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-005/capture:group:46"
+        },
+        {
+          "element_id": "pe-8b68d4d2b60cd1c6fb276be2",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-005/capture:group:46"
+        },
+        {
+          "element_id": "pe-3f53e30ad1cdb574a58ea2a5",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-005/capture:group:46"
+        },
+        {
+          "element_id": "pe-b17da3f46c7b56da878735a4",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-005/capture:group:46"
+        },
+        {
+          "element_id": "pe-a556e7c2b80d73190159ab9f",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-005/capture:group:46"
+        },
+        {
+          "element_id": "pe-1cb1e41ce6d325669caea678",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-005/capture:group:46"
+        },
+        {
+          "element_id": "pe-8d38e20ac29a9f117fdd846c",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-005/capture:group:46"
+        },
+        {
+          "element_id": "pe-5af0d49b75f51f5d37c69ca5",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-005/capture:group:46"
+        }
+      ]
+    },
+    {
+      "action_outcomes": [],
+      "case_id": "case-001",
+      "controller_operations": 0,
+      "evidence_bytes_added": 0,
+      "logical_calls": 7,
+      "remaining_insufficiency": [
+        {
+          "element_id": "pe-30b0ca3a91b1d4464aa1d8ac",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-001/capture:group:1"
+        },
+        {
+          "element_id": "pe-d38ab52ae63c6e5741ebfdb6",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-001/capture:group:1"
+        },
+        {
+          "element_id": "pe-e971b627f716683c8ddb7ae8",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-001/capture:group:1"
+        },
+        {
+          "element_id": "pe-4fbe1aa775990f522e215a1e",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-001/capture:group:1"
+        },
+        {
+          "element_id": "pe-8b68d4d2b60cd1c6fb276be2",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-001/capture:group:1"
+        },
+        {
+          "element_id": "pe-3f53e30ad1cdb574a58ea2a5",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-001/capture:group:1"
+        },
+        {
+          "element_id": "pe-b17da3f46c7b56da878735a4",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-001/capture:group:1"
+        },
+        {
+          "element_id": "pe-a556e7c2b80d73190159ab9f",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-001/capture:group:1"
+        },
+        {
+          "element_id": "pe-1cb1e41ce6d325669caea678",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-001/capture:group:1"
+        },
+        {
+          "element_id": "pe-8d38e20ac29a9f117fdd846c",
+          "kind": "uncovered_scope_element",
+          "scope_id": ".tmp/m3-single-candidate-20261013/bank/case-001/capture:group:1"
+        }
+      ]
+    },
+    {
+      "action_outcomes": [],
+      "case_id": "case-004",
+      "controller_operations": 0,
+      "evidence_bytes_added": 0,
+      "logical_calls": 7,
+      "remaining_insufficiency": []
+    }
+  ]
+}

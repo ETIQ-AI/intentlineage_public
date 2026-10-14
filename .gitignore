@@ -1,5 +1,4 @@
-# Curated latest-experiment snapshot; unlisted files stay local.
-# Update this selection when replacing the published experiment.
+# Curated latest completed experiment; unlisted local files stay untracked.
 *
 !/etiq_runner/
 !/evidence/
@@ -56,8 +55,10 @@
 !/experiments/latest/inputs/extraction-current.json
 !/experiments/latest/inputs/inventory.json
 !/experiments/latest/inputs/runtime.json
+!/experiments/latest/interpretation.md
 !/experiments/latest/invalid-response-evidence.json
 !/experiments/latest/protocol.json
+!/experiments/latest/readiness-and-controls.json
 !/experiments/latest/scheduled-observation-coverage.json
 !/experiments/latest/score-summary.json
 !/pyproject.toml
@@ -126,6 +127,7 @@
 !/src/intentlineage/capture.py
 !/src/intentlineage/changes.py
 !/src/intentlineage/compiler.py
+!/src/intentlineage/completed_replay.py
 !/src/intentlineage/contracts.py
 !/src/intentlineage/evidence_inventory.py
 !/src/intentlineage/evidence_packages.py
@@ -141,7 +143,9 @@
 !/src/intentlineage/experiment_protocol.py
 !/src/intentlineage/experiment_qualification.py
 !/src/intentlineage/experiment_resume.py
+!/src/intentlineage/experiment_scheduled.py
 !/src/intentlineage/experiment_scoring.py
+!/src/intentlineage/experiment_single.py
 !/src/intentlineage/experiment_transport.py
 !/src/intentlineage/experiment_user_authorization.py
 !/src/intentlineage/extraction.py
@@ -149,6 +153,7 @@
 !/src/intentlineage/native_capture.py
 !/src/intentlineage/native_workflow.py
 !/src/intentlineage/ontology.py
+!/src/intentlineage/ordinary_review_inputs.py
 !/src/intentlineage/payloads.py
 !/src/intentlineage/payment.py
 !/src/intentlineage/prompt_compiler.py
@@ -162,6 +167,7 @@
 !/src/intentlineage/review_function.py
 !/src/intentlineage/review_provider.py
 !/src/intentlineage/review_runner.py
+!/src/intentlineage/review_single.py
 !/src/intentlineage/review_usage.py
 !/src/intentlineage/source_scope.py
 !/src/intentlineage/taxonomy.py
@@ -173,10 +179,11 @@
 !/tests/test_m3_public_runtime.py
 !/tests/test_m3_response_bindings.py
 !/tests/test_m3_response_checkpoint.py
+!/tests/test_m3_single_qualification_dispatch.py
 !/tests/test_m3b_chatgpt_boundary.py
 !/tests/test_m3b_chatgpt_correction.py
 
-# Credentials and generated/local records remain excluded.
+# Credential/cache exclusions override the selection.
 # Credentials and local authentication (including nested reviewer workspaces)
 .env
 .env.*

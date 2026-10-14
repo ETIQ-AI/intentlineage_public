@@ -134,6 +134,13 @@ def execute_campaign(*args, **kwargs):
 
 def execution_preflight(protocol,gates,qualification,*,evidence_root=ROOT):
     """Real-path gates are based on concrete decisions and bound actual evidence."""
+    if type(protocol) is dict and protocol.get('format_version')=='m3b-chatgpt-scheduled-protocol.1':
+        from .experiment_scheduled import validate_execution_contract as scheduled
+        try:
+            check=scheduled(protocol,gates,qualification,evidence_root=evidence_root)
+            return {'ready':True,'execution_available':True,'blockers':[],'execution_mode':'m3-scheduled-readiness.1','runtime_ready':False,'protocol_sha256':check['protocol_sha256']}
+        except (ValueError,OSError,KeyError,TypeError) as error:
+            return {'ready':False,'execution_available':False,'blockers':['scheduled_admission'],'diagnostics':[str(error)]}
     from .experiment_protocol import validate_execution_protocol,draft_protocol
     from .experiment_execution import validate_execution_decision,controller_source_digest
     from copy import deepcopy

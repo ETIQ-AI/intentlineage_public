@@ -102,12 +102,19 @@ def _admission(config):
     if actual!=config['controller_source_manifest']:raise ValueError('Trusted native controller source changed')
     current=_digest(actual);admission=config.get('admission') or {};authority=source.parent.parent/'instructions_between_agents'
     contract=admission.get('contract')
+    if admission.get('kind')=='scheduled_campaign':
+        spec=importlib.util.spec_from_file_location('scheduled_user_authority',source/'src/intentlineage/experiment_scheduled.py')
+        module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+        module.validate_native_context(source,contract)
+        if contract['protocol']['bindings']['controller_source_sha256']!=current:raise ValueError('Scheduled native controller source changed')
+        return
     user_authority=None
     def user_module():
         spec=importlib.util.spec_from_file_location('user_continuation_gate',source/'src/intentlineage/experiment_user_authorization.py')
         module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module);return module
     if admission.get('kind')=='qualification':
-        path=authority/'m3b-qualification-code-overseer-review.md'
+        name='m3-single-qualification-code-overseer-review.md' if contract.get('scope')=='chatgpt-single-provider-qualification' else 'm3b-qualification-code-overseer-review.md'
+        path=authority/name
         raw=path.read_bytes()
         if hashlib.sha256(raw).hexdigest()!=admission['review_sha256']:raise ValueError('Actual main qualification review changed')
         blocks=re.findall(r'```intentlineage-qualification-code-review\r?\n(.*?)\r?\n```',raw.decode(),re.S)
@@ -123,8 +130,11 @@ def _admission(config):
     elif admission.get('kind')=='campaign':
         protocol=contract['protocol'];qualification=contract['qualification'];decisions=[]
         for gate,name in [('real_path_review','m3b-real-path-overseer-review.md'),('protocol_review','m3b-protocol-overseer-review.md'),('experiment_authorization','m3b-campaign-overseer-release.md')]:
+            single=protocol.get('format_version')=='m3b-chatgpt-single-protocol.1'
+            if single:name=name.replace('m3b-','m3-single-')
             record=contract['gates'][gate]
             if record.get('kind')=='observed_user_authorization':
+                if single:raise ValueError('Completed campaign authority cannot release a single-review campaign')
                 if not user_module().validate_user_campaign_record(source,record,gate,protocol,qualification,evidence_root=source):
                     raise ValueError('Actual user campaign binding missing or changed')
                 continue

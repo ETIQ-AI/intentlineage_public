@@ -198,7 +198,10 @@ def _bind_request(invocation, request):
         raise ValueError('Sealed request differs from the controller request')
     if json.loads((invocation/'invocation.json').read_bytes()).get('request_sha256') != digest(request):
         raise ValueError('Request differs from the original M2 invocation binding')
-    if digest(json.loads((invocation/'evidence/response-schema.json').read_bytes())) != digest(REPLY_SCHEMA):
+    schema=REPLY_SCHEMA
+    if request.get('contract_version')=='m3-single-review.1':
+        from .review_single import REPLY_SCHEMA as schema
+    if (request.get('contract_version')=='m3-single-review.1' and request.get('response_schema')!=schema) or digest(json.loads((invocation/'evidence/response-schema.json').read_bytes())) != digest(schema):
         raise ValueError('Sealed response schema differs from the M2 reviewer contract')
     if {p.name for p in (invocation/'evidence').iterdir()} != {'request.json', 'response-schema.json'}:
         raise ValueError('Only own sealed request/schema may enter the reviewer boundary')

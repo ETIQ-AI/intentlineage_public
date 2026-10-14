@@ -306,9 +306,12 @@ def validate_session_reference(item,arm,session,reference,manifest,*,plan_sha256
     return True
 
 
-def validate_composite_unit(unit,evidence_root):
+def validate_composite_unit(unit,evidence_root,*,historical_source=None):
     from intentlineage.experiment_execution import validate_empirical_unit
     root=Path(evidence_root);p=load(root/'protocol.json');manifest=load(root/'continuation-manifest.json')
+    if historical_source is not None:
+        from intentlineage.completed_replay import assert_unit_bound
+        assert_unit_bound(unit,root,historical_source)
     if digest(manifest)!=p['execution_contract']['protocol']['continuation']['manifest_sha256']:raise ValueError('Composite retained manifest binding differs')
     if unit.get('synthetic') is not False or unit.get('data_class')!='empirical' or unit.get('provenance',{}).get('kind')!='continued-qualified-actual-provider':raise ValueError('Composite unit provenance missing')
     from intentlineage.experiment_chatgpt import validate_chatgpt_call_files
@@ -322,7 +325,7 @@ def validate_composite_unit(unit,evidence_root):
         old=ref['phase']=='retained'
         for c in s['calls']:
             inv=folder/'calls'/f"{c['attempt']:04d}"/'invocation';request=load(inv/'evidence/request.json');launch=load(inv/'launch-receipt.json')
-            facts=validate_chatgpt_call_files(inv,request,launch,limits=p['execution_contract']['protocol']['limits'],historical_source=BASE_SHA if old else None)
+            facts=validate_chatgpt_call_files(inv,request,launch,limits=p['execution_contract']['protocol']['limits'],historical_source=BASE_SHA if old else historical_source)
             expected=qhash=OLD_QUALIFICATION if old else p['execution_contract']['qualification']['qualification_sha256']
             if launch['qualification_sha256']!=expected or request['model']!='gpt-5.5' or request['settings']!=p['settings']:raise ValueError('Composite qualification/model lineage differs')
             response=load(inv/'output/real-transport-response.json')
@@ -330,11 +333,11 @@ def validate_composite_unit(unit,evidence_root):
     return True
 
 
-def replay_composite_unit(root,unit):
+def replay_composite_unit(root,unit,*,historical_source=None):
     from intentlineage.review_runner import replay_session
     from intentlineage.review_failures import assert_not_hard_failure
     root=Path(root);cat=load(root/'inputs'/unit['case_id']/'controller/catalogue.json')
-    validate_composite_unit(unit,root)
+    validate_composite_unit(unit,root,historical_source=historical_source)
     for arm,s in unit['matrix']['sessions'].items():
         ref=unit['session_sources'][arm]
         if replay_session(root/ref['directory'],catalogue=cat)!=s:raise ValueError('Composite session policy replay differs')

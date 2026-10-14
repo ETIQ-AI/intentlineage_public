@@ -70,11 +70,13 @@ def validate_execution_decision(record,gate,protocol,qualification,*,evidence_ro
     bindings; missing external documents leave a real gate naturally closed.
     """
     if gate not in DECISION_FILES or type(record) is not dict:return False
+    single=protocol.get('format_version')=='m3b-chatgpt-single-protocol.1'
+    if single and record.get('kind')=='observed_user_authorization':return False
     if record.get('kind')=='observed_user_authorization':
         from .experiment_user_authorization import validate_user_campaign_record
         return validate_user_campaign_record(ROOT,record,gate,protocol,qualification,evidence_root=evidence_root)
     try:
-        filename=DECISION_FILES[gate]
+        filename=DECISION_FILES[gate].replace('m3b-','m3-single-') if single else DECISION_FILES[gate]
         authority=ROOT.parent.parent/'instructions_between_agents'/filename
         expected_path='instructions_between_agents/archive/m3b-execution-decisions/'+filename
         if record.get('kind')!='observed_overseer_decision' or record.get('path')!=expected_path:return False
@@ -100,6 +102,9 @@ def validate_execution_decision(record,gate,protocol,qualification,*,evidence_ro
 
 
 def validate_execution_contract(protocol=None,gates=None,qualification=None,*,evidence_root=ROOT):
+    if type(protocol) is dict and protocol.get('format_version')=='m3b-chatgpt-scheduled-protocol.1':
+        from .experiment_scheduled import validate_execution_contract as scheduled
+        return scheduled(protocol,gates,qualification,evidence_root=evidence_root)
     from .experiment_preflight import execution_preflight
     check=execution_preflight(protocol,gates,qualification,evidence_root=evidence_root)
     if not check['ready']:
@@ -299,7 +304,7 @@ def validate_qualification_code_review(contract):
 
 def prepare_qualification_plan(protocol,*,output):
     """Generate local inspection/hosted qualification argv; execute nothing."""
-    if protocol.get('format_version')=='m3b-chatgpt-protocol.1':
+    if protocol.get('format_version') in {'m3b-chatgpt-protocol.1','m3b-chatgpt-single-protocol.1'}:
         from .experiment_chatgpt import prepare_chatgpt_qualification_plan
         return prepare_chatgpt_qualification_plan(protocol,output=output)
     import sys
@@ -324,11 +329,12 @@ def prepare_qualification_plan(protocol,*,output):
     _write(output,result);return result
 
 
-def validate_empirical_unit(unit,evidence_root):
+def validate_empirical_unit(unit,evidence_root,*,historical_source=None):
     """Actual rows require retained bound call provenance, not changed labels."""
     if unit.get('provenance',{}).get('kind')=='continued-qualified-actual-provider':
         from .experiment_resume import validate_composite_unit
-        return validate_composite_unit(unit,evidence_root)
+        return validate_composite_unit(unit,evidence_root,historical_source=historical_source)
+    if historical_source is not None:raise ValueError('Historical source cannot qualify new empirical units')
     if evidence_root is None or unit.get('data_class')!='empirical' or unit.get('synthetic') is not False:
         raise ValueError('Empirical unit requires bound actual invocation evidence')
     if unit.get('provenance',{}).get('kind')!='qualified-actual-provider':
@@ -336,7 +342,8 @@ def validate_empirical_unit(unit,evidence_root):
     root=Path(evidence_root)
     protocol=_strict_load((root/'protocol.json').read_bytes())
     provider_kind=protocol.get('provider_identity',{}).get('kind')
-    if protocol.get('data_class')!='empirical' or provider_kind not in {'m3b-qualified-human','m3b-qualified-chatgpt'}:
+    scheduled=protocol.get('execution_contract',{}).get('protocol',{}).get('format_version')=='m3b-chatgpt-scheduled-protocol.1'
+    if protocol.get('data_class')!='empirical' or provider_kind not in {'m3b-qualified-human','m3b-qualified-chatgpt','m3b-scheduled-chatgpt'}:
         raise ValueError('Empirical campaign provider/protocol provenance missing')
     for arm,session in unit['matrix']['sessions'].items():
         for call in session.get('calls',[]):
@@ -345,12 +352,13 @@ def validate_empirical_unit(unit,evidence_root):
             isolation=_strict_load((folder/'isolation-receipt.json').read_bytes())
             if launch.get('data_class')!='empirical' or launch.get('request_sha256')!=call['request_sha256']:
                 raise ValueError('Empirical call binding/provenance changed')
-            expected_kind='actual-chatgpt-codex' if provider_kind=='m3b-qualified-chatgpt' else 'actual-openai-api'
+            expected_kind='actual-chatgpt-codex' if provider_kind in {'m3b-qualified-chatgpt','m3b-scheduled-chatgpt'} else 'actual-openai-api'
             if launch.get('provider_kind')!=expected_kind or launch.get('credential_persisted') is not False:
                 raise ValueError('Local/recorded provider cannot supply actual calls')
             if isolation.get('data_class')!='empirical' or isolation.get('qualified') is not True:
                 raise ValueError('Actual call isolation qualification missing')
-            if launch.get('qualification_sha256')!=protocol['execution_contract']['qualification']['qualification_sha256']:
+            expected_qualification=None if scheduled else protocol['execution_contract']['qualification']['qualification_sha256']
+            if launch.get('qualification_sha256')!=expected_qualification:
                 raise ValueError('Actual call qualification version changed')
             request=_strict_load((folder/'evidence/request.json').read_bytes())
             if digest(request)!=call['request_sha256'] or request['model']!=protocol['model'] or digest(request['settings'])!=digest(protocol['settings']):
@@ -362,7 +370,9 @@ def validate_empirical_unit(unit,evidence_root):
             if isolation.get('raw_events')!=launch.get('raw_events') or set(isolation.get('probes',{}))!=REQUIRED_PROBES or not all(isolation['probes'].values()):
                 raise ValueError('Actual native probe/launch binding differs')
             if isolation['probes']!=launch['raw_events']['result']['probes']:raise ValueError('Actual native probes differ from raw launch')
-            assert_runtime_matches(protocol['execution_contract']['qualification']['runtime'],launch['runtime'])
+            expected_runtime=protocol['execution_contract']['protocol']['execution_mode']['setup']['runtime'] if scheduled else protocol['execution_contract']['qualification']['runtime']
+            assert_runtime_matches(expected_runtime,launch['runtime'])
+            if scheduled and launch.get('frozen_protocol_sha256')!=digest(protocol['execution_contract']['protocol']):raise ValueError('Scheduled native launch freeze binding differs')
             response=folder/'output/real-transport-response.json'
             if response.exists():
                 value=_strict_load(response.read_bytes())

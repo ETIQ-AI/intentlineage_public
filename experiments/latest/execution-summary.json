@@ -1,22 +1,40 @@
 {
-  "campaign_sha256": "5988fca873f1d1af1fe1bbbfba51fee58155ae4f9ee0b52779d2d987709cc924",
-  "protocol_sha256": "b50ba93045dfdab4740aa5e3f4e728c585ca731c8250636e451336c812e88e3b",
-  "parent_protocol_sha256": "bc033ba73edab345a362002cb5351681a5419058be54bbe76d775e7f0bc67f04",
+  "format_version": "m3-public-execution-summary.2",
+  "experiment": "single-review scheduled readiness",
+  "completed_on": "2026-10-14",
+  "source_freeze_commit": "52af0e89ff54823c2bf8681280e7df2be2aef875",
+  "source_delivery_commit": "9c41294",
+  "controller_source_sha256": "158049004ae760abf23b4326104db59e3a3d6c2b1fa7a11cce019601a1f8ec33",
+  "campaign_sha256": "8cc670e7d5e184eb2e5f371ecf8fb116f9ed15e49a062f7c2b037d24e76ec834",
+  "protocol_sha256": "446c4e11e3ad29ac56a6bd3533e52f3341ccd89cd1994562c17214d1fbb2a535",
+  "score_sha256": "ccfba9710bab0a9d5cb974da7ed82ca4bf329cbe4a65021f9a47d322f1d0356a",
   "execution_finished": true,
-  "scientific_complete": false,
-  "scheduled_units": 6,
-  "completed_units": 6,
-  "retained_charged_calls": 79,
-  "new_charged_calls": 99,
-  "invalid_response_arms": 3,
-  "data_class": "empirical",
-  "synthetic": false,
-  "format_version": "m3-public-execution-summary.1",
-  "campaign_calls": 178,
+  "scientific_acceptance": "pending",
+  "scheduled_cases": 6,
+  "scheduled_arm_rows": 30,
+  "campaign_calls": 172,
+  "fresh_calls": 172,
+  "retained_calls": 0,
+  "separate_qualification_calls": 0,
+  "invalid_response_arms": [
+    {
+      "case_id": "case-006",
+      "arm": "H"
+    }
+  ],
+  "incomplete_review_sessions": 9,
+  "technical_readiness": {
+    "assessment_validity": [
+      true,
+      true
+    ],
+    "charged_calls": 172,
+    "pending_attempts": 0,
+    "separate_qualification_calls": 0,
+    "startup_observations": 2,
+    "technical_ready": true
+  },
   "independent_case_count": 1,
-  "final_acceptance": "pending",
-  "served_backend_model": "unknown",
-  "monetary_cost": "unknown",
-  "finished_at": "2026-10-13T20:14:50.110791+00:00",
-  "publication_note": "Derived summary of genuine delivered outcomes; full raw/private replay evidence is retained locally."
+  "backend_served_model": null,
+  "monetary_cost": null
 }

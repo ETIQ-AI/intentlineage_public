@@ -75,10 +75,18 @@ def _model(model):
         raise ValueError('ChatGPT experimental model must be explicitly eligible <=5.5; no fallback')
 
 
-def chatgpt_wire_schema():
+def _wire_instructions(request):
+    if request.get('contract_version') == 'm3-single-review.1':
+        return (request['instruction'],
+                WIRE_PACKAGING_INSTRUCTIONS.replace('original M2 reply JSON', 'single-review reply JSON'))
+    return PROMPT_CONTRACT, WIRE_PACKAGING_INSTRUCTIONS
+
+
+def chatgpt_wire_schema(contract_version=None):
     """Native strict-output framing, independent of the unchanged M2 schema."""
+    description='The complete single-review JSON reply encoded as one string.' if contract_version=='m3-single-review.1' else 'The complete original M2 JSON reply encoded as one string.'
     return {'type':'object','properties':{'reply_json':{'type':'string',
-            'description':'The complete original M2 JSON reply encoded as one string.'}},
+            'description':description}},
             'required':['reply_json'],'additionalProperties':False}
 
 
@@ -96,6 +104,7 @@ def chatgpt_rpc_requests(request, *, thread_id):
     effort = request['settings'].get('reasoning_effort')
     if effort not in {'none', 'low', 'medium', 'high', 'xhigh'}:
         raise ValueError('Explicit supported reasoning effort required')
+    instruction, packaging = _wire_instructions(request)
     return [
         {'id': 1, 'method': 'initialize', 'params': {'clientInfo': {
             'name': 'intentlineage-reviewer', 'title': 'IntentLineage', 'version': 'm3b-chatgpt.1'},
@@ -105,13 +114,13 @@ def chatgpt_rpc_requests(request, *, thread_id):
         {'id': 3, 'method': 'model/list', 'params': {'includeHidden': True, 'limit': 100}},
         {'id': 4, 'method': 'thread/start', 'params': {
             'model': request['model'], 'modelProvider': 'openai', 'cwd': '/workspace',
-            'approvalPolicy': 'never', 'ephemeral': True, 'baseInstructions': PROMPT_CONTRACT,
-            'developerInstructions': WIRE_PACKAGING_INSTRUCTIONS, 'config': {'model_reasoning_effort': effort}}},
+            'approvalPolicy': 'never', 'ephemeral': True, 'baseInstructions': instruction,
+            'developerInstructions': packaging, 'config': {'model_reasoning_effort': effort}}},
         {'id': 5, 'method': 'turn/start', 'params': {
             'threadId': thread_id, 'model': request['model'], 'effort': effort,
             'cwd': '/workspace', 'approvalPolicy': 'never',
             'input': [{'type': 'text', 'text': canonical_bytes(request).decode('utf-8')}],
-            'outputSchema': chatgpt_wire_schema()}},
+            'outputSchema': chatgpt_wire_schema(request.get('contract_version'))}},
     ]
 
 
@@ -137,9 +146,10 @@ def chatgpt_event_facts(raw, commands, request, raw_reply, *, exit_code):
     thread_id = turn_request.get('threadId')
     if thread_request.get('ephemeral') is not True or thread_request.get('model') != request['model']:
         errors.append('Fresh thread/model policy changed')
-    if thread_request.get('baseInstructions') != PROMPT_CONTRACT or thread_request.get('developerInstructions') != WIRE_PACKAGING_INSTRUCTIONS:
+    instruction, packaging = _wire_instructions(request)
+    if thread_request.get('baseInstructions') != instruction or thread_request.get('developerInstructions') != packaging:
         errors.append('Assessment/packaging instruction binding differs')
-    if turn_request.get('input') != [{'type': 'text', 'text': canonical_bytes(request).decode()}] or turn_request.get('outputSchema') != chatgpt_wire_schema():
+    if turn_request.get('input') != [{'type': 'text', 'text': canonical_bytes(request).decode()}] or turn_request.get('outputSchema') != chatgpt_wire_schema(request.get('contract_version')):
         errors.append('Own prompt/schema binding differs')
     if turn_request.get('model') != request['model'] or turn_request.get('effort') != request['settings'].get('reasoning_effort'):
         errors.append('Own model/settings binding differs')
@@ -186,6 +196,8 @@ def chatgpt_event_facts(raw, commands, request, raw_reply, *, exit_code):
             validator=validate_reply
             if request.get('contract_version')=='m3-function-review.1':
                 from .review_function import validate_reply as validator
+            elif request.get('contract_version')=='m3-single-review.1':
+                from .review_single import validate_reply as validator
             parsed=validator(decoded, request['evidence'], allow_opening=request['allow_opening'])
             canonical_bytes(parsed) # Reject nonfinite numeric overflow anywhere in the M2 reply.
             decoded_sha=digest(parsed)
@@ -194,7 +206,7 @@ def chatgpt_event_facts(raw, commands, request, raw_reply, *, exit_code):
     return {'complete': not errors, 'errors': sorted(set(errors)), 'logical_turns': len(starts),
             'client_effective_model': effective, 'backend_served_model': None,
             'effective_reasoning_effort':resolved.get('reasoningEffort'),
-            'native_wire_schema_sha256':digest(chatgpt_wire_schema()),
+            'native_wire_schema_sha256':digest(chatgpt_wire_schema(request.get('contract_version'))),
             'decoded_m2_reply_sha256':decoded_sha,
             'provider_attempts': None, 'usage_observation': normalize_usage(usage_raw),
             'monetary_cost': None, 'request_sha256': digest(request), 'native_events_sha256': __import__('hashlib').sha256(raw).hexdigest(),
@@ -202,6 +214,12 @@ def chatgpt_event_facts(raw, commands, request, raw_reply, *, exit_code):
 
 
 def validate_chatgpt_protocol(protocol, *, require_frozen=False):
+    if type(protocol) is dict and protocol.get('format_version')=='m3b-chatgpt-scheduled-protocol.1':
+        from .experiment_scheduled import validate_protocol as scheduled
+        return scheduled(protocol,require_frozen=require_frozen)
+    if type(protocol) is dict and protocol.get('format_version')=='m3b-chatgpt-single-protocol.1':
+        from .experiment_single import validate_protocol as validate_single
+        return validate_single(protocol,require_frozen=require_frozen)
     if type(protocol) is dict and protocol.get('format_version') in {'m3b-chatgpt-function-protocol.1','m3b-chatgpt-function-protocol.2'}:
         from .experiment_function import validate_protocol as validate_function_protocol
         return validate_function_protocol(protocol,require_frozen=require_frozen)
@@ -250,6 +268,9 @@ def validate_chatgpt_protocol(protocol, *, require_frozen=False):
 
 def chatgpt_qualification_request(protocol):
     """Unchanged M2 endpoint request from the reviewed real native evidence."""
+    if protocol.get('format_version')=='m3b-chatgpt-single-protocol.1':
+        from .experiment_single import qualification_request
+        return qualification_request(protocol,0)
     if protocol.get('format_version') in {'m3b-chatgpt-function-protocol.1','m3b-chatgpt-function-protocol.2'}:
         from .experiment_function import qualification_request
         return qualification_request(ROOT,0)
@@ -268,6 +289,9 @@ def chatgpt_qualification_request(protocol):
 
 
 def chatgpt_qualification_contract(protocol):
+    if protocol.get('format_version')=='m3b-chatgpt-single-protocol.1':
+        from .experiment_single import qualification_contract
+        return qualification_contract(protocol)
     if protocol.get('format_version') in {'m3b-chatgpt-function-protocol.1','m3b-chatgpt-function-protocol.2'}:
         from .experiment_function import qualification_contract
         return qualification_contract(ROOT,protocol)
@@ -296,7 +320,8 @@ def validate_chatgpt_qualification_review(protocol):
     """The developer cannot issue its own source/configuration approval."""
     from .experiment_execution import controller_source_digest
     contract = chatgpt_qualification_contract(protocol)
-    authority = ROOT.parent.parent / 'instructions_between_agents/m3b-qualification-code-overseer-review.md'
+    name='m3-single-qualification-code-overseer-review.md' if protocol.get('format_version')=='m3b-chatgpt-single-protocol.1' else 'm3b-qualification-code-overseer-review.md'
+    authority = ROOT.parent.parent / 'instructions_between_agents' / name
     try:
         blocks = re.findall(r'```intentlineage-qualification-code-review\r?\n(.*?)\r?\n```', authority.read_text(encoding='utf-8'), re.S)
         if len(blocks) != 1: raise ValueError('Missing exact review record')
@@ -502,6 +527,8 @@ def run_chatgpt_invocation(invocation, request, *, sandbox, protocol, qualificat
     from .experiment_execution import controller_source_digest
     from .review_runner import _write
     invocation = _check_invocation(invocation, request)
+    scheduled=protocol.get('format_version')=='m3b-chatgpt-scheduled-protocol.1'
+    if scheduled and qualification_only:raise ValueError('Scheduled mode has zero separate qualification calls')
     if len(canonical_bytes(request)) > protocol['limits']['max_input_bytes']:
         raise ValueError('Mandatory own request exceeds bounded input bytes; never truncate')
     if qualification_only:
@@ -516,7 +543,7 @@ def run_chatgpt_invocation(invocation, request, *, sandbox, protocol, qualificat
         approved=validate_execution_contract(**execution_contract)
         if approved['protocol']!=protocol or approved['qualification']!=qualification:
             raise ValueError('Actual approved ChatGPT execution contract differs')
-        admission={'kind':'campaign','contract':execution_contract}
+        admission={'kind':'scheduled_campaign' if scheduled else 'campaign','contract':execution_contract}
     source = chatgpt_auth_source(protocol['reviewer']['auth_source']['path'])
     if source != protocol['reviewer']['auth_source']: raise ValueError('Cached ChatGPT account/source changed')
     config = _boundary_setup(invocation, request, protocol, runtime, action='chatgpt-provider')
@@ -544,8 +571,9 @@ def run_chatgpt_invocation(invocation, request, *, sandbox, protocol, qualificat
         'controller_source_sha256':controller_source_digest(), 'auth_binding_sha256':digest(source),
         'native_cli_sha256':protocol['reviewer']['cli_sha256'],'runtime':runtime,
         'limits':deepcopy(protocol['limits']), 'raw_events':raw,
-        'qualification_sha256':qualification.get('qualification_sha256'),
+        'qualification_sha256':None if scheduled else qualification.get('qualification_sha256'),
         'provider_call_id':digest({'request':digest(request),'argv':raw['argv']})}
+    if scheduled:launch.update(execution_mode='m3-scheduled-readiness.1',frozen_protocol_sha256=digest(protocol),instruction_sha256=protocol['execution_mode']['instruction_sha256'])
     _write(invocation/'launch-receipt.json',launch)
     receipt = seal({'format_version':'m3b-provider-call-isolation.1','data_class':'empirical','synthetic':False,
         'qualified':True,'scope':'actual native client command boundary','request_sha256':digest(request),
@@ -567,7 +595,9 @@ def validate_chatgpt_call_files(invocation, request, launch, *, limits, historic
     expected_source=controller_source_digest()
     if historical_source is not None:
         from .experiment_resume import verify_baseline
-        if historical_source!=verify_baseline(ROOT):raise ValueError('Unknown historical call source')
+        from .completed_replay import SOURCE,verify_archive
+        trusted=verify_archive(ROOT) if historical_source==SOURCE else verify_baseline(ROOT)
+        if historical_source!=trusted:raise ValueError('Unknown historical call source')
         expected_source=historical_source
     if launch['limits'] != limits or launch['controller_source_sha256'] != expected_source:
         raise ValueError('Actual client source/limit binding differs')
@@ -628,7 +658,7 @@ def collect_chatgpt_response(invocation,request,*,launch,protocol,qualification_
     except (ValueError,TypeError):decoded_reply=None
     if decoded_reply is not None:_write(output/'decoded-m2-reply.json',decoded_reply,raw=True)
     response.update(raw_reply=decoded_reply if decoded_reply is not None else '',native_wire_reply=wire_reply,
-        native_wire_schema_sha256=digest(chatgpt_wire_schema()),
+        native_wire_schema_sha256=digest(chatgpt_wire_schema(request.get('contract_version'))),
         raw_events=(output/'stdout.bin').read_bytes().decode('utf-8',errors='replace'),
         raw_stdout=(output/'stdout.bin').read_bytes().decode('utf-8',errors='replace'),
         raw_stderr=(output/'stderr.bin').read_bytes().decode('utf-8',errors='replace'),
@@ -661,10 +691,11 @@ class ChatGPTProviderFactory:
         if self.context['protocol']['reviewer']['authentication']!='chatgpt':raise ValueError('ChatGPT protocol required')
         self.sandbox=sandbox or OfflineSandbox();self.providers={};self.stop_reason=None
         p=self.context['protocol']
-        self.qualification_root=ROOT/self.context['qualification']['artifact_directory']
-        self.identity={'kind':'m3b-qualified-chatgpt','authentication':'chatgpt','model':p['reviewer']['model'],
+        self.scheduled=p.get('format_version')=='m3b-chatgpt-scheduled-protocol.1'
+        self.qualification_root=None if self.scheduled else ROOT/self.context['qualification']['artifact_directory']
+        self.identity={'kind':'m3b-scheduled-chatgpt' if self.scheduled else 'm3b-qualified-chatgpt','authentication':'chatgpt','model':p['reviewer']['model'],
             'cli_sha256':p['reviewer']['cli_sha256'],'settings':p['reviewer']['settings'],
-            'qualification_sha256':self.context['qualification']['qualification_sha256'],
+            'qualification_sha256':None if self.scheduled else self.context['qualification']['qualification_sha256'],
             'retry_owner':'existing M2 controller; backend attempts unknown unless client reports'}
 
     def verify(self):
@@ -675,13 +706,20 @@ class ChatGPTProviderFactory:
     def inspect_runtime(self):
         from .experiment_qualification import assert_runtime_matches
         p=self.context['protocol'];raw=self.sandbox._call({'action':'inspect-provider','cli_binary':p['reviewer']['cli_path']})
-        assert_runtime_matches(self.context['qualification']['runtime'],raw['runtime'])
+        expected=p['execution_mode']['setup']['runtime'] if self.scheduled else self.context['qualification']['runtime']
+        assert_runtime_matches(expected,raw['runtime'])
         if raw['cli']['binary_sha256']!=p['reviewer']['cli_sha256'] or raw['cli']['version']!=p['reviewer']['cli_version']:
             raise ValueError('Actual native CLI drift')
         return raw['runtime']
 
     def stage_qualification(self,campaign_root):
         import shutil
+        if self.scheduled:
+            from .experiment_scheduled import Progress
+            p=self.context['protocol'];source=ROOT/p['execution_mode']['setup']['inspection_path']
+            target=Path(campaign_root)/p['execution_mode']['setup']['inspection_path'];target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(source,target)
+            self.progress=Progress(campaign_root,p)
+            return
         target=Path(campaign_root)/self.context['qualification']['artifact_directory']
         target.parent.mkdir(parents=True,exist_ok=True);shutil.copytree(self.qualification_root,target)
 
@@ -693,13 +731,18 @@ class ChatGPTProviderFactory:
 
 
 class ChatGPTReviewerTransport:
-    def __init__(self,owner):self.owner=owner;self.receipts=[];self.calls=0
+    def __init__(self,owner):
+        self.owner=owner;self.receipts=[];self.calls=0
+        if getattr(owner,'scheduled',False):self.after_call=owner.progress.after_call
 
     def __call__(self,request,invocation):
         from .review_runner import TransportFailure
         self.owner.verify();p=self.owner.context['protocol']
         if request['model']!=p['reviewer']['model'] or request['settings']!=p['reviewer']['settings']:
             raise ValueError('Frozen native client model/settings differs')
+        if getattr(self.owner,'scheduled',False):
+            arm=Path(invocation).parents[2].name
+            self.owner.progress.before_call(arm,request,invocation)
         try:
             raw,receipt,launch=run_chatgpt_invocation(invocation,request,sandbox=self.owner.sandbox,
                 protocol=p,qualification=self.owner.context['qualification'],runtime=self.owner.inspect_runtime(),
@@ -737,7 +780,8 @@ def qualify_chatgpt_provider(protocol,directory,*,sandbox=None):
     _write(root/'launch-settings.json',{'contract':review['contract'],'protocol':deepcopy(protocol),'runtime':runtime,
         'controller_source_sha256':controller_source_digest(),'campaign_authorized':False})
     (root/'qualification-code-overseer-review.md').write_bytes(Path(review['path']).read_bytes())
-    function_mode=protocol.get('format_version') in {'m3b-chatgpt-function-protocol.1','m3b-chatgpt-function-protocol.2'}
+    single_mode=protocol.get('format_version')=='m3b-chatgpt-single-protocol.1'
+    function_mode=single_mode or protocol.get('format_version') in {'m3b-chatgpt-function-protocol.1','m3b-chatgpt-function-protocol.2'}
     if function_mode:
         for record in review['contract']['qualification_inputs']:
             for field,suffix in [('request_path','request'),('controller_evidence_path','controller')]:
@@ -748,8 +792,12 @@ def qualify_chatgpt_provider(protocol,directory,*,sandbox=None):
     try:
         for index in range(2):
             if function_mode:
-                from .experiment_function import qualification_request
-                request=qualification_request(ROOT,index)
+                if single_mode:
+                    from .experiment_single import qualification_request
+                    request=qualification_request(protocol,index)
+                else:
+                    from .experiment_function import qualification_request
+                    request=qualification_request(ROOT,index)
             else:request=chatgpt_qualification_request(protocol)
             invocation=root/f'invocation-{index+1:02d}';prepare_invocation(invocation,request)
             raw,receipt,launch=run_chatgpt_invocation(invocation,request,sandbox=sandbox,protocol=protocol,
@@ -817,7 +865,8 @@ def validate_chatgpt_qualification(packet,*,protocol,evidence_root=None):
     files={p.relative_to(root).as_posix():file_hash(p) for p in root.rglob('*') if p.is_file() and p.name!='qualification.json'}
     if files!=packet['files']:raise ValueError('Actual qualification exact membership/hashes differ')
     settings=_strict_load((root/'launch-settings.json').read_bytes());contract=settings['contract']
-    authority=ROOT.parent.parent/'instructions_between_agents/m3b-qualification-code-overseer-review.md'
+    name='m3-single-qualification-code-overseer-review.md' if protocol.get('format_version')=='m3b-chatgpt-single-protocol.1' else 'm3b-qualification-code-overseer-review.md'
+    authority=ROOT.parent.parent/'instructions_between_agents'/name
     if authority.read_bytes()!=(root/'qualification-code-overseer-review.md').read_bytes():raise ValueError('Qualification authority anchor differs')
     blocks=re.findall(r'```intentlineage-qualification-code-review\r?\n(.*?)\r?\n```',authority.read_text(encoding='utf-8'),re.S)
     if len(blocks)!=1:raise ValueError('Qualification approval record missing')
@@ -836,10 +885,15 @@ def validate_chatgpt_qualification(packet,*,protocol,evidence_root=None):
     original=settings['protocol']
     if chatgpt_qualification_contract(original)!=contract or contract['limits']!=protocol['limits']:
         raise ValueError('Qualification launch/auth/limit contract differs')
-    function_mode=protocol.get('format_version') in {'m3b-chatgpt-function-protocol.1','m3b-chatgpt-function-protocol.2'}
+    single_mode=protocol.get('format_version')=='m3b-chatgpt-single-protocol.1'
+    function_mode=single_mode or protocol.get('format_version') in {'m3b-chatgpt-function-protocol.1','m3b-chatgpt-function-protocol.2'}
     if function_mode:
-        from .experiment_function import qualification_request
-        own_requests=[qualification_request(ROOT,i) for i in range(2)]
+        if single_mode:
+            from .experiment_single import qualification_request
+            own_requests=[qualification_request(original,i) for i in range(2)]
+        else:
+            from .experiment_function import qualification_request
+            own_requests=[qualification_request(ROOT,i) for i in range(2)]
         for record in contract['qualification_inputs']:
             for field,suffix,hashfield in [('request_path','request','request_file_sha256'),('controller_evidence_path','controller','controller_evidence_file_sha256')]:
                 if file_hash(root/(record['kind']+'-'+suffix+'.json'))!=record[hashfield]:raise ValueError('Exact function qualification snapshot changed')
@@ -885,6 +939,7 @@ def prepare_chatgpt_qualification_plan(protocol,*,output):
     import sys
     validation=validate_chatgpt_protocol(protocol);blockers=[]
     for field in ['model','settings','auth_source','cli_path','cli_sha256','cli_version','model_metadata_sha256']:
+        if field=='model_metadata_sha256' and protocol.get('format_version')=='m3b-chatgpt-single-protocol.1':continue
         if protocol['reviewer'][field] is None:blockers.append('reviewer.'+field)
     if any(v is None for v in protocol['limits'].values()):blockers.append('qualification_limits')
     try:review=validate_chatgpt_qualification_review(protocol)

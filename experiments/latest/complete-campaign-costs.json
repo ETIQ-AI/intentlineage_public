@@ -1,1 +1,89 @@
-{"accounting":{"usage":{"cached_input_tokens":258560,"input_tokens":2726310,"output_tokens":915051,"total_tokens":3641361},"usage_complete":true,"usage_coverage":{"cached_input_tokens":{"charged_calls":178,"complete":true,"derived_calls":0,"invalid_calls":0,"known_calls":178,"missing_calls":0,"reported_calls":178},"input_tokens":{"charged_calls":178,"complete":true,"derived_calls":0,"invalid_calls":0,"known_calls":178,"missing_calls":0,"reported_calls":178},"output_tokens":{"charged_calls":178,"complete":true,"derived_calls":0,"invalid_calls":0,"known_calls":178,"missing_calls":0,"reported_calls":178},"total_tokens":{"charged_calls":178,"complete":true,"derived_calls":0,"invalid_calls":0,"known_calls":178,"missing_calls":0,"reported_calls":178}},"usage_semantics":"Observed subtotals, not full totals when field coverage is incomplete; cached input is optional."},"campaign_calls":178,"elapsed_invocation_seconds":21909.30700000003,"monetary_cost":null,"new_calls":99,"qualification_costs_excluded":true,"retained_calls":79}
+{
+  "campaign_calls": 172,
+  "fresh_calls": 172,
+  "retained_calls": 0,
+  "separate_qualification_calls": 0,
+  "monetary_cost": null,
+  "usage": {
+    "cached_input_tokens": 247296,
+    "controller_operations": 3,
+    "input_tokens": 2554261,
+    "insufficient_elements": 0,
+    "logical_calls": 172,
+    "output_tokens": 720507,
+    "reported_rows": 30,
+    "token_reporting": {
+      "cached_input_tokens": {
+        "complete_rows": 30,
+        "derived_rows": 0,
+        "known_rows": 30,
+        "reported_rows": 30,
+        "unavailable_rows": 0
+      },
+      "input_tokens": {
+        "complete_rows": 30,
+        "derived_rows": 0,
+        "known_rows": 30,
+        "reported_rows": 30,
+        "unavailable_rows": 0
+      },
+      "output_tokens": {
+        "complete_rows": 30,
+        "derived_rows": 0,
+        "known_rows": 30,
+        "reported_rows": 30,
+        "unavailable_rows": 0
+      },
+      "total_tokens": {
+        "complete_rows": 30,
+        "derived_rows": 0,
+        "known_rows": 30,
+        "reported_rows": 30,
+        "unavailable_rows": 0
+      }
+    },
+    "total_tokens": 3274768,
+    "transport_failures": 0,
+    "uncovered_elements": 0,
+    "unresolved_questions": 0,
+    "usage_coverage": {
+      "cached_input_tokens": {
+        "charged_calls": 172,
+        "complete": true,
+        "derived_calls": 0,
+        "invalid_calls": 0,
+        "known_calls": 172,
+        "missing_calls": 0,
+        "reported_calls": 172
+      },
+      "input_tokens": {
+        "charged_calls": 172,
+        "complete": true,
+        "derived_calls": 0,
+        "invalid_calls": 0,
+        "known_calls": 172,
+        "missing_calls": 0,
+        "reported_calls": 172
+      },
+      "output_tokens": {
+        "charged_calls": 172,
+        "complete": true,
+        "derived_calls": 0,
+        "invalid_calls": 0,
+        "known_calls": 172,
+        "missing_calls": 0,
+        "reported_calls": 172
+      },
+      "total_tokens": {
+        "charged_calls": 172,
+        "complete": true,
+        "derived_calls": 0,
+        "invalid_calls": 0,
+        "known_calls": 172,
+        "missing_calls": 0,
+        "reported_calls": 172
+      }
+    },
+    "usage_semantics": "Observed subtotals with charged-call coverage; reported and derived observations remain distinct."
+  }
+}

@@ -28,7 +28,12 @@ def _check_model_logs(packet):
             raise ValueError('Aligned extraction differs from raw model output')
 
 
-def prepare_dispatch(extraction_path, compiled_path=None):
+def prepare_dispatch(extraction_path, compiled_path=None, *, profile=None):
+    compiler=compile_prompt;compiler_version=COMPILER_VERSION;op_version=OPERATIONALIZATION_VERSION
+    if profile is not None:
+        from .ordinary_review_inputs import PROFILE,compile_for_review,COMPILER_VERSION as cv,OPERATIONALIZATION_VERSION as ov
+        if profile!=PROFILE:raise ValueError('Unknown inventory profile')
+        compiler=compile_for_review;compiler_version=cv;op_version=ov
     path = Path(extraction_path).resolve()
     if not path.is_relative_to(ROOT):
         raise ValueError('Extraction input must be inside workspace')
@@ -48,12 +53,13 @@ def prepare_dispatch(extraction_path, compiled_path=None):
         if not compiled_path.is_relative_to(ROOT):
             raise ValueError('Compiled specification input must be inside workspace')
         spec = validate_compiled(json.loads(compiled_path.read_bytes()))
-        if spec['compiler_version'] != COMPILER_VERSION or spec['provenance'].get('operationalization_version') != OPERATIONALIZATION_VERSION:
+        if spec['compiler_version'] != compiler_version or spec['provenance'].get('operationalization_version') != op_version:
             raise ValueError('Stale compiled specification: regenerate with current versions')
-        if compile_prompt(packet, taxonomy, spec) != spec:
+        rebuilt=compiler(packet,taxonomy) if profile else compiler(packet,taxonomy,spec)
+        if rebuilt != spec:
             raise ValueError('Current compiled specification differs from extraction replay')
     else:
-        spec = compile_prompt(packet, taxonomy)
+        spec = compiler(packet, taxonomy)
     reasons, values = [], {}
     if spec['status'] == 'conflicted': reasons.append('conflicting_requirements')
     if spec['rejected_records']: reasons.append('rejected_model_records')
@@ -87,6 +93,7 @@ def prepare_dispatch(extraction_path, compiled_path=None):
                'resources/extraction/instructions-v2.txt', 'resources/extraction/examples-v2.json']
     for log in packet['provenance']['raw_logs']:
         sources.extend([log['request_file'], log['response_file']])
+    if profile:sources.extend(['src/intentlineage/ordinary_review_inputs.py','src/intentlineage/payment.py'])
     if compiled_path is not None:
         sources.append(compiled_path.relative_to(ROOT).as_posix())
     runtime = {'format_version': '2.0.0', 'operation': operation, 'reasons': reasons,

@@ -30,7 +30,7 @@ def test_retained_reference_cannot_relabel_valid_observations(change):
 def test_mismatched_retained_tree_is_refused_before_any_inference(tmp_path, monkeypatch):
     from intentlineage.native_capture import ROOT
     f=importlib.import_module('intentlineage.experiment_resume')
-    # Supply a minimal manifest fixture; the real membership rejection is unchanged.
+    # Minimal authored manifest; exercise the unchanged real membership refusal.
     monkeypatch.setattr(f, 'parent_bundle', lambda _: {'files': {'campaign/expected.json': 'a'*64}})
     with pytest.raises(ValueError,match='membership'):
         f.validate_retained_manifest(ROOT,{},evidence_root=tmp_path)

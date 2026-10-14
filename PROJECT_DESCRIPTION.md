@@ -1,32 +1,134 @@
-# Latest published experiment — 13 October 2026
-
-This snapshot contains the delivered amended M3 experiment: six cases,
-30 scheduled arm outcomes and 178 charged campaign calls. Execution
-finished; scientific completeness and final acceptance remain pending.
-Historical milestones below are planning/research history. Old captures,
-QA outputs and private replay bundles stay local. See
-[the current experiment](experiments/latest/README.md).
-
 **IntentLineage: Pre-Application OSS PoC vs ARIA-Funded Project**
 
-Current authoritative M1 status (8 October 2026): **accepted within tested scope at `7178692`**, following complete independent reassessment. See final overseer acceptance (local record: `instructions_between_agents/m1-overseer-acceptance-v4.md`). Earlier pending/rejected statements are historical. M2 still requires its own corrections, corrected-source integration and acceptance; M3B remains gated.
+Latest publication — 14 October 2026: the completed single-review campaign
+contains six cases,30 outcomes and172 fresh calls,zero separate qualification
+calls. One H arm is invalid; nine sessions have incomplete coverage. Full final
+acceptance remains pending. Historical material below is project/planning
+history. See [the current experiment](experiments/latest/README.md).
 
-Corrected complete M1 independently passes its tester gate at `7178692` (8 October
-2026): 430 milestone checks and 20 additional contracts pass; seven native captures
-and both historical/current audit replays validate. Source modality and finite
-numeric summary defects are corrected for their reproductions. This is bounded
-implementation evidence, with no new inference or accuracy/experiment claim.
-See tester report (local record: `instructions_between_agents/m1-tester-report-v4-corrections.md`).
-Final M1 acceptance remains with the overseer; existing M2/M3A scheduling and
-downstream dependency/experiment gates are unchanged. Earlier status is history.
+Execution code support is submitted for review with 388 passing local/integrated
+checks and exact preservation/replay archives. Actual experiments and empirical
+claims remain the separately authorized Experiment Developer's subsequent work.
 
-Latest M1 developer correction submission (8 October 2026) fixes contextual
-optional/uncertain source force and finite numeric summary overflow/cache recovery.
-All 430 checks pass, including both unchanged tester regression files; six fresh
-native captures/three abstentions and two exact source/preservation audits pass.
-No new inference, model-accuracy or experiment claim. The
-complete handoff (local record: `instructions_between_agents/m1-developer-handoff-v4.md`) records
-M2 dependency changes. Acceptance awaits overseer review and independent reassessment.
+12 October 2026: implementation now supports distinct historical/synthetic,
+recorded contract and separately gated actual review evidence. This developer
+delivers offline code verification; the Experiment Developer owns actual setup,
+qualification, execution, analysis and results after Overseer release. No empirical
+campaign outcome is supplied by the code support package.
+
+M3B human-launch RED, 12 October 2026: recorded-path GREEN f29f28f is
+committed. Thirteen failing tests specify native permissions, exact M2-derived
+command generation, pre-reasoning token caps, actual human factory/release
+refusal, native-ELF enforcement, interpreter hashing and human-only CLI stages.
+These tests precede implementation. No Linux Codex is installed on inspected
+runtime paths; no model/hosted call or actual provider qualification has run.
+
+M3B recorded execution-path GREEN (12 October 2026), after RED 6864460:
+**53 execution/path tests pass in 191.36s**, including local fake CLI isolation,
+recorded complete/interrupted/restart/relocated exports and 14 resealed transcript
+attacks. The existing M2 controller/usage/replay and M3A math/export are reused.
+Record-only scope remains synthetic and cannot become empirical by label edits.
+Broker quota/credential guards and actual qualification evidence validation are
+implemented. Guard: 38,360 prior files unchanged; 377 captures and 38 recipe
+fixtures backed up and unchanged. No model/hosted call. Actual launcher/factory,
+local bank/protocol proposal and human review/qualification stages remain next.
+
+M3B execution-path RED, 12 October 2026: foundation d8e518a is committed.
+The next recorded campaign/scoring/export, credential-broker and actual
+qualification contracts are specified before implementation: **nine failures,
+two passes and 17 fixture errors** (the recorded campaign route is absent).
+See tests/test_m3b_execution_paths.py and the visible execution plan. These
+are explicit fake/recorded contract fixtures, not actual qualification or results.
+Human hosted stages and Overseer release remain pending.
+
+M3B execution foundation GREEN (12 October 2026), after committed RED e328b75:
+25 new contract tests pass; combined local foundation/preparation checks are
+**89 passed, 35 offline-boundary checks deselected**. Curated <=5.5 model policy,
+full interpreter/runtime binding, recorded real-shaped intake, bounded broker
+request validation and actual reviewed-parent decision binding are implemented.
+Recorded fixtures remain synthetic and inadmissible for empirical campaign.
+Existing M2 sources are exact; current source/authority audit passes. Actual
+provider/campaign integration, qualification and protocol/release are still being
+implemented under the visible execution plan; no hosted/model call has run.
+
+M3B execution continuation, 12 October 2026: the user invoked the Overseer
+qualification/actual-experiment brief. Local implementation begins under the
+visible plan (local record: `instructions_between_agents/m3b-execution-plan-20261012.md`), with
+**25 failing behavioural tests** before fixes. Reviewed preparation 37a3bca,
+accepted M1/M2 and cleared M3A remain the exact baseline. The model ceiling is 5.5;
+no eligible account/model is qualified or selected. Hosted launches belong to the
+human after concrete code/qualification/protocol review and release. No inference
+or experiment has run. Previous preparation status below is historical.
+
+12 October 2026: reviewed M3A `fbedf3e` is integrated into M3B at merge
+`e260924`; production GREEN is `1ab91b5`. Accepted M1 `7178692` and M2 `6dd91fa`
+remain exact. **99 preparation/integration checks pass** with local fake CLIs and
+enforced offline probes. Complete combined run: **890 passed, five setup failures,
+one Windows symlink-privilege skip**; restoring historical inputs and the shared
+dependency path resolves all five in a fresh **5-pass** rerun without code changes.
+These are Developer runs; overlapping passes are not added as a new full-suite run.
+
+Source/reuse/dependency audits and `pip check` pass. The final guard verifies
+38,184 prior files unchanged in bytes/sizes/mtimes, including 279 captured files
+and 38 recipe fixtures backed up before rerun. Main/M2/M3A tracked bytes, heads and
+statuses remain unchanged. Fresh private archives retain 10,601 fake integration
+entries and 415 native test-capture files; synthetic/historical labels remain.
+
+Observed Overseer M1/M2 acceptance and M3A clearance are bound to exact Markdown
+bytes. Combined M3B review, a real-results path, actual-provider qualification,
+17 unresolved scientific settings and human-run authorization remain gates.
+Command preparation returns exit 2 and an empty campaign-command list. No model
+or hosted inference, real experiment, parallel agent, tester, push or publication
+occurred. Return the complete integrated handoff (local record: `instructions_between_agents/m3b-preparation-developer-handoff.md`)
+to the Overseer. The visible plan (local record: `instructions_between_agents/m3b-integration-plan-20261012.md`)
+and `evidence/m3b-verify-*/` contain RED/GREEN, argv/JUnit, audits and guards.
+
+## Historical M3A development record
+
+Earlier pending/review notes below are superseded by current clearance above.
+
+M3A 4.2 integration resubmission, 12 October 2026: accepted M1 `7178692`
+and accepted M2 `6dd91fa` are integrated. RED `340dd9e`, merge `1a37b27`, policy
+`7038b22`, accepted-disposition metadata `b5bb64d`. Current campaign/protocol/bank
+version 3 reaches the exact M2 session/matrix 4.2 policy for replay, completed-unit
+restart and bundle verification. Shared raw-alias accounting preserves unknowns,
+valid subtotals, coverage and reported/derived totals. Historical 4.0/4.1 checks
+are separately source-bound and labelled; archived Python is never executed and
+current sessions cannot use the historical path.
+
+Final guarded suite at `1fae74a`: **796 passed, 1 skipped in 623.61s**, with
+a globally unique basetemp outside the checkout and bytecode writing disabled.
+Includes all 186 M2 contracts, 73 unchanged M2 functions scoped to M3A, 43 new
+4.2 integration regressions and both unchanged M1 regression files. This is a
+developer run. Prior 372/1 affected and 796/1 policy runs remain separately dated;
+overlapping counts are not added. Windows symlink privilege is the single skip;
+fresh Linux escape and all 11 standalone offline probes pass. All 174 pins unchanged.
+
+`evidence/validation-m3a-resubmission-20261012/` retains exact argv/JUnit/logs,
+backups and proofs: seven implicit roots checked absent, 3,735 prior capture and
+188 recipe-fixture files backed up; all 55,777 protected source/evidence files
+retain identical bytes/sizes/mtimes. Six fresh qualified native test captures and
+the fresh offline probe are retained in a 379-entry private archive. Existing
+accepted-dependency inputs/bank/campaign/bundles and all three prior archives
+remain unchanged. No production change since `1fae74a`; M3A review remains pending.
+
+Fresh `.tmp/m3a-42-delivery/` contains regenerated 12 inventories/current caches/
+packages, six qualified actual native fault/control captures, offline probes and
+42 synthetic calls/six openings. Definitive denominators zero, rates and token
+totals null; no empirical model finding. Fourteen fully resealed campaign/bundle
+attacks are rejected with native captures unchanged. Read-only proofs verify
+2,477 file bytes/mtimes, and current/relocated complete/interrupted exports pass.
+`evidence/validation-m3a-42/` retains logs, report and 14,036-entry private archive.
+All 12,640 protected prior M3A files and 15 source archives verify unchanged.
+
+M2 acceptance explicitly retains two separately lost ignored smoke outputs; they
+are not used for acceptance or claimed preserved. No further M1/M2 correction is
+required by those acceptances. M3A overseer review, actual provider/model/CLI
+boundary qualification and frozen M3B protocol remain gates. No M3B experiment,
+hosted inference, independent M3 tester, parallel agent or publication occurred.
+See complete handoff (local record: `instructions_between_agents/m3a-developer-handoff.md`) and
+current report (local record: `evidence/validation-m3a-42/report.json`). Earlier dated status
+statements below are historical; verified capture agreements remain applicable.
 
 Independent complete M1 reassessment (8 October 2026) at `c7c0a5f` recommends
 changes for source modality and finite numeric summary overflow; the 386 submitted
@@ -304,5 +406,92 @@ PLAN.md revision 4 and the six active milestone briefs supersede earlier propose
 
 Reference https://github.com/raluca07/use_case_icp at `5bd37b1ca3e49e940fc885839fa56411203afee0`: require compatible source reuse for serialization, lazy catalogues, native expansion, artifact describe/read, review receipts/reconsideration and enforced runner boundaries. `fault_operations.inspect_catalogue_artifact` computes statistics on inspection; frozen-artifact precomputation/cache is our adaptation. Description coverage and captured-subset statistics must remain explicit. Reference source was inspected, not executed here. No milestone acceptance or new capability is implied.
 
-## Separate local Laya pilot
-User-authorized separate local feasibility pilot completed on 13 October 2026; handoff (local record: `instructions_between_agents/laya-pilot-developer-handoff.md`). The pinned zero-shot Laya CPU setup is unsuitable in the tested compact payment-state scope (8/24 planned decisions, one late ambiguity separately audited). This is developer feasibility evidence, outside the current M3 study and acceptance; its model/context/matrix are unchanged.
+## M3A developer implementation in progress ? 8 October 2026
+
+M3A infrastructure implementation is authorized in a separate worktree using M1 `c7c0a5f` and the committed M2 reviewer snapshot `e6b8570`. Initial RED `f813754` records 14 failures/five fixture assertion errors before production additions. Local fault qualification, offline OS probes and scoring unit checks pass; complete mocked orchestration/replay validation is in progress. All reviews/scores are explicitly synthetic; no live experiment or milestone acceptance is claimed. See `instructions_between_agents/m3a-implementation-plan.md`.
+
+Initial complete M3A developer contract result: **18 passed, 1 skipped in 135.77s**. The skip is Windows symbolic-link creation privilege; a real Linux symlink escape is denied by the passing namespace probe. Six actual captures and serial isolated five-arm/retry/replay checks pass. A final source/budget/denominator hardening pass and durable delivery remain.
+
+
+## M3B preparation first increment
+
+11 October 2026: M3B preparation coding is authorized before corrected M3A integration. Configuration, offline transport/probes and human command preparation are plumbing, not experiment evidence. Final protocol/population, accepted M2 and corrected reviewed M3A remain required.
+
+
+## Historical integration authorization — 12 October 2026
+
+User authorizes coding-only integration of exact reviewed fbedf3e into M3B preparation. Accepted M1 7178692 and M2 6dd91fa stay intact; commit behavioural RED before integration. See instructions_between_agents/m3b-integration-plan-20261012.md. No real/provider campaign, inference or midway tester is authorized.
+
+Current M3 continuation: explicit versioned one-function review with common compact semantic inventory, local adaptive disclosure and concise reply bounds. The original six variants are dependent samples of one payment pair, not six independent workflows. Existing Etiq captures and pipeline remain unchanged.
+
+
+## Single-review correction RED ? 13 October 2026
+
+The new brief is implementation/offline scope only. A local correction branch starts at completed delivery ee5e377; exact 58-source execution bytes (8c3369) are archived without editing the completed campaign.28 behavioral REDs cover the closed no-question/one-action response, joint element assessment, citations/coverage, ordinary-payment compilation, justified/unknown ontology mappings and stage applicability. These precede implementation; historical contracts and explicit-carriage tasks remain supported. No hosted qualification or experiment is launched. See instructions_between_agents/m3-single-review-correction-plan-20261013.md.
+
+
+Single-review first GREEN:28 contract/compiler/mapping checks pass after RED4196fe8. review_single.py declares a separate closed one-action, no-question wire and exact joint-review instruction, reusing compact public views and shared assessment/citation checks. ordinary_review_inputs.py compiles the new request with explicit versioned ordinary-data mappings and due stages; explicit-carriage legacy compilation remains supported. Native runner/disclosure/replay/candidate integration is not yet delivered. No hosted calls.
+
+
+Single-review integration RED:10 failing behavior checks specify runner/schema staging, nested levels and repeat outcomes, distinct artifact reads, invalid-answer/control accounting, hard stops, new native envelope dispatch, source mapping references and relocated replay before those integrations. The corrected request was genuinely decomposed once by the existing pinned loopback-only Qwen2.5:1.5b/LangExtract pipeline:12 accepted records,24 compiled elements, zero rejected records/diagnostics, zero hosted reviewer calls. Raw local extraction and the first compilation remain preserved; no old inventory was pruned to produce the new one.
+
+
+### Single-review runner integration (13 October 2026)
+
+The versioned single-review runner now stages its declared schema, uses the same joint task for nested follow-ups, records reason/element associations and explicit repeated-disclosure outcomes, matches fresh endpoint controls to actual charged calls, and replays the same native operations and transcripts. ChatGPT event validation and content-only failure classification dispatch on the explicit new contract; historical task/schema branches remain separate. The 28 contract/input checks and ten committed integration REDs pass (38 checks, offline). Existing call, operation, byte, isolation and invalid-answer guards remain required. No hosted qualification or campaign is authorized by this correction. Candidate/source admission and complete historical replay remain to be verified before handoff.
+
+
+### Single-review candidate and preservation REDs
+
+Nine behavioral REDs specify genuine extraction dispatch, versioned bank capture and unreleased fixed bounds, scoring without questions, per-scope insufficiency, pre-operation column validation, accurate native packaging and pinned completed-campaign replay. The first test attempt had an import/fixture issue; corrected REDs are retained separately. These tests precede candidate/admission and historical replay implementation. No new hosted budget or approval is implied.
+
+
+### Single-review admission guards
+
+The 47 contract/input/runner/candidate checks now pass offline. Additional REDs require the native invocation binder to accept only the declared versioned schema and explicit accepted-versus-pending M2 source provenance. Passing guard fixtures also cover content-only containment, model/tool/usage/probe hard stops, old authority refusal and archive tampering. New source admission uses fresh exact Overseer records; no user continuation or historical call allowance is transferred. Candidate captures and full historical replay remain delivery checks, not new reviewer outcomes.
+
+
+### Capture source versus launch source
+
+All six new ordinary-payment native cases completed. The first candidate audit correctly exposed an overbroad assumption: the native bank capture manifest does not include three CLI/audit scripts that the exact launch digest includes. A committed RED requires these source sets to remain distinct: retain sealed capture-time sources and bind the whole current launch source set separately. Refresh only the unreleased source/configuration package, preserve its first version, and keep runtime/capture/request evidence unchanged.
+
+
+### New qualification route REDs
+
+Two pure routing REDs require the new single-review protocol to enter the existing ChatGPT qualification validator and preparation-command path. No provider is qualified by these patched route fixtures. Fresh qualification itself still requires actual model-list events, two isolated completed turns, unchanged denial controls and exact source/configuration review. Model metadata is intentionally pending and must be observed during new qualification, rather than inherited from the completed campaign.
+
+
+### Single-review correction delivered (14 October 2026)
+
+The new `m3-single-review.1` contract supplies one joint task and one optional disclosure action with inventoried element associations. Historical M2 and function-review schemas remain separate. New `ordinary-payment-inventory.1` compilation uses a genuine local single-pass decomposition of the ordinary request: 12 accepted records, 24 elements, zero diagnostics; explicit carriage remains supported in the historical compiler. The declared Payment/amount domain mapping cites the actual PaymentRevision and receipt_for sources, separates existence from user preservation/approval rules, applies due stages, and keeps unsupported mappings insufficient.
+
+The existing capture/injection harness produced all six qualified native cases, with seven H calls per case, A capped at nine calls/two operations/100000 added bytes, one repeat and seed 20261012. The new candidate has 174 base calls and a proposed maximum of 198; it has zero hosted outcomes and no release. The largest measured request is 79797 bytes against the unchanged 200000 request guard (196608 input-token observed stop, 8192 output-token observed stop, 300 seconds, 33554432 raw-event bytes). Fresh ChatGPT gpt-5.5/low qualification and new exact Overseer decisions remain necessary. Completed 178-call authority is not reusable.
+
+Verification: 59 new focused checks plus 259 affected historical checks pass (318 distinct checks). The original completed six-unit, 178-call campaign and scores replayed under its pinned 58-source digest; archive code was verified as data, never executed. New private candidate export and relocated export replay, and tampered export rejection, passed. Three of 16 accepted M2 files are current optional extensions with separately pinned accepted bytes; the new extension is pending review. No hosted qualification, experiment, API-key access, push or publication occurred. See `instructions_between_agents/m3-single-review-correction-developer-handoff.md`, `resources/protocol/m3-single-profile.json`, examples, and `evidence/validation-single-review-20261013/`. Requirements pins and shared Etiq wrapper remain unchanged.
+
+
+### Direct-start scheduled-readiness REDs (14 October 2026)
+
+The user-authorized direct-start brief permits the reviewed new single-review campaign with zero separate qualification calls. Parent62-source digest de0585 and all prior evidence are archived unchanged. Nineteen behavioral REDs specify frozen-before-inference admission, exact scheduled E/H requests, once-only outcomes/costs, drift/ceiling refusal, content-versus-technical failure semantics, callback journaling/interruption and legacy gating. Genuine no-turn native setup completed with the pinned ELF and existing ChatGPT login; provider review calls0 and no credential leakage. No experimental outcome or readiness success is yet claimed. Source gate changes and scientific inputs remain distinct.
+
+
+### Scheduled startup accounting guards
+
+The initial nineteen REDs now pass offline. Additional behavioral checks distinguish technical readiness from structurally valid assessment, preserve unknown backend/provider/currency facts, reject model/usage/probe/runtime/tool/charge/freeze drift, require closed startup policy and globally once-only invocation admission, enforce198 before inference and retain empty/interrupted startup prefixes without inventing success. Native-shaped guard inputs are authored software fixtures and are never admitted as actual readiness or campaign evidence. Two uncovered policy/address guard REDs precede their fixes.
+
+
+### Scheduled-call readiness implementation verified (14 October 2026)
+
+The explicit m3b-chatgpt-scheduled-protocol.1 mode preserves reviewed scientific inputs and uses the actual direct-start user brief as authority. Archive62-parent source/protocol/bank identities and an AST/body allowlist constrain the mechanical gate adaptation. The native Linux stdlib gate passes without a fabricated qualification packet; no-turn cached ChatGPT metadata shows gpt-5.5 available, zero review turns and all14 probes passed. Effective served identity remains unknown until append-only campaign observations.
+
+The first scheduled E and H requests are frozen from the actual first scheduled case, not exemplars. Existing session/transport machinery records each once, with separate technical and assessment-validity facts; invalid content terminates its arm, while technical failure stops the campaign. Append-only admission/cost/startup journals enforce unique addresses/threads/calls and the cumulative198 ceiling. Neutral controls, raw framing, citation validation, privacy/namespace/network policies and historical qualification paths remain intact. Thirty-two new gate/accounting checks and185 focused/affected checks pass; At that preparation checkpoint genuine inference had not started. No new dependency or scientific-source change is required.
+
+
+Direct-start freeze (14 October): source 158049004ae760abf23b4326104db59e3a3d6c2b1fa7a11cce019601a1f8ec33; protocol 3a30c4900dace1bb6307d381c54e76f65eb0c90d928bdf2f0eaa45f948fd735a; user authority 679eb44b4d83333eadc7252a777a093877d9649bc8774c3f4b8cd77b2e91625a. All reviewed scientific/source/request/schedule bindings are fixed before the first actual E/H observations. Separate qualification calls0; cumulative campaign cap198. That freeze preceded the actual direct launch documented in the completed handoff below.
+
+
+## Completed single-review execution (14 October 2026)
+
+14 October 2026: the new single-review campaign completed all six cases/thirty rows with172 fresh charged gpt-5.5/low calls, zero separate qualifications, one contained invalid H answer and all12 actual control matches. Complete/exported/relocated raw/score/accounting replay passed. Source158049004ae760abf23b4326104db59e3a3d6c2b1fa7a11cce019601a1f8ec33; campaign8cc670e7d5e184eb2e5f371ecf8fb116f9ed15e49a062f7c2b037d24e76ec834. Results are descriptive one-pair observations; all6 A rows retain incomplete coverage. See `instructions_between_agents/m3-single-review-experiment-developer-handoff.md`. Execution/analysis are finished; complete-M3 testing and semantic acceptance remain Overseer-owned.
+
+Delivered scorer labels A4/4 faults detected, H3 detected+1invalid, endpoint arms2detected/2missed. No clean/benign alarms. These counts do not establish generalized accuracy, independent-case significance or full nesting/ontology semantics.

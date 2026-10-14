@@ -170,7 +170,10 @@ def draft_execution_protocol():
 
 
 def validate_execution_protocol(protocol, *, require_frozen=False):
-    if type(protocol) is dict and protocol.get('format_version') in {'m3b-chatgpt-protocol.1','m3b-chatgpt-function-protocol.1','m3b-chatgpt-function-protocol.2'}:
+    if type(protocol) is dict and protocol.get('format_version')=='m3b-chatgpt-scheduled-protocol.1':
+        from .experiment_scheduled import validate_protocol as scheduled
+        return scheduled(protocol,require_frozen=require_frozen)
+    if type(protocol) is dict and protocol.get('format_version') in {'m3b-chatgpt-protocol.1','m3b-chatgpt-function-protocol.1','m3b-chatgpt-function-protocol.2','m3b-chatgpt-single-protocol.1'}:
         from .experiment_chatgpt import validate_chatgpt_protocol
         return validate_chatgpt_protocol(protocol,require_frozen=require_frozen)
     template=draft_execution_protocol();_shape(protocol,template)

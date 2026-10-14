@@ -1,39 +1,187 @@
 # Etiq Verify Python
 
-Independent M2 tester reassessment (11 October 2026), frozen `6dd91fa`: **T07/T08/T09 PASS within local scope; F01/F02 closed.** 616 submitted, 73 unchanged independent and 207 additional checks pass; fresh native replay/dependency/reuse audits pass. Final acceptance belongs to the Overseer. Two ignored legacy T02 smoke files have an explicit tester preservation exception; the report records it. No semantic-model or OS/provider-isolation qualification is claimed. M3B remains gated. See complete independent report (local record: `instructions_between_agents/m2-tester-report-v4-f01-f02-corrections.md`).
+Latest publication — 14 October 2026: the completed single-review campaign
+contains six cases,30 outcomes and172 fresh calls,zero separate qualification
+calls. One H arm is invalid; nine sessions have incomplete coverage. Full final
+acceptance remains pending. Historical material below is project/planning
+history. See [the current experiment](experiments/latest/README.md).
 
+Focused qualification input correction: use the tracked exact existing
+endpoint at resources/protocol/m3b-qualification-endpoint.json. It preserves
+the original M2 evidence unchanged; qualification uses the existing M2 builder.
+Input bytes/request digest are included in the exact launch contract and saved
+for replay. No synthetic requirements, expected verdicts or forced citations.
+Native wrapper/model/settings/limits are unchanged. Fresh source-bound review
+precedes two new actual calls; prior failed answers/costs remain historical.
 
-M2 tester assessment at `1f1c7c1` finds two T09 gaps despite 529 submitted passes:
-case-colliding usage metadata can erase invalid counters, and resealed final
-assessment summaries can disagree with retained raw replies while replay passes.
-Existing wrapper/native disclosure and accepted M1 integration checks pass.
-Do not infer verified final assessment consistency from the current M2 replay
-command alone. See the report (local record: `instructions_between_agents/m2-tester-report-v4.md`).
-No wrapper, capture command, dependency or production source changed in testing.
+Actual refreshed qualification (12 October): the native one-string envelope
+was accepted under ChatGPT gpt-5.5/low, with all fourteen actual probes passing.
+Unchanged M2 rejected a question with element_ids=[] in the empty-inventory
+qualification request. The approved operator stopped before call two. Preserve
+raw/decoded bytes and usage; do not repair the answer or resume its conversation.
+The source-bound decision still validates; successful two-call qualification
+and later campaign gates remain unmet pending Overseer failure disposition.
 
-Current authoritative M1 status (8 October 2026): **accepted within tested scope at `7178692`**, following complete independent reassessment. See final overseer acceptance (local record: `instructions_between_agents/m1-overseer-acceptance-v4.md`). Earlier pending/rejected statements are historical. M2 still requires its own corrections, corrected-source integration and acceptance; M3B remains gated.
+M3 native transport correction: outputSchema is a closed object with one required
+string `reply_json`; the canonical own request still contains the original M2
+response_schema and complete evidence. Identical packaging instructions apply to
+all arms. Native reply/events remain raw; decoded original M2 text is separately
+retained and replay-verified before unchanged validation. Invalid replies retain
+failed costs. The previous source-bound qualification decision is historical and
+does not authorize this changed adapter. Use cached ChatGPT login, gpt-5.5/low,
+and fresh isolated invocations after exact replacement review.
 
-Independent complete M1 reassessment at `7178692` (8 October 2026) passes T01–T06
-within tested scope: 430 milestone tests, 20 additional contracts, seven retained
-native scans, four nonexecuting abstentions and both exact audits pass. Recorded
-modality/statistics fixes are verified; no new inference or production fix occurred.
-Use corrected summary 4.1.0 and normalizer/compiler 2.2.0 for current packages.
-Native entry/capture-producer validity alone does not establish complete package
-policy currency; verify its full source manifest and summary identity separately.
-See tester report (local record: `instructions_between_agents/m1-tester-report-v4-corrections.md`).
-The shared wrapper/capture producers and dependency pins remain unchanged.
+Current M3 completion (12 October): the authorized `/usr/local/bin` public ELF
+overlay works and all fourteen real native probes pass. Supported isolated
+cached-login metadata reports ChatGPT and hidden `gpt-5.5`; use `low` reasoning,
+not the unsupported provisional `none`. Real qualification has not run. The
+single Developer/Experimenter owns direct hosted launches after exact Overseer
+qualification review and later campaign release. No API keys, higher-model
+fallback or resumed reviewer conversations. Earlier placement/role entries below
+are historical. Public DNS/TLS hashes are checked before reviewer launch.
 
-M1 V4-F01/V4-F02 developer corrections pass 430 complete checks and `pip check`.
-Current source agreement/normalizer/compiler are 2.2.0; current summary is 4.1.0
-with safe finite numeric arithmetic and strict encoding before cache creation.
-Current packages are `.etiq/artifacts/m1-v4-fixes/`: six native scans and three
-abstentions, zero new model requests. Use `annotations/m1-v4-fixes-capture-plan.json`
-and a fresh `--output-root` with the existing recipe. Historical snapshots/cache
-seals/reuse hashes validate against exact predecessors; corrected current evidence
-requires current producer equality. The exact audit now records two new reports
-under `evidence/validation-v4-fixes/` and passed twice without rewriting equal bytes/
-mtimes. Earlier delivery/audit status below is historical. Acceptance remains pending;
-M2's separate checkout must reconcile the changed versions and policy hashes.
+ChatGPT correction (12 October): existing M2/M3A code is reused; capture, semantic
+assessment and scoring are unchanged. Operator routes reject API-key execution.
+Native quote/subcommand fixes pass local contracts, but minimal-runtime helper
+placement remains unqualified after three real failed compatibility probes. Stop
+native retries until the help-early decision; preserve all raw failures. Cached
+login/model inspection and genuine two-call qualification remain pending. No source
+or fixture in this correction grants itself provider/campaign approval.
+
+Execution verification (12 October): tracked raw ZIPs/manifests contain deep
+controller artifacts; loose copies are retained untracked to avoid Windows Git
+path limits. Extract to a new path, verify membership/hashes/CRC, then use existing
+M3A/M2 replay. Native rebatched candidate values are unreviewed scientific
+proposals; request byte measurements do not qualify real token/context limits.
+
+M3B execution support: use unique guarded local outputs and the existing accepted
+M1 capture recipe. `prepare-qualification` and `propose-protocol` generate data
+only. `human-qualify`/`human-campaign` are explicit operator commands, retained for
+compatibility; the separately authorized Experiment Developer owns their hosted
+use after review. Never invoke them as implementation verification.
+
+M3B human-launch RED, 12 October 2026: recorded-path GREEN f29f28f is
+committed. Thirteen failing tests specify native permissions, exact M2-derived
+command generation, pre-reasoning token caps, actual human factory/release
+refusal, native-ELF enforcement, interpreter hashing and human-only CLI stages.
+These tests precede implementation. No Linux Codex is installed on inspected
+runtime paths; no model/hosted call or actual provider qualification has run.
+
+M3B recorded execution-path GREEN (12 October 2026), after RED 6864460:
+**53 execution/path tests pass in 191.36s**, including local fake CLI isolation,
+recorded complete/interrupted/restart/relocated exports and 14 resealed transcript
+attacks. The existing M2 controller/usage/replay and M3A math/export are reused.
+Record-only scope remains synthetic and cannot become empirical by label edits.
+Broker quota/credential guards and actual qualification evidence validation are
+implemented. Guard: 38,360 prior files unchanged; 377 captures and 38 recipe
+fixtures backed up and unchanged. No model/hosted call. Actual launcher/factory,
+local bank/protocol proposal and human review/qualification stages remain next.
+
+M3B execution-path RED, 12 October 2026: foundation d8e518a is committed.
+The next recorded campaign/scoring/export, credential-broker and actual
+qualification contracts are specified before implementation: **nine failures,
+two passes and 17 fixture errors** (the recorded campaign route is absent).
+See tests/test_m3b_execution_paths.py and the visible execution plan. These
+are explicit fake/recorded contract fixtures, not actual qualification or results.
+Human hosted stages and Overseer release remain pending.
+
+M3B execution foundation GREEN (12 October 2026), after committed RED e328b75:
+25 new contract tests pass; combined local foundation/preparation checks are
+**89 passed, 35 offline-boundary checks deselected**. Curated <=5.5 model policy,
+full interpreter/runtime binding, recorded real-shaped intake, bounded broker
+request validation and actual reviewed-parent decision binding are implemented.
+Recorded fixtures remain synthetic and inadmissible for empirical campaign.
+Existing M2 sources are exact; current source/authority audit passes. Actual
+provider/campaign integration, qualification and protocol/release are still being
+implemented under the visible execution plan; no hosted/model call has run.
+
+M3B execution continuation, 12 October 2026: the user invoked the Overseer
+qualification/actual-experiment brief. Local implementation begins under the
+visible plan (local record: `instructions_between_agents/m3b-execution-plan-20261012.md`), with
+**25 failing behavioural tests** before fixes. Reviewed preparation 37a3bca,
+accepted M1/M2 and cleared M3A remain the exact baseline. The model ceiling is 5.5;
+no eligible account/model is qualified or selected. Hosted launches belong to the
+human after concrete code/qualification/protocol review and release. No inference
+or experiment has run. Previous preparation status below is historical.
+
+12 October 2026: reviewed M3A `fbedf3e` is integrated into M3B at merge
+`e260924`; production GREEN is `1ab91b5`. Accepted M1 `7178692` and M2 `6dd91fa`
+remain exact. **99 preparation/integration checks pass** with local fake CLIs and
+enforced offline probes. Complete combined run: **890 passed, five setup failures,
+one Windows symlink-privilege skip**; restoring historical inputs and the shared
+dependency path resolves all five in a fresh **5-pass** rerun without code changes.
+These are Developer runs; overlapping passes are not added as a new full-suite run.
+
+Source/reuse/dependency audits and `pip check` pass. The final guard verifies
+38,184 prior files unchanged in bytes/sizes/mtimes, including 279 captured files
+and 38 recipe fixtures backed up before rerun. Main/M2/M3A tracked bytes, heads and
+statuses remain unchanged. Fresh private archives retain 10,601 fake integration
+entries and 415 native test-capture files; synthetic/historical labels remain.
+
+Observed Overseer M1/M2 acceptance and M3A clearance are bound to exact Markdown
+bytes. Combined M3B review, a real-results path, actual-provider qualification,
+17 unresolved scientific settings and human-run authorization remain gates.
+Command preparation returns exit 2 and an empty campaign-command list. No model
+or hosted inference, real experiment, parallel agent, tester, push or publication
+occurred. Return the complete integrated handoff (local record: `instructions_between_agents/m3b-preparation-developer-handoff.md`)
+to the Overseer. The visible plan (local record: `instructions_between_agents/m3b-integration-plan-20261012.md`)
+and `evidence/m3b-verify-*/` contain RED/GREEN, argv/JUnit, audits and guards.
+
+Reproduction: follow the handoff's guarded recipe, copied byte-exact from reviewed
+M3A. Use a new `evidence/m3b-verify-<uuid>/` and external pytest basename, preflight
+all implicit output paths, back up prior captures/recipe fixtures, disable bytecode
+and verify prior bytes/sizes/mtimes afterward. Own `.venv` is a local shim with a
+`.pth` pointing at read-only shared packages; no dependency was installed. All 174
+pins and accepted M1 capture recipe stay unchanged. Do not rerun evidence archive
+builders or pytest basenames in place. Offline qualification is never provider
+qualification and cannot admit synthetic fixtures as empirical results.
+
+## Historical M3A development record
+
+Earlier pending/review notes below are superseded by current clearance above.
+
+M3A 4.2 integration resubmission, 12 October 2026: accepted M1 `7178692`
+and accepted M2 `6dd91fa` are integrated. RED `340dd9e`, merge `1a37b27`, policy
+`7038b22`, accepted-disposition metadata `b5bb64d`. Current campaign/protocol/bank
+version 3 reaches the exact M2 session/matrix 4.2 policy for replay, completed-unit
+restart and bundle verification. Shared raw-alias accounting preserves unknowns,
+valid subtotals, coverage and reported/derived totals. Historical 4.0/4.1 checks
+are separately source-bound and labelled; archived Python is never executed and
+current sessions cannot use the historical path.
+
+Final guarded suite at `1fae74a`: **796 passed, 1 skipped in 623.61s**, with
+a globally unique basetemp outside the checkout and bytecode writing disabled.
+Includes all 186 M2 contracts, 73 unchanged M2 functions scoped to M3A, 43 new
+4.2 integration regressions and both unchanged M1 regression files. This is a
+developer run. Prior 372/1 affected and 796/1 policy runs remain separately dated;
+overlapping counts are not added. Windows symlink privilege is the single skip;
+fresh Linux escape and all 11 standalone offline probes pass. All 174 pins unchanged.
+
+`evidence/validation-m3a-resubmission-20261012/` retains exact argv/JUnit/logs,
+backups and proofs: seven implicit roots checked absent, 3,735 prior capture and
+188 recipe-fixture files backed up; all 55,777 protected source/evidence files
+retain identical bytes/sizes/mtimes. Six fresh qualified native test captures and
+the fresh offline probe are retained in a 379-entry private archive. Existing
+accepted-dependency inputs/bank/campaign/bundles and all three prior archives
+remain unchanged. No production change since `1fae74a`; M3A review remains pending.
+
+Fresh `.tmp/m3a-42-delivery/` contains regenerated 12 inventories/current caches/
+packages, six qualified actual native fault/control captures, offline probes and
+42 synthetic calls/six openings. Definitive denominators zero, rates and token
+totals null; no empirical model finding. Fourteen fully resealed campaign/bundle
+attacks are rejected with native captures unchanged. Read-only proofs verify
+2,477 file bytes/mtimes, and current/relocated complete/interrupted exports pass.
+`evidence/validation-m3a-42/` retains logs, report and 14,036-entry private archive.
+All 12,640 protected prior M3A files and 15 source archives verify unchanged.
+
+M2 acceptance explicitly retains two separately lost ignored smoke outputs; they
+are not used for acceptance or claimed preserved. No further M1/M2 correction is
+required by those acceptances. M3A overseer review, actual provider/model/CLI
+boundary qualification and frozen M3B protocol remain gates. No M3B experiment,
+hosted inference, independent M3 tester, parallel agent or publication occurred.
+See complete handoff (local record: `instructions_between_agents/m3a-developer-handoff.md`) and
+current report (local record: `evidence/validation-m3a-42/report.json`). Earlier dated status
+statements below are historical; verified capture agreements remain applicable.
 
 Independent M1 reassessment at `c7c0a5f` (8 October 2026) confirms the shared
 single-scan native capture/disclosure path and closes the recorded V2-F01/V4-O01
@@ -161,6 +309,17 @@ Verify `entry_file_path` and its SHA-256 in `scan-result.json` against the selec
 entry. The read-only `intentlineage.capture.load_capture` can validate this binding
 when called with `workspace_root`.
 
+## Guarded regression commands
+
+Use the guarded repeat recipe (local record: `evidence/validation-m3a-resubmission-20261012/REPRODUCE.md`)
+for the integrated suite. It allocates a UUID basetemp outside this checkout,
+preflights the six implicit native/workflow capture roots and seventh recipe-fixture
+root, and backs up them and the two UUID-based M3A capture roots before execution.
+Setting `--basetemp` alone is insufficient when its basename was used before.
+Existing capture/package/export directories must remain unchanged. Never reuse a
+verification directory, test basename or original tester reproduction output path.
+The real shared Etiq wrapper and accepted recipe remain the only capture path.
+
 ## Inspection Order
 
 1. Run the selected Python workflow through the shared Etiq wrapper or protected runner.
@@ -233,5 +392,38 @@ PLAN.md revision 4 and the six active milestone briefs supersede earlier propose
 
 Reference https://github.com/raluca07/use_case_icp at `5bd37b1ca3e49e940fc885839fa56411203afee0`: require compatible source reuse for serialization, lazy catalogues, native expansion, artifact describe/read, review receipts/reconsideration and enforced runner boundaries. `fault_operations.inspect_catalogue_artifact` computes statistics on inspection; frozen-artifact precomputation/cache is our adaptation. Description coverage and captured-subset statistics must remain explicit. Reference source was inspected, not executed here. No milestone acceptance or new capability is implied.
 
+## M3A developer implementation in progress ? 8 October 2026
 
-Test capture-path precaution (11 October 2026): use globally unique pytest basetemp basenames; some legacy tests derive worktree-local capture paths from that basename. Check/snapshot implicit destinations before testing. A fresh outer directory alone is insufficient. See REFERENCE.md tester output-path preservation lesson.
+The M3A private copied payment entries execute through `scripts/capture_m1_v4.py:run_wrapper`, using its optional `python_executable`/`source_path` arguments when the developer environment shares dependency files. This calls the unchanged existing wrapper with native export. Six local clean/benign/persistent/repaired captures pass mechanical activation/endpoint checks. Current M1 modality/statistics findings are not corrected by this phase.
+
+Initial complete M3A developer contract result: **18 passed, 1 skipped in 135.77s**. The skip is Windows symbolic-link creation privilege; a real Linux symlink escape is denied by the passing namespace probe. Six actual captures and serial isolated five-arm/retry/replay checks pass. A final source/budget/denominator hardening pass and durable delivery remain.
+
+
+## M3B preparation first increment
+
+M3B preparation performs no payment capture or inference and changes no Etiq capture path. All 51 initial preparation checks pass using the existing M3A offline launcher. Provider transport is disabled. Offline results do not qualify the actual CLI/model generated-command boundary or current integrated M3A evidence.
+
+
+## Historical integration authorization — 12 October 2026
+
+User authorizes coding-only integration of exact reviewed fbedf3e into M3B preparation. Accepted M1 7178692 and M2 6dd91fa stay intact; commit behavioural RED before integration. See instructions_between_agents/m3b-integration-plan-20261012.md. No real/provider campaign, inference or midway tester is authorized.
+
+### Function-review execution contract
+Use the existing batching/controller with batch_size1 and declared m3-function formats. Compact public views never fetch missing samples from private data. Retain original registry, signed graph and all raw/decoded receipts; list valid small artifact/graph/inspection pointers rather than citing omissions. Adaptive follow-ups carry one selected scope and necessary explicit facts/question, with no previous model-answer history. Qualify endpoint and execute_payment requests separately through the same native reply_json wrapper. Existing native probes, exact ELF/login and300-second/196608-input/8192-output/33554432-raw bounds apply to all arms.
+
+
+## Verified single-review offline preparation (13 October 2026)
+
+Reuse `scripts/m3b.py prepare-single-candidate --extraction <genuine-local-extraction.json> --output <fresh-own-directory>`. This invokes the existing six-case native injection/capture recipe, performs no hosted reviewer calls, and refuses to overwrite an existing global single-review profile. Use `audit-single-candidate --protocol <candidate.json> --bank <bank.json> --output <fresh-report.json>` for separate capture-time and current launch-source checks. `prepare-qualification` is pure command preparation and remains blocked by a missing new exact review. `replay-completed --campaign <exact-completed-campaign> --output <fresh-report.json>` is read-only and pins the 178-call source/evidence; it cannot authorize new execution. Native reviewer filesystem/process/network/history controls and the verified Etiq capture limits remain required.
+
+
+## Scheduled-call readiness mode (14 October 2026)
+
+Verified native zero-turn inspection uses existing inspect_chatgpt_boundary(metadata=True), with cached ChatGPT login outside reviewer mounts. freeze-direct-start binds the actual setup/source/scientific schedule/user authority before human-campaign. No separate human-qualify invocation is permitted in this mode. The normal first E/H calls are outcomes/costs and establish native technical readiness through existing probes/framing/identity/usage checks. The namespace/ELF/tool/history/network and raw32MiB bounds remain unchanged. Mode-specific journals replay alongside ordinary calls; interrupted reviewer sessions are never resumed.
+
+
+## Completed single-review execution (14 October 2026)
+
+14 October 2026: the new single-review campaign completed all six cases/thirty rows with172 fresh charged gpt-5.5/low calls, zero separate qualifications, one contained invalid H answer and all12 actual control matches. Complete/exported/relocated raw/score/accounting replay passed. Source158049004ae760abf23b4326104db59e3a3d6c2b1fa7a11cce019601a1f8ec33; campaign8cc670e7d5e184eb2e5f371ecf8fb116f9ed15e49a062f7c2b037d24e76ec834. Results are descriptive one-pair observations; all6 A rows retain incomplete coverage. See `instructions_between_agents/m3-single-review-experiment-developer-handoff.md`. Execution/analysis are finished; complete-M3 testing and semantic acceptance remain Overseer-owned.
+
+Reviewer raw capture remains33554432bytes for every arm, separate from unchanged shared Etiq capture limits. New mode has qualification0, exactly scheduled startup E/H, frozen user authority, fresh threads and unchanged strict envelope/inner/citation checks. Use delivered read-only replay/export; cached-input tokens are a subset of input, monetary/backend facts remain unknown.

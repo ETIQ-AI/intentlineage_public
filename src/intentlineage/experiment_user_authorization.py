@@ -145,6 +145,16 @@ def capture_disposition_record(root):
 
 
 def capture_authorized_launch(root,contract,decision):
+    if contract.get('scope')=='chatgpt-single-provider-qualification':
+        root=Path(root)
+        files=list((root/'src/intentlineage').rglob('*.py'))+[root/n for n in ['scripts/m3b.py','scripts/audit_m3b.py','scripts/audit_m3b_execution.py','scripts/capture_m1_v4.py','requirements.txt']]
+        current=_digest({p.relative_to(root).as_posix():_hash(p) for p in sorted(files)})
+        if (decision.get('format_version')!='m3b-qualification-code-review.1' or decision.get('issued_by')!='overseer'
+            or decision.get('status')!='approved' or decision.get('synthetic') is not False
+            or decision.get('controller_source_sha256')!=current or contract.get('controller_source_sha256')!=current
+            or decision.get('qualification_launch_sha256')!=_digest(contract)):
+            raise ValueError('New exact single-review Overseer qualification decision required')
+        return {'issued_by':'overseer','controller_source_sha256':current,'authorized_launch_sha256':_digest(contract)}
     if contract.get('scope')=='chatgpt-function-provider-qualification':
         import importlib.util
         spec=importlib.util.spec_from_file_location('function_authority',Path(root)/'src/intentlineage/experiment_function.py')

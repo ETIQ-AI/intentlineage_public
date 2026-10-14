@@ -52,7 +52,7 @@ def prepare_invocation(directory, request):
     directory.mkdir(parents=True,exist_ok=False)
     for name in ('evidence','workspace','home','temp','output'): (directory/name).mkdir()
     _write(directory/'evidence/request.json',request)
-    _write(directory/'evidence/response-schema.json',REPLY_SCHEMA)
+    _write(directory/'evidence/response-schema.json',request['response_schema'])
     manifest=_invocation_manifest(request)
     _write(directory/'invocation.json',manifest)
     return manifest
@@ -70,11 +70,17 @@ class _Session:
         if arm not in ARMS: raise ValueError('Unknown review arm')
         if not isinstance(model,str) or not model.strip(): raise ValueError('Freeze an explicit model')
         canonical_bytes(settings)
-        if policy not in {'question_driven','breadth_first','requirement_prioritized'}:raise ValueError('Unknown selection policy')
+        if policy not in {'question_driven','breadth_first','requirement_prioritized','review_driven'}:raise ValueError('Unknown selection policy')
         _positive('max_operations',max_operations);_positive('max_disclosure_bytes',max_disclosure_bytes)
         for name,value,minimum in [('max_calls',max_calls,1),('reasoning_retries',reasoning_retries,0),('transport_retries',transport_retries,0)]:
             _positive(name,value,minimum)
+        from . import review_single
+        self.single_mode=review_single.enabled(plan)
         from .review_failures import POLICY
+        if self.single_mode:
+            if max_calls>9 or max_operations>2 or max_disclosure_bytes>100000:
+                raise ValueError('Single-review fixed call/operation/byte caps exceeded')
+            response_policy=POLICY
         if response_policy not in {None,POLICY}:raise ValueError("Unknown response policy")
         if response_policy and reasoning_retries:raise ValueError("Response policy forbids reasoning retries")
         self.response_policy=response_policy
@@ -85,13 +91,16 @@ class _Session:
             self.root.mkdir(parents=True)
         self.plan=deepcopy(plan);self.arm=arm;self.provider=provider
         from . import review_function
-        self.function_mode=review_function.enabled(plan)
-        self.request_builder=review_function.build_request if self.function_mode else build_request
-        self.reply_validator=review_function.validate_reply if self.function_mode else validate_reply
+        self.function_mode=self.single_mode or review_function.enabled(plan)
+        self.scope_module=review_single if self.single_mode else review_function if self.function_mode else None
+        self.request_builder=self.scope_module.build_request if self.function_mode else build_request
+        self.reply_validator=self.scope_module.validate_reply if self.function_mode else validate_reply
         self.model=model;self.settings=deepcopy(settings);self.max_calls=max_calls
         self.reasoning_retries=reasoning_retries;self.transport_retries=transport_retries
         self.max_request_bytes=max_request_bytes or plan['max_request_bytes']
-        self.policy=policy;self.max_operations=max_operations;self.max_disclosure_bytes=max_disclosure_bytes
+        self.policy='review_driven' if self.single_mode else policy;policy=self.policy
+        self.max_operations=max_operations;self.max_disclosure_bytes=max_disclosure_bytes
+        self.action_outcomes=[]
         self.disclosure_attempts=0
         self.calls=[];self.failures=[];self.replies=[];self.operations=[];self.reconsiderations=[]
         self.omitted_openings=[];self.terminal_reply=None
@@ -114,6 +123,8 @@ class _Session:
 
     def record_call(self,folder,record):
         self.write(folder/'call.json',record)
+        callback=getattr(self.provider,'after_call',None)
+        if callback is not None:callback(folder,deepcopy(record))
         return record
 
     def disclosure(self,catalogue,evidence,actions,*,cache_dir=None):
@@ -122,7 +133,10 @@ class _Session:
         self.disclosure_attempts+=1
         event={'before_evidence':deepcopy(evidence),'actions':deepcopy(actions)}
         try:
-            expanded,receipts=disclose(catalogue,evidence,actions,cache_dir=cache_dir)
+            if self.single_mode:
+                from .review_disclosure import disclose_single
+                expanded,receipts=disclose_single(catalogue,evidence,actions,cache_dir=cache_dir)
+            else:expanded,receipts=disclose(catalogue,evidence,actions,cache_dir=cache_dir)
         except (KeyError,TypeError,ValueError) as error:
             event['failure']={'reason':str(error)}
             self.write(self.root/'disclosure-attempts'/f'{self.disclosure_attempts:04d}.json',event)
@@ -225,7 +239,7 @@ class _Session:
         insufficient=[i for i in ids if coverage[i] and
                       not any(a['assessment'] in {'supported','contradicted'} for a in coverage[i])]
         conflicts=[i for i in ids if {a['assessment'] for a in coverage[i]} >= {'supported','contradicted'}]
-        questions=deepcopy(unresolved if unresolved is not None else
+        questions=[] if self.single_mode else deepcopy(unresolved if unresolved is not None else
                            [q for r in self.replies for q in r['unresolved_questions']])
         # No global semantic verdict is manufactured from disparate observations.
         complete=not (uncovered or insufficient or conflicts or questions or self.stop_reason in
@@ -246,12 +260,14 @@ class _Session:
                 'limits':['Local contract validation does not establish semantic model accuracy.',
                           'Accepted M1 is integrated; M2 acceptance and M3 qualification are required before campaign.'],
                 **(extra or {})}
-        if self.function_mode:
+        if self.single_mode:
+            result=self.scope_module.augment_result(result,self.plan,self)
+        elif self.function_mode:
             from .review_function import augment_result
             result=augment_result(result,self.plan)
         if self.response_policy:
             from .review_failures import terminal_metadata,SESSION_VERSION as RESPONSE_SESSION
-            result.update(terminal_metadata(self),format_version=RESPONSE_SESSION)
+            result.update(terminal_metadata(self),format_version=self.scope_module.SESSION_VERSION if self.single_mode else RESPONSE_SESSION)
             result['status']='incomplete' if result['terminal_outcome'] else result['status']
         self.write(self.root/'final-evidence.json',self.latest_evidence)
         result['files']={p.relative_to(self.root).as_posix():file_hash(p) for p in self.root.rglob('*') if p.is_file() and p!=self.root/'session.json'}
@@ -277,7 +293,7 @@ def run_review_session(plan,catalogue,*,arm,provider,output_dir,model,settings,m
                        max_operations=4,max_disclosure_bytes=100000,policy='question_driven',
                        reasoning_retries=0,transport_retries=0,cache_dir=None,response_policy=None):
     if arm not in {'E','H','A'}:raise ValueError('Use reconsider_same_evidence for repeated endpoint controls')
-    if policy not in {'question_driven','breadth_first','requirement_prioritized'}:raise ValueError('Unknown selection policy')
+    if policy not in {'question_driven','breadth_first','requirement_prioritized','review_driven'}:raise ValueError('Unknown selection policy')
     _positive('max_operations',max_operations);_positive('max_disclosure_bytes',max_disclosure_bytes)
     _validate_catalogue(catalogue);validate_plan(plan)
     for batch in plan['batches']:_validate_view(catalogue,batch['graph'])
@@ -320,7 +336,7 @@ def _run_treatment(session,catalogue,*,cache_dir=None):
     if arm=='H' or current is None or session.stop_reason:
         return session.finish(unchecked_functions=unchecked)
     if session.function_mode:
-        from .review_function import adaptive_followups
+        adaptive_followups=session.scope_module.adaptive_followups
         return adaptive_followups(session,catalogue,local_pending,unchecked,cache_dir=cache_dir)
     # Adaptive follow-up sees the union of permitted starting batches, no answers.
     synthetic={'assessments':[a for r in initial_replies for a in r['assessments']],
@@ -393,7 +409,7 @@ def _run_control(session):
     # Matching calls is not completing coverage. Preserve invalid passes as failures.
     if any(f['kind']!='transport_failure' for f in session.failures):session.stop_reason='invalid_response' if session.response_policy else 'invalid_reply'
     return session.finish(coverage_replies=[session.terminal_reply] if session.terminal_reply else [],
-                          unresolved=session.terminal_reply['unresolved_questions'] if session.terminal_reply else [],
+                          unresolved=session.terminal_reply.get('unresolved_questions',[]) if session.terminal_reply else [],
                           extra={'matched_logical_calls':logical_calls,
                                  'count_match':session.logical_calls==logical_calls})
 
@@ -416,7 +432,7 @@ class _ReplaySession(_Session):
 
     def stage_invocation(self,path,request):
         self.write(path/'evidence/request.json',request)
-        self.write(path/'evidence/response-schema.json',REPLY_SCHEMA)
+        self.write(path/'evidence/response-schema.json',request['response_schema'])
         self.write(path/'invocation.json',_invocation_manifest(request))
 
     def retained_response(self,request,invocation):
@@ -460,7 +476,10 @@ class _ReplaySession(_Session):
         if self.catalogue is not None:
             expected={'before_evidence':deepcopy(evidence),'actions':deepcopy(actions)}
             try:
-                expanded,receipts=disclose(self.catalogue,evidence,actions)
+                if self.single_mode:
+                    from .review_disclosure import disclose_single
+                    expanded,receipts=disclose_single(self.catalogue,evidence,actions)
+                else:expanded,receipts=disclose(self.catalogue,evidence,actions)
             except (KeyError,TypeError,ValueError) as error:
                 expected['failure']={'reason':str(error)}
             else:expected.update(evidence=expanded,receipts=receipts,failure=None)
@@ -478,9 +497,9 @@ def replay_session(directory,*,catalogue=None):
     it is never accepted here as a corrected-current outcome.
     """
     root=Path(directory).resolve();result=json.loads((root/'session.json').read_bytes())
-    from . import review_function
+    from . import review_function,review_single
     from .review_failures import SESSION_VERSION as RESPONSE_SESSION
-    if result.get('format_version') not in {SESSION_VERSION,review_function.SESSION_VERSION,RESPONSE_SESSION}:
+    if result.get('format_version') not in {SESSION_VERSION,review_function.SESSION_VERSION,RESPONSE_SESSION,review_single.SESSION_VERSION}:
         raise ValueError('Historical session contract/version: use its archived audit, regenerate current evidence')
     if result.get('session_sha256')!=digest({k:v for k,v in result.items() if k!='session_sha256'}):
         raise ValueError('Session integrity mismatch')
@@ -495,7 +514,7 @@ def replay_session(directory,*,catalogue=None):
             raise ValueError('Saved call collection differs from call.json replay record')
     plan=json.loads((root/'plan.json').read_bytes());validate_plan(plan)
     protocol=json.loads((root/'protocol.json').read_bytes())
-    expected_version=RESPONSE_SESSION if protocol.get('response_policy') else review_function.SESSION_VERSION if review_function.enabled(plan) else SESSION_VERSION
+    expected_version=review_single.SESSION_VERSION if review_single.enabled(plan) else RESPONSE_SESSION if protocol.get('response_policy') else review_function.SESSION_VERSION if review_function.enabled(plan) else SESSION_VERSION
     if result['format_version']!=expected_version:raise ValueError('Session/view version mismatch')
     protocol=json.loads((root/'protocol.json').read_bytes())
     if protocol['arm']=='E' and (protocol['max_calls']!=1 or protocol['reasoning_retries']):
@@ -524,11 +543,12 @@ def run_review_matrix(plan,catalogue,*,provider_factory,output_dir,model,setting
     root=Path(output_dir)
     if root.exists():raise ValueError('Matrix output requires a fresh directory')
     root.mkdir(parents=True)
+    from . import review_single
     sessions={}
     for arm in ('E','H','A'):
         sessions[arm]=run_review_session(plan,catalogue,arm=arm,provider=provider_factory(arm),
                   output_dir=root/arm,model=model,settings=settings,
-                  max_calls=1 if arm=='E' else max_calls,max_operations=max_operations,
+                  max_calls=1 if arm=='E' else plan['batch_count'] if review_single.enabled(plan) and arm=='H' else max_calls,max_operations=max_operations,
                   max_disclosure_bytes=max_disclosure_bytes,policy=policy,
                   reasoning_retries=0 if arm=='E' else reasoning_retries,transport_retries=transport_retries,response_policy=response_policy)
         from .review_failures import assert_not_hard_failure
@@ -545,7 +565,7 @@ def run_review_matrix(plan,catalogue,*,provider_factory,output_dir,model,setting
                                'reason':'Paired arm made no charged reasoning calls.'}
     from . import review_function
     from .review_failures import MATRIX_VERSION as RESPONSE_MATRIX
-    result={'format_version':RESPONSE_MATRIX if response_policy else review_function.MATRIX_VERSION if review_function.enabled(plan) else MATRIX_VERSION,'plan_sha256':plan['plan_sha256'],'model':model,
+    result={'format_version':review_single.MATRIX_VERSION if review_single.enabled(plan) else RESPONSE_MATRIX if response_policy else review_function.MATRIX_VERSION if review_function.enabled(plan) else MATRIX_VERSION,'plan_sha256':plan['plan_sha256'],'model':model,
             'settings':deepcopy(settings),'sessions':sessions,'isolation_qualified':False,
             'provider_mode':provider_mode,'hosted_calls':0 if provider_mode=='mock' else None,
             'paired_counts':{c:{'control':sessions[c]['logical_calls'],'paired':sessions[p]['logical_calls'],
@@ -560,16 +580,17 @@ def run_review_matrix(plan,catalogue,*,provider_factory,output_dir,model,setting
 def replay_matrix(directory,*,catalogue=None):
     """Validate every session and neutral pairing through the corrected replay."""
     root=Path(directory);matrix=json.loads((root/'matrix.json').read_bytes())
-    from . import review_function
+    from . import review_function,review_single
     from .review_failures import MATRIX_VERSION as RESPONSE_MATRIX,SESSION_VERSION as RESPONSE_SESSION
-    if matrix.get('format_version') not in {MATRIX_VERSION,review_function.MATRIX_VERSION,RESPONSE_MATRIX}:
+    if matrix.get('format_version') not in {MATRIX_VERSION,review_function.MATRIX_VERSION,RESPONSE_MATRIX,review_single.MATRIX_VERSION}:
         raise ValueError('Historical matrix contract/version: regenerate current evidence')
     if matrix.get('matrix_sha256')!=digest({k:v for k,v in matrix.items() if k!='matrix_sha256'}):
         raise ValueError('Matrix replay integrity mismatch')
     if set(matrix['sessions'])!=ARMS:raise ValueError('Matrix arm collection replay mismatch')
     function_mode=matrix['sessions']['E'].get('format_version')==review_function.SESSION_VERSION
     response_mode=matrix['sessions']['E'].get('response_policy')
-    if matrix['format_version']!=(RESPONSE_MATRIX if response_mode else review_function.MATRIX_VERSION if function_mode else MATRIX_VERSION):
+    single_mode=matrix['sessions']['E'].get('format_version')==review_single.SESSION_VERSION
+    if matrix['format_version']!=(review_single.MATRIX_VERSION if single_mode else RESPONSE_MATRIX if response_mode else review_function.MATRIX_VERSION if function_mode else MATRIX_VERSION):
         raise ValueError('Matrix/session view version mismatch')
     for arm in ('E','H','A'):
         replayed=replay_session(root/arm,catalogue=catalogue)

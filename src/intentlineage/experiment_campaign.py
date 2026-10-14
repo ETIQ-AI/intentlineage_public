@@ -135,6 +135,9 @@ def inspect_incomplete_campaign(root):
         'unknown_attempts':len(unknown),'unknown_invocations':unknown,'score':None,
         'limits':['Interrupted invocations have unknown charging/results; no session resumes and no semantic score is manufactured.']}
     if extended:result.update(data_class=data_class,empirical_admissible=False)
+    if protocol.get('execution_contract',{}).get('protocol',{}).get('format_version')=='m3b-chatgpt-scheduled-protocol.1':
+        from .experiment_scheduled import verify_progress
+        result['scheduled_readiness']=verify_progress(root)
     return result
 
 
@@ -170,6 +173,9 @@ def replay_campaign(root):
         from .review_function import SESSION_VERSION as FUNCTION_SESSION,MATRIX_VERSION as FUNCTION_MATRIX
         function_mode=protocol.get('execution_contract',{}).get('protocol',{}).get('format_version')=='m3b-chatgpt-function-protocol.1'
         expected_session=FUNCTION_SESSION if function_mode else SESSION_VERSION;expected_matrix=FUNCTION_MATRIX if function_mode else MATRIX_VERSION
+        if protocol.get('execution_contract',{}).get('protocol',{}).get('format_version')=='m3b-chatgpt-scheduled-protocol.1':
+            from .review_single import SESSION_VERSION as SINGLE_SESSION,MATRIX_VERSION as SINGLE_MATRIX
+            expected_session=SINGLE_SESSION;expected_matrix=SINGLE_MATRIX
         if protocol.get('usage_version')!=expected_session or protocol.get('matrix_version')!=expected_matrix or result['score']['format_version']!='m3b-score.1':
             raise ValueError('Execution requires exact corrected 4.2 policy')
         if data_class=='empirical':validate_execution_contract(**protocol['execution_contract'],evidence_root=root)
@@ -191,7 +197,9 @@ def replay_campaign(root):
                 if session.get('status')!='not_run' and replay_historical_session(folder/arm)!=session:
                     raise ValueError('Historical session replay mismatch')
         for paired in matrix['paired_counts'].values():
-            if not paired['matched']:raise ValueError('Actual logical calls not matched')
+            if not paired['matched']:
+                scheduled=protocol.get('execution_contract',{}).get('protocol',{}).get('format_version')=='m3b-chatgpt-scheduled-protocol.1'
+                if not scheduled or not any(s.get('terminal_outcome')=='invalid_response' for a,s in matrix['sessions'].items() if a.startswith('R-')):raise ValueError('Actual logical calls not matched')
     score=score_rows(result['truth'],rows_from_units(result['units'],legacy=legacy,historical=historical,data_class=data_class,evidence_root=root),
                      format_version=result['score']['format_version'],data_class=data_class)
     if score!=result['score']:raise ValueError('Score replay mismatch')
@@ -208,6 +216,10 @@ def replay_campaign(root):
                 elif protocol.get('provider_identity',{}).get('kind')=='m3b-offline-fake':
                     from .experiment_qualification import validate_qualification
                     validate_qualification(receipt,request_sha256=call['request_sha256'])
+    if protocol.get('execution_contract',{}).get('protocol',{}).get('format_version')=='m3b-chatgpt-scheduled-protocol.1':
+        from .experiment_scheduled import verify_progress
+        progress=verify_progress(root,complete=True)
+        if progress['charged_calls']!=result['hosted_calls']:raise ValueError('Scheduled campaign exactly-once charges differ')
     return {**result,'historical':True,'current_42_qualified':False,'replay_scope':'Frozen-source historical structural/accounting audit only'} if historical else result
 
 
@@ -266,7 +278,10 @@ def run_campaign(bank,output_dir,*,mode='synthetic',repeats=None,seed=None,resum
         controller_sources[name]=file_hash(ROOT/name)
     interface=json.loads((ROOT/'resources/evidence/m3a-m2-interface.json').read_bytes())
     from .review_function import SESSION_VERSION as FUNCTION_SESSION,MATRIX_VERSION as FUNCTION_MATRIX
-    function_mode=bool(context and frozen.get('format_version')=='m3b-chatgpt-function-protocol.1')
+    scheduled=bool(context and frozen.get('format_version')=='m3b-chatgpt-scheduled-protocol.1')
+    if scheduled and resume:raise ValueError('Scheduled campaign does not resume reviewer history or partial invocations')
+    single_mode=bool(context and frozen.get('format_version') in {'m3b-chatgpt-single-protocol.1','m3b-chatgpt-scheduled-protocol.1'})
+    function_mode=single_mode or bool(context and frozen.get('format_version')=='m3b-chatgpt-function-protocol.1')
     protocol={'format_version':'m3a-protocol.3','synthetic':mode!='empirical','model':frozen['reviewer']['model'] if context else 'synthetic-m2-stub',
         'settings':deepcopy(frozen['reviewer']['settings']) if context else {},'schedule':design,'truth_sha256':digest(truth),'bank_sha256':original['bank_sha256'],
         'max_calls':max_calls,'max_operations':max_operations,'max_disclosure_bytes':max_disclosure_bytes,
@@ -276,11 +291,15 @@ def run_campaign(bank,output_dir,*,mode='synthetic',repeats=None,seed=None,resum
         'm2_status':interface['status'],'usage_version':FUNCTION_SESSION if function_mode else SESSION_VERSION,'matrix_version':FUNCTION_MATRIX if function_mode else MATRIX_VERSION,
         'm2_interface':interface,
         'provider_transport':'human-qualified' if context else 'disabled','live_allowed':mode=='empirical','controller_sources':controller_sources}
+    if single_mode:
+        from .review_single import SESSION_VERSION as SINGLE_SESSION,MATRIX_VERSION as SINGLE_MATRIX
+        protocol.update(usage_version=SINGLE_SESSION,matrix_version=SINGLE_MATRIX)
     if provider_factory is not None:protocol['provider_identity']=provider_factory.identity
     if extended:
         protocol.update(format_version='m3b-campaign-protocol.1',data_class=data_class)
         if context:protocol['execution_contract']={k:deepcopy(context[k]) for k in ['protocol','gates','qualification']}
     protocol['protocol_sha256']=digest(protocol)
+    if scheduled and design!=frozen['execution_mode']['schedule']:raise ValueError('Exact frozen scheduled unit order differs')
     if root.exists():
         if not resume:raise ValueError('Campaign requires fresh output or explicit read-only restart')
         saved=json.loads((root/'protocol.json').read_bytes())
@@ -338,10 +357,14 @@ def run_campaign(bank,output_dir,*,mode='synthetic',repeats=None,seed=None,resum
             return provider
         write(root/'starts'/(item['unit_id']+'.json'),{**item,'protocol_sha256':protocol['protocol_sha256'],
               'review_plan_sha256':plan['plan_sha256'],'session_resume_allowed':False})
-        matrix=run_review_matrix(plan,catalogue,provider_factory=factory,output_dir=folder,
-            model=protocol['model'],settings=protocol['settings'],max_calls=max_calls,
-            max_operations=max_operations,max_disclosure_bytes=max_disclosure_bytes,policy=policy,
-            reasoning_retries=reasoning_retries,transport_retries=transport_retries,provider_mode='qualified_human' if context else 'mock')
+        try:
+            matrix=run_review_matrix(plan,catalogue,provider_factory=factory,output_dir=folder,
+                model=protocol['model'],settings=protocol['settings'],max_calls=max_calls,
+                max_operations=max_operations,max_disclosure_bytes=max_disclosure_bytes,policy=policy,
+                reasoning_retries=reasoning_retries,transport_retries=transport_retries,provider_mode='qualified_human' if context else 'mock')
+        except (ValueError,RuntimeError,OSError) as error:
+            if scheduled:provider_factory.progress.interrupt(str(error))
+            raise
         qualified=all(len(providers[a].receipts)==len(s.get('calls',[])) for a,s in matrix['sessions'].items() if a in providers)
         if not qualified:
             write(folder/'incomplete-isolation.json',{'status':'incomplete','synthetic':True,'reason':'Unqualified attempt; no scoring admissible'})
@@ -364,6 +387,10 @@ def run_campaign(bank,output_dir,*,mode='synthetic',repeats=None,seed=None,resum
     if extended:
         result.update(data_class=data_class,empirical_admissible=mode=='empirical')
         result['limits'][0]='Actual results remain bounded by qualified protocol, coverage and dependent-case limitations.' if context else 'Recorded contract fixtures are not empirical results.'
+    if scheduled:
+        from .experiment_scheduled import verify_progress
+        result['scheduled_readiness']=verify_progress(root,complete=True)
+        if result['scheduled_readiness']['charged_calls']!=result['hosted_calls']:raise ValueError('Exactly-once campaign accounting differs')
     result['files']={p.relative_to(root).as_posix():file_hash(p) for p in root.rglob('*') if p.is_file()}
     result['campaign_sha256']=digest(result);write(root/'campaign.json',result)
     return result

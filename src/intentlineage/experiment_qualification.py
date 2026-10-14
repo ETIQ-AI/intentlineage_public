@@ -41,7 +41,7 @@ def validate_provider_qualification(receipt,*,protocol,evidence_root=None):
     Qualification costs belong to this report, never outcome rows. Positive
     declarations without exact raw files and matching scope cannot qualify.
     """
-    if type(protocol) is dict and protocol.get('format_version') in {'m3b-chatgpt-protocol.1','m3b-chatgpt-function-protocol.1','m3b-chatgpt-function-protocol.2'}:
+    if type(protocol) is dict and protocol.get('format_version') in {'m3b-chatgpt-protocol.1','m3b-chatgpt-function-protocol.1','m3b-chatgpt-function-protocol.2','m3b-chatgpt-single-protocol.1'}:
         from .experiment_chatgpt import validate_chatgpt_qualification
         return validate_chatgpt_qualification(receipt,protocol=protocol,evidence_root=evidence_root)
     from pathlib import Path

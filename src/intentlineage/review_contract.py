@@ -122,6 +122,13 @@ def validate_reply(raw, evidence, *, allow_opening=False):
     reply = _strict_load(raw)
     errors = list(Draft202012Validator(REPLY_SCHEMA).iter_errors(reply))
     if errors: raise ValueError('Reviewer schema violation: ' + errors[0].message)
+    _validate_assessment_evidence(reply, evidence)
+    ids = {e['element_id'] for e in evidence['elements']}
+    return _validate_legacy_openings(reply, evidence, ids, allow_opening=allow_opening)
+
+
+def _validate_assessment_evidence(reply, evidence):
+    """Shared checks; each wire version supplies its own closed outer schema."""
     ids = {e['element_id'] for e in evidence['elements']}
     selected = [r['element_id'] for r in reply['assessments']]
     uncovered = reply['uncovered_elements']
@@ -143,6 +150,9 @@ def validate_reply(raw, evidence, *, allow_opening=False):
                             and actual == citation['observed'])
             if not same_numeric and digest(actual) != digest(citation['observed']):
                 raise ValueError('Cited observed value differs from supplied evidence')
+
+
+def _validate_legacy_openings(reply, evidence, ids, *, allow_opening=False):
     questions = {q['question_id']: q for q in reply['unresolved_questions']}
     if len(questions) != len(reply['unresolved_questions']): raise ValueError('Duplicate unresolved question ID')
     for q in questions.values():

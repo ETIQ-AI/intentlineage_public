@@ -1,27 +1,21 @@
 # Project guide
 
-Current publication: latest amended M3 experiment delivered on 13 October 2026.
-The snapshot imports its exact source from the experiment worktree, not the older
-main-only implementation. Full 58-file controller source digest:
-`8c3369b80d6c36f5757dcb7cafe0447480270a76df194f9db22137b7d1b9e5a9`;
-executed source commit `005383bab020ac52a04f0a0d4713d87377c4bd64`.
+Current published selection: completed 14 October 2026 single-review experiment.
+Six cases,30 scheduled outcomes,172 fresh campaign calls,zero separate
+qualification calls; one H invalid arm and nine incomplete review sessions.
+Independent final milestone/scientific acceptance remains pending.
 
 | Location | Contents |
 | --- | --- |
-| `experiments/latest/` | Current six-case/30-arm outcomes, costs, coverage, protocol and report |
-| `experiments/latest/inputs/` | Current semantic inventory, runtime and extraction input |
-| `src/intentlineage/` | Executed harness and its reused M1/M2 dependencies |
-| `tests/` | Self-contained current offline contracts |
-| `examples/native_payment_workflow.py` | The native payment workflow |
-| `resources/ontology/`, `resources/extraction/` | Required semantic/extraction resources and licences |
-| `resources/reference-use-case-icp/` | Source attribution, mappings and upstream snapshots |
-| `resources/publication-sanitization.json` | Original/public derivative hashes and executed source identity |
+| `experiments/latest/` | Current results, costs, coverage, protocol, report and interpretation |
+| `experiments/latest/inputs/` | Actual 24-element inventory, runtime and extraction input |
+| `src/intentlineage/` | Exact executed controller and reused dependencies |
+| `tests/` | Self-contained offline native/routing/accounting contracts |
+| `examples/native_payment_workflow.py` | The current payment workflow |
+| `resources/` | Required semantics, source attribution and publication provenance |
 
-Execution finished with 178 charged calls (79 retained genuine observations,
-99 fresh). Three adaptive rows are invalid; semantic coverage is incomplete and
-scientific completeness/final acceptance remain pending. Historical captures,
-test dumps, previous protocols/campaigns, authority archives and private replay
-bundles remain local. The eight selected root project documents are retained.
-The public snapshot does not support full original sealed-audit replay or reuse
-of historical live-launch authorization. No qualification/inference/push is part
-of publication. Original source worktrees, histories and evidence are unchanged.
+Executed source freeze52af0e89, delivery9c41294; exact63-source digest
+`158049004ae760abf23b4326104db59e3a3d6c2b1fa7a11cce019601a1f8ec33`.
+Current files replace the previous experiment; earlier commits remain in normal
+Git history and all originals remain local. Future citation-rerun work is not
+claimed as completed. Public derivatives do not replace private sealed evidence.

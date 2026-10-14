@@ -60,6 +60,8 @@ def assessment_failure(wire, request, observed, *, charging, probes):
         return None
     from .experiment_chatgpt import decode_chatgpt_wire_reply
     from .review_function import validate_reply
+    if request.get('contract_version') == 'm3-single-review.1':
+        from .review_single import validate_reply
     stage = 'native_envelope'
     try:
         decoded = decode_chatgpt_wire_reply(wire)

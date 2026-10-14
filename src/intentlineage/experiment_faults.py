@@ -161,7 +161,7 @@ def qualify_native_values(cat,variant,*,seed,clean_input=None,clean_endpoint=Non
             'unqualified_reason':None if qualified else 'Missing activation, matched input, repair or endpoint agreement'}
 
 
-def capture_bank(output_dir, *, variants=VARIANTS, seed=17, extraction_file=None, batch_size=8):
+def capture_bank(output_dir, *, variants=VARIANTS, seed=17, extraction_file=None, batch_size=8, profile=None):
     """Run fresh copied entries through the existing wrapper, never edit captures."""
     output=Path(output_dir).resolve()
     if output.exists() or not output.is_relative_to(ROOT):
@@ -177,7 +177,7 @@ def capture_bank(output_dir, *, variants=VARIANTS, seed=17, extraction_file=None
     current=replay_extraction(extraction,json.loads((ROOT/'resources/ontology/generated/taxonomy-v2.json').read_bytes()),current=True)
     output.mkdir(parents=True)
     write(output/'extraction-current.json',current)
-    runtime=prepare_dispatch(output/'extraction-current.json')
+    runtime=prepare_dispatch(output/'extraction-current.json',profile=profile)
     if runtime['operation'] != 'pay':
         raise ValueError('This fault bank requires source-authorized definite payment')
     inventory=inventory_from_spec(runtime['specification'])
@@ -241,6 +241,9 @@ def capture_bank(output_dir, *, variants=VARIANTS, seed=17, extraction_file=None
         write(folder/'controller/catalogue.json',cat)
         packages=build_packages(cat,inventory,cache_dir=folder/'controller/summary-cache')
         plan=build_review_plan(packages['endpoint'],packages['top_level'],batch_size=batch_size)
+        if profile:
+            from .review_single import attach_contract
+            plan=attach_contract(plan)
         write(folder/'controller/review-plan.json',plan)
         for key,value in packages.items():write(folder/'public'/f'{key}.json',value)
         if variant=='clean':
@@ -266,5 +269,9 @@ def capture_bank(output_dir, *, variants=VARIANTS, seed=17, extraction_file=None
         'review_session_version':SESSION_VERSION,'review_matrix_version':MATRIX_VERSION,
         'source_manifest_sha256':file_hash(output/'source-manifest.json'),
         'runtime_sha256':file_hash(output/'runtime.json'),'inventory_sha256':file_hash(output/'inventory.json')}
+    if profile:
+        from .review_single import SESSION_VERSION as sv,MATRIX_VERSION as mv,contract
+        result.update(format_version='m3-single-bank.1',inventory_profile=profile,
+            review_contract=contract(),review_session_version=sv,review_matrix_version=mv)
     result['bank_sha256']=digest(result);write(output/'bank.json',result)
     return result
